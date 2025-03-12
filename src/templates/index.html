@@ -34,7 +34,7 @@
         justify-content: space-between;
         background-color: #333333; /* Deep Charcoal */
         color: #333333; /* Deep Charcoal */
-        padding: 0 20px 20px 20px; /* ปรับ padding เพื่อให้ติดกับ navbar */
+        padding: 20px; /* ปรับ padding เพื่อให้มีระยะห่างจากขอบ */
         height: calc(100vh - 60px); /* ปรับความสูงของ container */
     }
     .sidebar {
@@ -43,7 +43,9 @@
         background-color: #333333; /* Deep Charcoal */
         color: #D3C4A3; /* Light Almond */
         padding: 20px;
-        margin-top: 0; /* ลบ margin-top เพื่อให้ติดกับ navbar */
+        margin-top: 20px; /* เพิ่ม margin-top เพื่อให้มีระยะห่างจาก map-container */
+        margin-left: 60px; /* เพิ่ม margin-left เพื่อให้มีระยะห่างจากขอบซ้าย */
+        margin-right: 60px; /* เพิ่ม margin-right เพื่อให้มีระยะห่างจากขอบขวา */
         display: flex;
         flex-direction: column;
         align-items: center; /* จัดตำแหน่งให้อยู่ตรงกลาง */
@@ -54,13 +56,23 @@
         background-color: #333333; /* Deep Charcoal */
         color: #333333; /* Deep Charcoal */
         padding: 0; /* ลบ padding เพื่อให้แผนที่เต็มพื้นที่ */
-        margin-right: 0; /* ลบ margin-right เพื่อให้แผนที่เต็มพื้นที่ */
+        margin-right: 20px; /* เพิ่ม margin-right เพื่อให้มีระยะห่างจาก sidebar */
         border-radius: 0; /* ลบ border-radius เพื่อให้แผนที่เต็มพื้นที่ */
         height: 100%; /* ปรับความสูงของ map-container */
-        margin-top: 20px; /* เพิ่ม margin-top เพื่อให้มีระยะห่างจาก navbar */
     }
-    h1, h2 {
-        color: #D3C4A3; /* Deep Charcoal */
+    .info-box {
+        background-color: #D3C4A3; /* Light Almond */
+        color: #333333; /* Deep Charcoal */
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    h1 {
+        color: #D3C4A3; /* Light Almond */
+    }
+    h2 {
+        color: #333333; /* Light Almond */
     }
     a {
         color: #D3C4A3; /* Light Almond */
@@ -91,10 +103,15 @@
         <div id="map" style="width: 100%; height: 100%;"></div>
     </div>
     <div class="sidebar">
-        <h2>My Location</h2>
-        <p>My Location: <span id="location-name">None</span></p>
-        <p>Temperature: <span id="temperature">N/A</span></p>
-
+        <div class="info-box">
+            <h2>My Location</h2>
+            <p>My Location: <span id="location-name">None</span></p>
+            <p>Temperature: <span id="temperature">N/A</span></p>
+        </div>
+        <div class="info-box">
+            <h2>PM2.5 Prediction</h2>
+            <div id="prediction-chart"></div>
+        </div>
         <script>
             // ตัวอย่างการอัพเดทข้อมูล location และ temperature
             // คุณสามารถปรับแต่งโค้ดนี้เพื่อให้ทำงานร่วมกับแผนที่ของคุณ
