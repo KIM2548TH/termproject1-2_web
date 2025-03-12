@@ -29,7 +29,7 @@
         justify-content: space-between;
         background-color: #D3C4A3; /* Light Almond */
         color: #333333; /* Deep Charcoal */
-        padding: 20px;
+        padding: 0 20px 20px 20px; /* ปรับ padding เพื่อให้ติดกับ navbar */
     }
     .sidebar {
         order: 2;
@@ -37,7 +37,10 @@
         background-color: #333333; /* Deep Charcoal */
         color: #D3C4A3; /* Light Almond */
         padding: 20px;
-        border-radius: 8px;
+        margin-top: 0; /* ลบ margin-top เพื่อให้ติดกับ navbar */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* จัดตำแหน่งให้อยู่ตรงกลาง */
     }
     .map-container, .pm25-values {
         order: 1;
@@ -80,15 +83,22 @@
         <div id="map"></div>
     </div>
     <div class="sidebar">
-        <h2>Navigation</h2>
-        <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('prediction', sensor_id=sensor_id) }}">View Predictions</a></li>
-        </ul>
-        <h2>Predicted PM2.5 Values</h2>
-        <div id="pm25-display">
-            <p>Select a sensor on the map to view predicted PM2.5 values.</p>
-        </div>
+        <h2>My Location</h2>
+        <p>My Location: <span id="location-name">None</span></p>
+        <p>Temperature: <span id="temperature">N/A</span></p>
+
+        <script>
+            // ตัวอย่างการอัพเดทข้อมูล location และ temperature
+            // คุณสามารถปรับแต่งโค้ดนี้เพื่อให้ทำงานร่วมกับแผนที่ของคุณ
+            function updateLocationInfo(location, temperature) {
+                document.getElementById('location-name').textContent = location;
+                document.getElementById('temperature').textContent = temperature;
+            }
+
+            // ตัวอย่างการเรียกใช้ฟังก์ชัน updateLocationInfo
+            // คุณสามารถเรียกใช้ฟังก์ชันนี้เมื่อผู้ใช้คลิกที่แผนที่
+            // updateLocationInfo('Bangkok', '30°C');
+        </script>
     </div>
 </div>
 {% endblock %}

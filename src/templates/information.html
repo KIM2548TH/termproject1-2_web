@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+{% block body %}
+<h2>My Location</h2>
+<p>Selected Location: <span id="location-name">None</span></p>
+<p>Temperature: <span id="temperature">N/A</span></p>
+
+<script>
+    // ตัวอย่างการอัพเดทข้อมูล location และ temperature
+    // คุณสามารถปรับแต่งโค้ดนี้เพื่อให้ทำงานร่วมกับแผนที่ของคุณ
+    function updateLocationInfo(location, temperature) {
+        document.getElementById('location-name').textContent = location;
+        document.getElementById('temperature').textContent = temperature;
+    }
+
+    // ตัวอย่างการเรียกใช้ฟังก์ชัน updateLocationInfo
+    // คุณสามารถเรียกใช้ฟังก์ชันนี้เมื่อผู้ใช้คลิกที่แผนที่
+    // updateLocationInfo('Bangkok', '30°C');
+</script>
+{% endblock %}
