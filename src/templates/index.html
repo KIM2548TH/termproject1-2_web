@@ -2,124 +2,89 @@
 
 {% block content %}
 <style>
-    /* กำหนดตัวแปรสีธีม */
-    :root {
-        --bg-color: #F5F5F5;         /* สีพื้นหลังหลัก */
-        --container-bg: #D3C4A3;     /* สีพื้นหลังของ container */
-        --sidebar-bg: #333333;       /* สีพื้นหลัง sidebar */
-        --text-color: #333333;       /* สีข้อความหลัก */
-        --sidebar-text: #D3C4A3;     /* สีข้อความใน sidebar */
-        --sidebar-heading: #FFD700; /* สีของ h2 ใน Sidebar */
-        --btn-bg: #D3C4A3;           /* สีพื้นหลังปุ่ม */
-        --btn-text: #333333;         /* สีข้อความของปุ่ม */
-        --btn-hover: #B8A280;        /* สีพื้นหลังปุ่มเมื่อ hover */
-    }
-
-    /* ธีมมืด */
-    .dark-theme {
-        --bg-color: #222831;
-        --container-bg: #393E46;
-        --sidebar-bg: #00ADB5;
-        --text-color: #EEEEEE;
-        --sidebar-text: #EEEEEE;
-        --sidebar-heading: #FFD700; /* สีของ h2 ใน Sidebar */
-        --btn-bg: #00ADB5;
-        --btn-text: #222831;
-        --btn-hover: #008B8B;
-    }
-
-    /* ปรับสีพื้นหลังและข้อความ */
     body {
         font-family: Arial, sans-serif;
-        background-color: var(--bg-color);
+        background-color: #F5F5F5; /* Light background for contrast */
         margin: 0;
         padding: 0;
-        color: var(--text-color);
     }
-
+    .navbar {
+        background-color: #333333; /* Deep Charcoal */
+        color: #D3C4A3; /* Light Almond */
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar a {
+        color: #D3C4A3; /* Light Almond */
+        text-decoration: none;
+        padding: 10px;
+    }
+    .navbar a:hover {
+        text-decoration: underline;
+    }
     .container {
         display: flex;
         justify-content: space-between;
-        background-color: var(--container-bg);
+        background-color: #D3C4A3; /* Light Almond */
+        color: #333333; /* Deep Charcoal */
         padding: 20px;
-        border-radius: 8px;
     }
-
-    /* Sidebar */
     .sidebar {
         order: 2;
-        width: 300px;
-        background-color: var(--sidebar-bg);
-        color: var(--sidebar-text);
+        width: 45%; /* ขยายความกว้างของ sidebar */
+        background-color: #333333; /* Deep Charcoal */
+        color: #D3C4A3; /* Light Almond */
         padding: 20px;
         border-radius: 8px;
     }
-
-    /* ปรับสีของ h2 ใน Sidebar */
-    .sidebar h2 {
-        color: var(--sidebar-heading);
-    }
-
-    /* Map และ PM2.5 ค่า */
     .map-container, .pm25-values {
         order: 1;
         flex-grow: 1;
-        background-color: var(--container-bg);
-        color: var(--text-color);
+        background-color: #D3C4A3; /* Light Almond */
+        color: #333333; /* Deep Charcoal */
         padding: 20px;
         margin-right: 20px;
         border-radius: 8px;
     }
-
-    /* เปลี่ยนสี h1, h2 ตามธีม */
     h1, h2 {
-        color: var(--text-color);
+        color: #333333; /* Deep Charcoal */
     }
-
-    /* ปรับสีลิงก์ใน Sidebar */
     a {
-        color: var(--sidebar-text);
+        color: #D3C4A3; /* Light Almond */
         text-decoration: none;
-        padding: 10px;
-        display: block;
-        border-radius: 5px;
-        transition: background 0.3s ease, color 0.3s ease;
     }
-
     a:hover {
-        background-color: var(--btn-hover);
-        color: var(--btn-text);
+        text-decoration: underline;
     }
-
-    a:active, a:focus {
-        background-color: var(--btn-bg);
-        color: var(--btn-text);
-    }
-
-    /* ปรับสีของรายการใน Sidebar */
     ul {
         list-style-type: none;
         padding: 0;
     }
-
     li {
         margin-bottom: 10px;
     }
 </style>
 
-<div class="container">
+<div class="navbar">
     <h1>PM2.5 Prediction Dashboard</h1>
+    <div>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('prediction', sensor_id=sensor_id) }}">View Predictions</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
     <div class="sidebar">
         <h2>Navigation</h2>
         <ul>
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('prediction', sensor_id=sensor_id) }}">View Predictions</a></li>
         </ul>
-    </div>
-    <div class="map-container">
-        <div id="map"></div>
-    </div>
-    <div class="pm25-values">
         <h2>Predicted PM2.5 Values</h2>
         <div id="pm25-display">
             <p>Select a sensor on the map to view predicted PM2.5 values.</p>
