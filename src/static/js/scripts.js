@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     console.log("Initializing Leaflet Map...");
     const map = L.map('map', {
-        center: [13.736717, 100.523186], // Center ที่กรุงเทพ (เปลี่ยนได้)
-        zoom: 10,
+        center: [7.006, 100.498], // Center ที่มหาวิทยาลัยสงขลานครินทร์
+        zoom: 13,
         dragging: true,
         zoomControl: true,
         scrollWheelZoom: true,
@@ -40,7 +40,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         sensorData.forEach(sensor => {
-            const marker = L.marker([sensor.latitude, sensor.longitude]).addTo(map);
+            const marker = L.marker([sensor.latitude, sensor.longitude], {
+                icon: L.icon({
+                    iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
+                    iconSize: [32, 32],
+                    iconAnchor: [16, 32],
+                    popupAnchor: [0, -32]
+                })
+            }).addTo(map);
             marker.bindPopup(`Sensor: ${sensor.name}<br>PM2.5: ${sensor.pm25} µg/m³`);
         });
     }
@@ -61,21 +68,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Call the function to fetch sensor data
     fetchSensorData();
 
-    // Event listener for sensor selection
-    const sensorSelect = document.getElementById('sensor-select');
-    const pm25Display = document.getElementById('pm25-value');
-
-    if (sensorSelect && pm25Display) {
-        sensorSelect.addEventListener('change', function() {
-            const selectedSensorId = this.value;
-            fetch(`/api/predictions/${selectedSensorId}`)
-                .then(response => response.json())
-                .then(data => {
-                    pm25Display.innerText = `Predicted PM2.5: ${data.pm25} µg/m³`;
-                })
-                .catch(error => console.error('Error fetching prediction data:', error));
-        });
-    } else {
-        console.warn("Warning: #sensor-select หรือ #pm25-value ไม่พบใน DOM");
-    }
+    // Add a marker for the sensor at มหาวิทยาลัยสงขลานครินทร์
+    const psuMarker = L.marker([7.006, 100.498], {
+        icon: L.icon({
+            iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -32]
+        })
+    }).addTo(map);
+    psuMarker.bindPopup('มหาวิทยาลัยสงขลานครินทร์<br>PM2.5: 25 µg/m³');
 });
