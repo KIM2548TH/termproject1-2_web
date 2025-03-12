@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>PM2.5 Prediction Dashboard</h1>
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('prediction', sensor_id=sensor_id) }}">View Predictions</a></li>
+        </ul>
+    </div>
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+    <div class="pm25-values">
+        <h2>Predicted PM2.5 Values</h2>
+        <div id="pm25-display">
+            <p>Select a sensor on the map to view predicted PM2.5 values.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

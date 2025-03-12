@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>PM2.5 Prediction Details</h1>
+    <div id="prediction-info">
+        <h2>Predicted PM2.5 Values:</h2>
+        <div id="prediction-chart"></div>
+    </div>
+</div>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+    const predictionData = JSON.parse('{{ prediction_data | tojson | safe }}');
+    const layout = {
+        title: 'Predicted PM2.5 Values Over Time',
+        xaxis: { title: 'Time' },
+        yaxis: { title: 'PM2.5 (µg/m³)' }
+    };
+    Plotly.newPlot('prediction-chart', [{
+        x: predictionData.time,
+        y: predictionData.values,
+        type: 'scatter',
+        mode: 'lines+markers',
+        marker: { color: 'blue' }
+    }], layout);
+</script>
+{% endblock %}

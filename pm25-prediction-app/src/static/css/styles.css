@@ -1,0 +1,103 @@
+/* ตั้งค่าทั่วไป */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ส่วนหัวของเว็บ */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+}
+
+/* โครงสร้าง Layout หลัก */
+.container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+}
+
+/* ส่วนแผนที่ (ฝั่งซ้าย) */
+.map-container {
+    flex: 1; /* ใช้พื้นที่ที่เหลือทั้งหมด */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#map {
+    width: 90%;  /* ปรับให้ขนาดไม่ชิดขอบเกินไป */
+    height: 90%;
+    min-height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Sidebar (ฝั่งขวา) */
+.sidebar {
+    width: 30%; /* ปรับให้ Sidebar ไม่แคบเกินไป */
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh; /* ให้ Sidebar สูงเต็มหน้าจอ */
+    overflow-y: auto; /* เผื่อ Sidebar เนื้อหาเยอะ */
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background: #2c3e50;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background: #e8491d;
+}
+
+/* ส่วนแสดงค่าฝุ่น PM2.5 */
+.pm25-values {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#pm25-display {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ส่วนท้ายของเว็บ */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #35424a;
+    color: #ffffff;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
