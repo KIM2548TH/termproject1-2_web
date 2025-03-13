@@ -28,6 +28,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     console.log("Map Loaded!");
 
+    // Add search control to the map
+    const searchControl = new L.Control.Search({
+        url: 'https://nominatim.openstreetmap.org/search?format=json&q={s}',
+        jsonpParam: 'json_callback',
+        propertyName: 'display_name',
+        propertyLoc: ['lat', 'lon'],
+        marker: L.marker([0, 0]),
+        autoCollapse: true,
+        autoType: false,
+        minLength: 2
+    });
+    map.addControl(searchControl);
+
     // Function to update PM2.5 values on the map
     function updatePM25Values(sensorData) {
         console.log("Updating PM2.5 values...");
