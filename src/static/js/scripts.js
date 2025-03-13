@@ -131,4 +131,32 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('location-name').textContent = location;
         document.getElementById('temperature').textContent = `${pm25} µg/m³`;
     }
+
+    // Function to change region
+    window.changeRegion = function(region) {
+        let center;
+        switch(region) {
+            case 'north':
+                center = [18.788, 98.985]; // Example coordinates for North
+                break;
+            case 'northeast':
+                center = [16.441, 102.835]; // Example coordinates for Northeast
+                break;
+            case 'central':
+                center = [14.020, 100.525]; // Example coordinates for Central
+                break;
+            case 'east':
+                center = [12.923, 101.651]; // Example coordinates for East
+                break;
+            case 'west':
+                center = [13.412, 99.963]; // Example coordinates for West
+                break;
+            case 'south':
+                center = [7.006, 100.498]; // Example coordinates for South
+                break;
+            default:
+                center = [7.006, 100.498]; // Default to South
+        }
+        map.setView(center, 10); // Change the map view to the selected region
+    }
 });
