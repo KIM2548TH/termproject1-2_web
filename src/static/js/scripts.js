@@ -85,6 +85,34 @@ document.addEventListener("DOMContentLoaded", function() {
         updateLocationInfo('มหาวิทยาลัยสงขลานครินทร์', 25);
     });
 
+    // Add a marker for the sensor at สวนสาธารณะหาดใหญ่
+    const hatyaiParkMarker = L.marker([7.017, 100.504], {
+        icon: L.icon({
+            iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -32]
+        })
+    }).addTo(map);
+    hatyaiParkMarker.bindPopup('สวนสาธารณะหาดใหญ่<br>PM2.5: 30 µg/m³');
+    hatyaiParkMarker.on('click', function() {
+        updateLocationInfo('สวนสาธารณะหาดใหญ่', 30);
+    });
+
+    // Add a marker for the sensor at สนามกลางหาดใหญ่
+    const hatyaiStadiumMarker = L.marker([7.008, 100.474], {
+        icon: L.icon({
+            iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -32]
+        })
+    }).addTo(map);
+    hatyaiStadiumMarker.bindPopup('สนามกลางหาดใหญ่<br>PM2.5: 28 µg/m³');
+    hatyaiStadiumMarker.on('click', function() {
+        updateLocationInfo('สนามกลางหาดใหญ่', 28);
+    });
+
     // Function to update location and temperature in the sidebar
     function updateLocationInfo(location, pm25) {
         document.getElementById('location-name').textContent = location;
