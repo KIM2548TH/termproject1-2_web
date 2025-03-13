@@ -49,6 +49,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 })
             }).addTo(map);
             marker.bindPopup(`Sensor: ${sensor.name}<br>PM2.5: ${sensor.pm25} µg/m³`);
+            marker.on('click', function() {
+                updateLocationInfo(sensor.name, sensor.pm25);
+            });
         });
     }
 
@@ -78,4 +81,13 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }).addTo(map);
     psuMarker.bindPopup('มหาวิทยาลัยสงขลานครินทร์<br>PM2.5: 25 µg/m³');
+    psuMarker.on('click', function() {
+        updateLocationInfo('มหาวิทยาลัยสงขลานครินทร์', 25);
+    });
+
+    // Function to update location and temperature in the sidebar
+    function updateLocationInfo(location, pm25) {
+        document.getElementById('location-name').textContent = location;
+        document.getElementById('temperature').textContent = `${pm25} µg/m³`;
+    }
 });

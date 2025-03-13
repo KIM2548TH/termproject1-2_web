@@ -1,6 +1,4 @@
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 from flask import Flask
@@ -8,12 +6,12 @@ import models
 
 # Create a Flask server
 server = Flask(__name__)
-app = dash.Dash(__name__, server=server, url_base_pathname='/dash/')
-
-# Initialize the database
 server.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///pm25.db"
 server.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 models.init_app(server)
+
+# Create a Dash app
+app = Dash(__name__, server=server, url_base_pathname='/dash/')
 
 # Define the layout of the Dash app
 app.layout = html.Div([
