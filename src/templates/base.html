@@ -17,10 +17,111 @@
 <body>
     
     <main>
-        {% block content %}
-
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #F5F5F5; /* Light background for contrast */
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden; /* ป้องกันการเลื่อนซ้ายขวา */
+            }
+            .navbar {
+                background-color: #333333; /* Deep Charcoal */
+                color: #D3C4A3; /* Light Almond */
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 2px solid #D3C4A3; /* เพิ่มเส้นขอบด้านล่าง */
+            }
+            .navbar h1 {
+                color: #D3C4A3; /* Light Almond */
+                margin: 0;
+            }
+            .navbar a {
+                color: #D3C4A3; /* Light Almond */
+                text-decoration: none;
+                padding: 10px;
+            }
+            .navbar a:hover {
+                text-decoration: underline;
+            }
+            .container {
+                display: flex;
+                justify-content: space-between;
+                background-color: #333333; /* Deep Charcoal */
+                color: #333333; /* Deep Charcoal */
+                padding: 20px; /* ปรับ padding เพื่อให้มีระยะห่างจากขอบ */
+                height: calc(100vh - 60px); /* ปรับความสูงของ container */
+                margin: 0 20px; /* เพิ่ม margin ซ้ายและขวาเพื่อให้มีระยะห่างจากขอบ */
+                border-radius: 8px; /* เพิ่ม border-radius เพื่อให้ container มีขอบมน */
+            }
+            .sidebar {
+                order: 2;
+                width: 45%; /* ขยายความกว้างของ sidebar */
+                background-color: #333333; /* Deep Charcoal */
+                color: #D3C4A3; /* Light Almond */
+                padding: 20px;
+                margin-top: 20px; /* เพิ่ม margin-top เพื่อให้มีระยะห่างจาก map-container */
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* จัดตำแหน่งให้อยู่ตรงกลาง */
+            }
+            .map-container {
+                order: 1;
+                flex-grow: 1;
+                background-color: #333333; /* Deep Charcoal */
+                color: #333333; /* Deep Charcoal */
+                padding: 0; /* ลบ padding เพื่อให้แผนที่เต็มพื้นที่ */
+                margin-right: 20px; /* เพิ่ม margin-right เพื่อให้มีระยะห่างจาก sidebar */
+                border-radius: 8px; /* เพิ่ม border-radius เพื่อให้แผนที่มีขอบมน */
+                height: 100%; /* ปรับความสูงของ map-container */
+            }
+            .info-box {
+                background-color: #D3C4A3; /* Light Almond */
+                color: #333333; /* Deep Charcoal */
+                padding: 20px;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            h1 {
+                color: #D3C4A3; /* Light Almond */
+            }
+            h2 {
+                color: #333333; /* Deep Charcoal */
+            }
+            a {
+                color: #D3C4A3; /* Light Almond */
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            li {
+                margin-bottom: 10px;
+            }
+        </style>
         
-        {% endblock %}
+        <div class="navbar">
+            <h1>SmogSense</h1>
+            <div>
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('prediction', sensor_id=sensor_id) }}">View Predictions</a>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="map-container">
+                <div id="map" style="width: 100%; height: 100%;"></div>
+            </div>
+            {% block content %}
+            {% endblock %}
+        </div>
     </main>
     <footer>
         <p>&copy; 2023 PM2.5 Prediction App</p>

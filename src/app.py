@@ -1,8 +1,8 @@
-# webtermclone/pm2.5prompt/pm25-prediction-app/src/app.py
 from flask import Flask, render_template, request, jsonify
 import models
 import forms
 import utils
+from dash_app import app as dash_app
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///pm25.db"
