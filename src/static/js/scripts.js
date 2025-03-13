@@ -130,6 +130,8 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateLocationInfo(location, pm25) {
         document.getElementById('location-name').textContent = location;
         document.getElementById('temperature').textContent = `${pm25} µg/m³`;
+        document.getElementById('modal-location-name').textContent = location;
+        document.getElementById('modal-temperature').textContent = `${pm25} µg/m³`;
     }
 
     // Function to change region
@@ -158,5 +160,31 @@ document.addEventListener("DOMContentLoaded", function() {
                 center = [7.006, 100.498]; // Default to South
         }
         map.setView(center, 10); // Change the map view to the selected region
+    }
+
+    // Get the modal
+    const modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    const btn = document.getElementById("view-predictions");
+
+    // Get the <span> element that closes the modal
+    const span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     }
 });
