@@ -668,7 +668,7 @@ li {
     height: 100%;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-    padding-top: 60px;
+    padding-top: 4px;
 }
 .modal-content {
     background-color: #333333; /* Deep Charcoal */
@@ -694,11 +694,11 @@ li {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์ */
-    gap: 10px;
+    gap: 8px;
 }
 .info-box {
     background: #fcfcfb; /* Light Almond */
-    padding: 15px;
+    padding: 0.05px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
