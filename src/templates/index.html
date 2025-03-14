@@ -1,74 +1,238 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="sidebar">
-        <h2>Air Quality Monitor</h2>
-        <h3 id="location-name">Bangkok</h3>
+<div class="air-quality-container">
+    <h1>Air Quality Monitor</h1>
 
-        <div class="grid-container">
-            <div class="info-box">
-                <p>🌫 <strong>PM2.5</strong></p>
-                <p class="value"><span id="pm25">45</span> µg/m³</p>
+    <h2>Bangkok</h2>
+
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <circle cx="12" cy="12" r="10" stroke="#4285F4" stroke-width="2" fill="none" />
+                    <path d="M12 8v8M8 12h8" stroke="#4285F4" stroke-width="2" />
+                </svg>
             </div>
-            <div class="info-box">
-                <p>🌫 <strong>PM10</strong></p>
-                <p class="value"><span id="pm10">75</span> µg/m³</p>
-            </div>
-            <div class="info-box">
-                <p>🌡 <strong>Temperature</strong></p>
-                <p class="value"><span id="temperature">32</span>°C</p>
-            </div>
-            <div class="info-box">
-                <p>💧 <strong>Humidity</strong></p>
-                <p class="value"><span id="humidity">65</span>%</p>
-            </div>
+            <div class="metric-label">PM2.5</div>
+            <div class="metric-value">45 <span class="metric-unit">μg/m³</span></div>
         </div>
 
-        <h3>Forecast Model</h3>
-        <select id="forecast-model">
-            <option value="SARIMAX">SARIMAX</option>
-        </select>
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <circle cx="12" cy="12" r="10" stroke="#4285F4" stroke-width="2" fill="none" />
+                    <path d="M12 8v8M8 12h8" stroke="#4285F4" stroke-width="2" />
+                </svg>
+            </div>
+            <div class="metric-label">PM10</div>
+            <div class="metric-value">75 <span class="metric-unit">μg/m³</span></div>
+        </div>
 
-        <div class="forecast-chart">
-            <iframe src="/dash/" width="100%" height="200px" style="border:none;"></iframe>
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 3v18M6 7h12" stroke="#FF5252" stroke-width="2" />
+                </svg>
+            </div>
+            <div class="metric-label">Temperature</div>
+            <div class="metric-value">32 <span class="metric-unit">°C</span></div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z" stroke="#4FC3F7"
+                        stroke-width="2" fill="none" />
+                    <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" fill="#4FC3F7" />
+                </svg>
+            </div>
+            <div class="metric-label">Humidity</div>
+            <div class="metric-value">65<span class="metric-unit">%</span></div>
         </div>
     </div>
 
-    <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์ */
-            gap: 10px;
-        }
-        .info-box {
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .value {
-            font-size: 20px;
-            font-weight: bold;
-        }
-    </style>
+    <div class="forecast-section">
+        <div class="forecast-header">
+            <h3>Forecast Model</h3>
+            <select id="forecast-model" class="forecast-select">
+                <option value="SARIMAX">SARIMAX</option>
+            </select>
+        </div>
 
-    <script>
-        function updateAirQuality(data) {
-            document.getElementById('location-name').textContent = data.location || "Unknown";
-            document.getElementById('pm25').textContent = data.pm25 || "N/A";
-            document.getElementById('pm10').textContent = data.pm10 || "N/A";
-            document.getElementById('temperature').textContent = data.temperature || "N/A";
-            document.getElementById('humidity').textContent = data.humidity || "N/A";
-        }
+        <h4>7-Day PM2.5 Forecast</h4>
 
-        // ตัวอย่างข้อมูล สามารถแทนที่ด้วย API จริง
-        updateAirQuality({
-            location: "Bangkok",
-            pm25: 45,
-            pm10: 75,
-            temperature: 32,
-            humidity: 65
-        });
-    </script>
+        <div class="forecast-chart">
+            <div class="chart-legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #4DD0E1;"></div>
+                    <div>PM2.5 Forecast</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="forecastChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .air-quality-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: #555;
+    }
+
+    .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .metric-card {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .metric-icon {
+        margin-bottom: 10px;
+    }
+
+    .metric-label {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    .metric-value {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .metric-unit {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .forecast-section {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .forecast-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .forecast-header h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .forecast-select {
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    h4 {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .chart-legend {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        font-size: 14px;
+    }
+
+    .legend-color {
+        width: 20px;
+        height: 10px;
+        margin-right: 5px;
+        border-radius: 2px;
+    }
+
+    .chart-container {
+        height: 200px;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // สร้างกราฟพยากรณ์ PM2.5
+    const ctx = document.getElementById('forecastChart').getContext('2d');
+    const forecastChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['2024-03-01', '2024-03-02', '2024-03-03', '2024-03-04', '2024-03-05', '2024-03-06', '2024-03-07'],
+            datasets: [{
+                label: 'PM2.5 Forecast',
+                data: [40, 38, 35, 42, 43, 40, 35],
+                backgroundColor: 'rgba(77, 208, 225, 0.2)',
+                borderColor: '#4DD0E1',
+                borderWidth: 2,
+                tension: 0.3,
+                pointRadius: 4,
+                pointBackgroundColor: '#fff',
+                pointBorderColor: '#4DD0E1'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    min: 20,
+                    max: 60,
+                    grid: {
+                        display: true,
+                        color: 'rgba(0, 0, 0, 0.05)'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+</script>
 {% endblock %}
