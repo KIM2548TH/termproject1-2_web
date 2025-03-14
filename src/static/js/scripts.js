@@ -1,190 +1,97 @@
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("Script Loaded!"); // Debugging log
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Script Loaded!");
 
-    const mapElement = document.getElementById('map');
-    if (!mapElement) {
-        console.error("Error: #map ไม่พบใน DOM!");
-        return;
-    }
-
-    console.log("Initializing Leaflet Map...");
+    // กำหนดค่าเริ่มต้นของแผนที่
     const map = L.map('map', {
-        center: [7.006, 100.498], // Center ที่มหาวิทยาลัยสงขลานครินทร์
+        center: [7.006, 100.498], // ศูนย์กลางที่มหาวิทยาลัยสงขลานครินทร์
         zoom: 13,
-        dragging: true,
-        zoomControl: true,
-        scrollWheelZoom: true,
-        doubleClickZoom: true,
-        touchZoom: true,
-        tap: true,
     });
 
-    // Add a tile layer to the map
+    // เพิ่ม Tile Layer (แผนที่พื้นหลัง)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap',
-        detectRetina: true,
     }).addTo(map);
 
     console.log("Map Loaded!");
 
-    // Add search control to the map
-    const searchControl = new L.Control.Search({
-        url: 'https://nominatim.openstreetmap.org/search?format=json&q={s}',
-        jsonpParam: 'json_callback',
-        propertyName: 'display_name',
-        propertyLoc: ['lat', 'lon'],
-        marker: L.marker([0, 0]),
-        autoCollapse: true,
-        autoType: false,
-        minLength: 2
-    });
-    map.addControl(searchControl);
+    // ข้อมูลเซ็นเซอร์ตัวอย่าง
+    const sensorData = [
+        {
+            name: "มหาวิทยาลัยสงขลานครินทร์",
+            latitude: 7.006,
+            longitude: 100.498,
+            pm25: 25,
+            pm10: 40,
+            temperature: 32,
+            humidity: 65,
+        },
+        {
+            name: "สวนสาธารณะหาดใหญ่",
+            latitude: 7.017,
+            longitude: 100.504,
+            pm25: 30,
+            pm10: 45,
+            temperature: 31,
+            humidity: 70,
+        },
+        {
+            name: "สนามกลางหาดใหญ่",
+            latitude: 7.008,
+            longitude: 100.474,
+            pm25: 28,
+            pm10: 42,
+            temperature: 30,
+            humidity: 68,
+        },
+    ];
 
-    // Function to update PM2.5 values on the map
-    function updatePM25Values(sensorData) {
-        console.log("Updating PM2.5 values...");
+    // เพิ่ม Marker และ Popup สำหรับแต่ละเซ็นเซอร์
+    sensorData.forEach(sensor => {
+        const marker = L.marker([sensor.latitude, sensor.longitude], {
+            icon: L.icon({
+                iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+            }),
+        }).addTo(map);
 
-        // Remove any existing markers before adding new ones
-        map.eachLayer(function(layer) {
-            if (layer instanceof L.Marker) {
-                map.removeLayer(layer);
-            }
+        marker.bindPopup(`
+            <b>${sensor.name}</b><br>
+            PM2.5: ${sensor.pm25} µg/m³<br>
+            PM10: ${sensor.pm10} µg/m³<br>
+            อุณหภูมิ: ${sensor.temperature} °C<br>
+            ความชื้น: ${sensor.humidity}%
+        `);
+
+        // เมื่อคลิกที่ Marker ให้อัปเดตข้อมูลใน sidebar
+        marker.on('click', function () {
+            updateLocationInfo(
+                sensor.name, // ชื่อสถานที่
+                sensor.pm25, // ค่า PM2.5
+                sensor.pm10, // ค่า PM10
+                sensor.temperature, // อุณหภูมิ
+                sensor.humidity // ความชื้น
+            );
         });
-
-        sensorData.forEach(sensor => {
-            const marker = L.marker([sensor.latitude, sensor.longitude], {
-                icon: L.icon({
-                    iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
-                    iconSize: [32, 32],
-                    iconAnchor: [16, 32],
-                    popupAnchor: [0, -32]
-                })
-            }).addTo(map);
-            marker.bindPopup(`Sensor: ${sensor.name}<br>PM2.5: ${sensor.pm25} µg/m³`);
-            marker.on('click', function() {
-                updateLocationInfo(sensor.name, sensor.pm25);
-            });
-        });
-    }
-
-    // Fetch sensor data and update the map
-    async function fetchSensorData() {
-        try {
-            console.log("Fetching sensor data...");
-            const response = await fetch('/api/sensors');
-            const data = await response.json();
-            console.log('Sensor Data:', data);
-            updatePM25Values(data);
-        } catch (error) {
-            console.error('Error fetching sensor data:', error);
-        }
-    }
-
-    // Call the function to fetch sensor data
-    fetchSensorData();
-
-    // Add a marker for the sensor at มหาวิทยาลัยสงขลานครินทร์
-    const psuMarker = L.marker([7.006, 100.498], {
-        icon: L.icon({
-            iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
-            iconSize: [32, 32],
-            iconAnchor: [16, 32],
-            popupAnchor: [0, -32]
-        })
-    }).addTo(map);
-    psuMarker.bindPopup('มหาวิทยาลัยสงขลานครินทร์<br>PM2.5: 25 µg/m³');
-    psuMarker.on('click', function() {
-        updateLocationInfo('มหาวิทยาลัยสงขลานครินทร์', 25);
     });
 
-    // Add a marker for the sensor at สวนสาธารณะหาดใหญ่
-    const hatyaiParkMarker = L.marker([7.017, 100.504], {
-        icon: L.icon({
-            iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
-            iconSize: [32, 32],
-            iconAnchor: [16, 32],
-            popupAnchor: [0, -32]
-        })
-    }).addTo(map);
-    hatyaiParkMarker.bindPopup('สวนสาธารณะหาดใหญ่<br>PM2.5: 30 µg/m³');
-    hatyaiParkMarker.on('click', function() {
-        updateLocationInfo('สวนสาธารณะหาดใหญ่', 30);
-    });
-
-    // Add a marker for the sensor at สนามกลางหาดใหญ่
-    const hatyaiStadiumMarker = L.marker([7.008, 100.474], {
-        icon: L.icon({
-            iconUrl: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
-            iconSize: [32, 32],
-            iconAnchor: [16, 32],
-            popupAnchor: [0, -32]
-        })
-    }).addTo(map);
-    hatyaiStadiumMarker.bindPopup('สนามกลางหาดใหญ่<br>PM2.5: 28 µg/m³');
-    hatyaiStadiumMarker.on('click', function() {
-        updateLocationInfo('สนามกลางหาดใหญ่', 28);
-    });
-
-    // Function to update location and temperature in the sidebar
-    function updateLocationInfo(location, pm25) {
+    // ฟังก์ชันอัปเดตข้อมูลใน sidebar
+    function updateLocationInfo(location, pm25, pm10, temperature, humidity) {
+        // อัปเดตชื่อสถานที่
         document.getElementById('location-name').textContent = location;
-        document.getElementById('temperature').textContent = `${pm25} µg/m³`;
-        document.getElementById('modal-location-name').textContent = location;
-        document.getElementById('modal-temperature').textContent = `${pm25} µg/m³`;
-    }
 
-    // Function to change region
-    window.changeRegion = function(region) {
-        let center;
-        switch(region) {
-            case 'north':
-                center = [18.788, 98.985]; // Example coordinates for North
-                break;
-            case 'northeast':
-                center = [16.441, 102.835]; // Example coordinates for Northeast
-                break;
-            case 'central':
-                center = [14.020, 100.525]; // Example coordinates for Central
-                break;
-            case 'east':
-                center = [12.923, 101.651]; // Example coordinates for East
-                break;
-            case 'west':
-                center = [13.412, 99.963]; // Example coordinates for West
-                break;
-            case 'south':
-                center = [7.006, 100.498]; // Example coordinates for South
-                break;
-            default:
-                center = [7.006, 100.498]; // Default to South
-        }
-        map.setView(center, 10); // Change the map view to the selected region
-    }
+        // อัปเดตค่า PM2.5
+        document.getElementById('pm25-value').textContent = pm25;
 
-    // Get the modal
-    const modal = document.getElementById("myModal");
+        // อัปเดตค่า PM10
+        document.getElementById('pm10-value').textContent = pm10;
 
-    // Get the button that opens the modal
-    const btn = document.getElementById("view-predictions");
+        // อัปเดตอุณหภูมิ
+        document.getElementById('temperature-value').textContent = temperature;
 
-    // Get the <span> element that closes the modal
-    const span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
+        // อัปเดตความชื้น
+        document.getElementById('humidity-value').textContent = humidity;
     }
 });

@@ -22,14 +22,23 @@ header {
 .container {
     display: flex;
     width: 100%;
-    flex: 1;
+    /* flex: 1; */
     background-color: #333333;
     color: #333333;
-    padding: 20px;
-    height: calc(100vh - 60px);
-    margin: 0 20px;
-    border-radius: 8px;
+    padding: 10px;
+    height: calc(100vh - 80px);
+    margin: 0 0px;
+    border-radius: 0px;
 }
+
+
+h1 {
+    color: #D3C4A3; /* Light Almond */
+}
+h2 {
+    color: #D3C4A3; /* Light Almond */
+}
+
 
 /* ส่วนแผนที่ (ฝั่งซ้าย) */
 .map-container {
