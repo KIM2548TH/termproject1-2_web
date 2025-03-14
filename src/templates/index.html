@@ -130,5 +130,47 @@
             }
         }
     });
+
+    // ฟังก์ชันอัปเดตสีพื้นหลังของช่อง PM2.5
+    function updatePM25Color(pm25Value) {
+        const pm25Card = document.getElementById('pm25-value').parentElement.parentElement;
+
+        // กำหนดสีตามค่า PM2.5
+        if (pm25Value <= 12) {
+            pm25Card.style.backgroundColor = '#4CAF50'; // Good
+        } else if (pm25Value <= 35.4) {
+            pm25Card.style.backgroundColor = '#FFEB3B'; // Moderate
+        } else if (pm25Value <= 55.4) {
+            pm25Card.style.backgroundColor = '#FF9800'; // Unhealthy for Sensitive Groups
+        } else if (pm25Value <= 150.4) {
+            pm25Card.style.backgroundColor = '#F44336'; // Unhealthy
+        } else if (pm25Value <= 250.4) {
+            pm25Card.style.backgroundColor = '#9C27B0'; // Very Unhealthy
+        } else {
+            pm25Card.style.backgroundColor = '#795548'; // Hazardous
+        }
+    }
+
+    // ฟังก์ชันอัปเดตข้อมูล PM2.5 และสีพื้นหลัง
+    function updatePM25Data(pm25Value) {
+        // อัปเดตค่า PM2.5
+        document.getElementById('pm25-value').textContent = pm25Value;
+
+        // อัปเดตสีพื้นหลัง
+        updatePM25Color(pm25Value);
+    }
+
+    // ตัวอย่างการอัปเดตค่า PM2.5
+    updatePM25Data(45); // เปลี่ยนค่า PM2.5 เป็น 45 และอัปเดตสี
 </script>
+
+<div class="air-quality-index">
+    <h3>PM2.5 Air Quality Index</h3>
+    <div class="index-level" style="background-color: #4CAF50;">Good (0-12 µg/m³)</div>
+    <div class="index-level" style="background-color: #FFEB3B;">Moderate (12.1-35.4 µg/m³)</div>
+    <div class="index-level" style="background-color: #FF9800;">Unhealthy for Sensitive Groups (35.5-55.4 µg/m³)</div>
+    <div class="index-level" style="background-color: #F44336;">Unhealthy (55.5-150.4 µg/m³)</div>
+    <div class="index-level" style="background-color: #9C27B0;">Very Unhealthy (150.5-250.4 µg/m³)</div>
+    <div class="index-level" style="background-color: #795548;">Hazardous (250.5+ µg/m³)</div>
+</div>
 {% endblock %}
