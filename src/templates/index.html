@@ -2,9 +2,8 @@
 
 {% block content %}
 <div class="air-quality-container">
-    
-
-    <h2>Bangkok</h2>
+    <!-- เพิ่ม ID ให้กับส่วนที่ต้องการอัปเดต -->
+    <h2 id="location-name">Bangkok</h2>
 
     <div class="metrics-grid">
         <div class="metric-card">
@@ -15,7 +14,9 @@
                 </svg>
             </div>
             <div class="metric-label">PM2.5</div>
-            <div class="metric-value">45 <span class="metric-unit">μg/m³</span></div>
+            <div class="metric-value">
+                <span id="pm25-value">45</span> <span class="metric-unit">μg/m³</span>
+            </div>
         </div>
 
         <div class="metric-card">
@@ -26,7 +27,9 @@
                 </svg>
             </div>
             <div class="metric-label">PM10</div>
-            <div class="metric-value">75 <span class="metric-unit">μg/m³</span></div>
+            <div class="metric-value">
+                <span id="pm10-value">75</span> <span class="metric-unit">μg/m³</span>
+            </div>
         </div>
 
         <div class="metric-card">
@@ -36,7 +39,9 @@
                 </svg>
             </div>
             <div class="metric-label">Temperature</div>
-            <div class="metric-value">32 <span class="metric-unit">°C</span></div>
+            <div class="metric-value">
+                <span id="temperature-value">32</span> <span class="metric-unit">°C</span>
+            </div>
         </div>
 
         <div class="metric-card">
@@ -48,7 +53,9 @@
                 </svg>
             </div>
             <div class="metric-label">Humidity</div>
-            <div class="metric-value">65<span class="metric-unit">%</span></div>
+            <div class="metric-value">
+                <span id="humidity-value">65</span> <span class="metric-unit">%</span>
+            </div>
         </div>
     </div>
 
@@ -76,7 +83,6 @@
         </div>
     </div>
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
