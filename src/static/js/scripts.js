@@ -95,6 +95,26 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById('humidity-value').textContent = humidity;
     }
 
+    // เพิ่ม Control สำหรับแสดง PM2.5 Air Quality Index ในแผนที่
+    const airQualityControl = L.control({ position: 'bottomleft' });
+
+    airQualityControl.onAdd = function (map) {
+        const div = L.DomUtil.create('div', 'air-quality-control');
+        div.innerHTML = `
+            <h3 style="font-size: 14px; margin: 5px 0;">PM2.5 Air Quality Index</h3>
+            <div class="index-level" style="background-color: #4CAF50; font-size: 12px; padding: 2px 5px; margin: 2px 0;">Good (0-12 µg/m³)</div>
+            <div class="index-level" style="background-color: #FFEB3B; font-size: 12px; padding: 2px 5px; margin: 2px 0;">Moderate (12.1-35.4 µg/m³)</div>
+            <div class="index-level" style="background-color: #FF9800; font-size: 12px; padding: 2px 5px; margin: 2px 0;">Unhealthy for Sensitive Groups (35.5-55.4 µg/m³)</div>
+            <div class="index-level" style="background-color: #F44336; font-size: 12px; padding: 2px 5px; margin: 2px 0;">Unhealthy (55.5-150.4 µg/m³)</div>
+            <div class="index-level" style="background-color: #9C27B0; font-size: 12px; padding: 2px 5px; margin: 2px 0;">Very Unhealthy (150.5-250.4 µg/m³)</div>
+            <div class="index-level" style="background-color: #795548; font-size: 12px; padding: 2px 5px; margin: 2px 0;">Hazardous (250.5+ µg/m³)</div>
+        `;
+        return div;
+    
+    };
+
+    airQualityControl.addTo(map);
+
     // เพิ่ม Control สำหรับเลือกภาค
     const regionControl = L.control({ position: 'topleft' });
 
@@ -132,4 +152,3 @@ document.addEventListener("DOMContentLoaded", function () {
         map.setView(region.center, region.zoom);
     });
 });
-
