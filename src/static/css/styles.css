@@ -421,7 +421,7 @@ footer {
 }
 
 
-/* สไตล์สำหรับ PM2.5 Air Quality Index */
+/* ปรับพื้นที่ PM2.5 Air Quality Index และตาราง */
 .air-quality-index {
     margin-top: 20px;
     padding: 15px;
@@ -451,11 +451,11 @@ footer {
     margin-bottom: 0;
 }
 
-/* สไตล์สำหรับตาราง 7-Day PM2.5 Forecast Table */
+/* ปรับพื้นที่ตารางให้อยู่ในพื้นที่เดียวกัน */
 .forecast-table {
     margin-top: 20px;
     padding: 15px;
-    background-color: #ffffff;
+    background-color: #ffffff; /* พื้นหลังสีขาวเหมือนกัน */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -488,4 +488,29 @@ footer {
 
 .forecast-table tbody tr:hover {
     background-color: #f1f1f1;
+}
+
+/* สไตล์สำหรับแสดงสถานที่และอุณหภูมิ */
+.location-temperature {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.location-temperature h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fcfafa;
+    margin-bottom: 10px;
+}
+
+.temperature-display {
+    font-size: 48px;
+    font-weight: bold;
+    color: #dcdbdb;
+}
+
+.weather-condition {
+    font-size: 24px;
+    color: #accaf1;
+    margin-left: 10px;
 }

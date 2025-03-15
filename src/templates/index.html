@@ -2,8 +2,14 @@
 
 {% block content %}
 <div class="air-quality-container">
-    <!-- เพิ่ม ID ให้กับส่วนที่ต้องการอัปเดต -->
-    <h2 id="location-name">Bangkok</h2>
+    <!-- ส่วนแสดงสถานที่และอุณหภูมิ -->
+    <div class="location-temperature">
+        <h1 id="location-name">AMPHOE HAT YAI</h1>
+        <div class="temperature-display">
+            <span id="temperature-value">26</span>°C
+            <span class="weather-condition">Cloudy</span>
+        </div>
+    </div>
 
     <div class="metrics-grid">
         <div class="metric-card">
@@ -40,7 +46,7 @@
             </div>
             <div class="metric-label">Temperature</div>
             <div class="metric-value">
-                <span id="temperature-value">32</span> <span class="metric-unit">°C</span>
+                <span id="temperature-value">26</span> <span class="metric-unit">°C</span>
             </div>
         </div>
 
@@ -221,7 +227,5 @@
     // อัปเดตตารางเมื่อโหลดหน้าเว็บ
     updateForecastTable(forecastData);
 </script>
-
-
 
 {% endblock %}
