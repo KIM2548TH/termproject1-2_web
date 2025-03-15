@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ข้อมูลเซ็นเซอร์ตัวอย่าง
     const sensorData = [
         {
-            name: "มหาวิทยาลัยสงขลานครินทร์",
+            name: "Prince of Songkla University",
             latitude: 7.006,
             longitude: 100.498,
             pm25: 25,
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             humidity: 65,
         },
         {
-            name: "สวนสาธารณะหาดใหญ่",
+            name: "Hatyai City Municipal Park",
             latitude: 7.017,
             longitude: 100.504,
             pm25: 30,
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             humidity: 70,
         },
         {
-            name: "สนามกลางหาดใหญ่",
+            name: "Jiranakorn Stadium",
             latitude: 7.008,
             longitude: 100.474,
             pm25: 28,
@@ -100,17 +100,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     airQualityControl.onAdd = function (map) {
         const div = L.DomUtil.create('div', 'air-quality-control');
+        div.style.backgroundColor = "white";
+        div.style.padding = "8px";
+        div.style.borderRadius = "8px";
+        div.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.2)";
         div.innerHTML = `
-            <h3 style="font-size: 14px; margin: 5px 0;">PM2.5 Air Quality Index</h3>
-            <div class="index-level" style="background-color: #4CAF50; font-size: 12px; padding: 2px 5px; margin: 2px 0;">Good (0-12 µg/m³)</div>
-            <div class="index-level" style="background-color: #FFEB3B; font-size: 12px; padding: 2px 5px; margin: 2px 0;">Moderate (12.1-35.4 µg/m³)</div>
-            <div class="index-level" style="background-color: #FF9800; font-size: 12px; padding: 2px 5px; margin: 2px 0;">Unhealthy for Sensitive Groups (35.5-55.4 µg/m³)</div>
-            <div class="index-level" style="background-color: #F44336; font-size: 12px; padding: 2px 5px; margin: 2px 0;">Unhealthy (55.5-150.4 µg/m³)</div>
-            <div class="index-level" style="background-color: #9C27B0; font-size: 12px; padding: 2px 5px; margin: 2px 0;">Very Unhealthy (150.5-250.4 µg/m³)</div>
-            <div class="index-level" style="background-color: #795548; font-size: 12px; padding: 2px 5px; margin: 2px 0;">Hazardous (250.5+ µg/m³)</div>
+            <h3 style="font-size: 14px; margin: 5px 0; text-align: center;">PM2.5 Air Quality Index</h3>
+            <div class="index-level" style="background-color: #4CAF50; color: black; font-size: 12px; padding: 4px 8px; margin: 2px 0; border-radius: 4px;">Good (0-12 µg/m³)</div>
+            <div class="index-level" style="background-color: #FFEB3B; color: black; font-size: 12px; padding: 4px 8px; margin: 2px 0; border-radius: 4px;">Moderate (12.1-35.4 µg/m³)</div>
+            <div class="index-level" style="background-color: #FF9800; color: white; font-size: 12px; padding: 4px 8px; margin: 2px 0; border-radius: 4px;">Unhealthy for Sensitive Groups (35.5-55.4 µg/m³)</div>
+            <div class="index-level" style="background-color: #F44336; color: white; font-size: 12px; padding: 4px 8px; margin: 2px 0; border-radius: 4px;">Unhealthy (55.5-150.4 µg/m³)</div>
+            <div class="index-level" style="background-color: #9C27B0; color: white; font-size: 12px; padding: 4px 8px; margin: 2px 0; border-radius: 4px;">Very Unhealthy (150.5-250.4 µg/m³)</div>
+            <div class="index-level" style="background-color: #795548; color: white; font-size: 12px; padding: 4px 8px; margin: 2px 0; border-radius: 4px;">Hazardous (250.5+ µg/m³)</div>
         `;
         return div;
-    
     };
 
     airQualityControl.addTo(map);
