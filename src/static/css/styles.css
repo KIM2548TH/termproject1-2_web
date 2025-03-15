@@ -131,6 +131,7 @@ h2 {
     background-color: #333333;
     color: #accaf1;
     padding: 10px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
