@@ -173,4 +173,94 @@
     <div class="index-level" style="background-color: #9C27B0;">Very Unhealthy (150.5-250.4 µg/m³)</div>
     <div class="index-level" style="background-color: #795548;">Hazardous (250.5+ µg/m³)</div>
 </div>
+
+<!-- เพิ่มตารางแสดงค่า PM2.5 ในอีก 7 วัน -->
+<div class="forecast-table">
+    <h4>7-Day PM2.5 Forecast Table</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>PM2.5 (µg/m³)</th>
+            </tr>
+        </thead>
+        <tbody id="forecast-table-body">
+            <!-- ข้อมูลจะถูกเติมโดย JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // ข้อมูลพยากรณ์ PM2.5 จากกราฟ
+    const forecastData = {
+        labels: ['2024-03-01', '2024-03-02', '2024-03-03', '2024-03-04', '2024-03-05', '2024-03-06', '2024-03-07'],
+        pm25Values: [40, 38, 35, 42, 43, 40, 35]
+    };
+
+    // ฟังก์ชันสร้างแถวในตาราง
+    function createTableRow(day, pm25Value) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${day}</td>
+            <td>${pm25Value}</td>
+        `;
+        return row;
+    }
+
+    // ฟังก์ชันอัปเดตตารางพยากรณ์
+    function updateForecastTable(data) {
+        const tableBody = document.getElementById('forecast-table-body');
+        tableBody.innerHTML = ''; // ล้างข้อมูลเดิม
+
+        data.labels.forEach((label, index) => {
+            const row = createTableRow(label, data.pm25Values[index]);
+            tableBody.appendChild(row);
+        });
+    }
+
+    // อัปเดตตารางเมื่อโหลดหน้าเว็บ
+    updateForecastTable(forecastData);
+</script>
+
+<style>
+    /* เพิ่ม CSS สำหรับตาราง */
+    .forecast-table {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .forecast-table h4 {
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .forecast-table table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .forecast-table th, .forecast-table td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .forecast-table th {
+        background-color: #f5f5f5;
+        font-weight: bold;
+    }
+
+    .forecast-table tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    .forecast-table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+</style>
+
 {% endblock %}

@@ -132,3 +132,4 @@ document.addEventListener("DOMContentLoaded", function () {
         map.setView(region.center, region.zoom);
     });
 });
+
