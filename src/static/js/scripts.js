@@ -94,4 +94,41 @@ document.addEventListener("DOMContentLoaded", function () {
         // อัปเดตความชื้น
         document.getElementById('humidity-value').textContent = humidity;
     }
+
+    // เพิ่ม Control สำหรับเลือกภาค
+    const regionControl = L.control({ position: 'topleft' });
+
+    regionControl.onAdd = function (map) {
+        const div = L.DomUtil.create('div', 'region-control');
+        div.innerHTML = `
+            <select id="region-select">
+                <option value="north">ภาคเหนือ</option>
+                <option value="northeast">ภาคตะวันออกเฉียงเหนือ</option>
+                <option value="central">ภาคกลาง</option>
+                <option value="south">ภาคใต้</option>
+                <option value="east">ภาคตะวันออก</option>
+                <option value="west">ภาคตะวันตก</option>
+            </select>
+        `;
+        return div;
+    };
+
+    regionControl.addTo(map);
+
+    // กำหนดศูนย์กลางและระดับการซูมสำหรับแต่ละภาค
+    const regions = {
+        north: { center: [18.796, 98.979], zoom: 8 }, // ภาคเหนือ
+        northeast: { center: [16.103, 102.832], zoom: 7 }, // ภาคตะวันออกเฉียงเหนือ
+        central: { center: [14.064, 100.612], zoom: 8 }, // ภาคกลาง
+        south: { center: [7.006, 100.498], zoom: 9 }, // ภาคใต้
+        east: { center: [12.712, 101.431], zoom: 8 }, // ภาคตะวันออก
+        west: { center: [14.019, 99.532], zoom: 8 }, // ภาคตะวันตก
+    };
+
+    // เมื่อผู้ใช้เลือกภาค
+    document.getElementById('region-select').addEventListener('change', function (e) {
+        const selectedRegion = e.target.value;
+        const region = regions[selectedRegion];
+        map.setView(region.center, region.zoom);
+    });
 });

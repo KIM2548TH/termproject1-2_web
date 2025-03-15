@@ -367,10 +367,10 @@ footer {
 }
 .modal-content {
     background-color: #333333; /* Deep Charcoal */
-    color: #fcfcfb; /* Light Almond */
+    color: #888; /* Light Almond */
     margin: 5% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #fcfcfb;
     width: 80%; /* Could be more or less, depending on screen size */
     border-radius: 10px;
 }
@@ -430,4 +430,19 @@ footer {
 
 .index-level:last-child {
     margin-bottom: 0;
+}
+
+.region-control {
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#region-select {
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
 }
