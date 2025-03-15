@@ -50,7 +50,10 @@ h2 {
     padding: 0;
     margin-right: 20px;
     border-radius: 8px;
-    height: 100%;
+    height: calc(100vh - 80px);
+    z-index: 100;
+    position: sticky;
+    
 }
 
 #map {
