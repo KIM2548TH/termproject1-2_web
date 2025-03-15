@@ -3,138 +3,134 @@
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
-<div class="col-md-8">
-    <article class="blog-post">
-        <div class="air-quality-container scrollable-container">
-            <!-- ส่วนแสดงสถานที่และอุณหภูมิ -->
-            <div class="location-temperature">
-                <h1 id="location-name">AMPHOE HAT YAI</h1>
-                <div class="temperature-display">
-                    <span id="temperature-value">26</span>°C
-                    <span class="weather-condition">Cloudy</span>
-                </div>
+<div class="air-quality-container scrollable-container">
+    <!-- ส่วนแสดงสถานที่และอุณหภูมิ -->
+    <div class="location-temperature fixed-top">
+        <h1 id="location-name">AMPHOE HAT YAI</h1>
+        <div class="temperature-display">
+            <span id="temperature-value">26</span>°C
+            <span class="weather-condition">Cloudy</span>
+        </div>
+    </div>
+
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <circle cx="12" cy="12" r="10" stroke="#4285F4" stroke-width="2" fill="none" />
+                    <path d="M12 8v8M8 12h8" stroke="#4285F4" stroke-width="2" />
+                </svg>
             </div>
-
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-icon">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <circle cx="12" cy="12" r="10" stroke="#4285F4" stroke-width="2" fill="none" />
-                            <path d="M12 8v8M8 12h8" stroke="#4285F4" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <div class="metric-label">PM2.5</div>
-                    <div class="metric-value">
-                        <span id="pm25-value">45</span> <span class="metric-unit">μg/m³</span>
-                    </div>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-icon">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <circle cx="12" cy="12" r="10" stroke="#4285F4" stroke-width="2" fill="none" />
-                            <path d="M12 8v8M8 12h8" stroke="#4285F4" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <div class="metric-label">PM10</div>
-                    <div class="metric-value">
-                        <span id="pm10-value">75</span> <span class="metric-unit">μg/m³</span>
-                    </div>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-icon">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <path d="M12 3v18M6 7h12" stroke="#FF5252" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <div class="metric-label">Temperature</div>
-                    <div class="metric-value">
-                        <span id="temperature-value">26</span> <span class="metric-unit">°C</span>
-                    </div>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-icon">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z" stroke="#4FC3F7"
-                                stroke-width="2" fill="none" />
-                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" fill="#4FC3F7" />
-                        </svg>
-                    </div>
-                    <div class="metric-label">Humidity</div>
-                    <div class="metric-value">
-                        <span id="humidity-value">65</span> <span class="metric-unit">%</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="forecast-section">
-                <div class="forecast-header">
-                    <h3>Forecast Model</h3>
-                    <select id="forecast-model" class="forecast-select">
-                        <option value="SARIMAX">SARIMAX</option>
-                    </select>
-                </div>
-
-                <h4>7-Day PM2.5 Forecast</h4>
-
-                <div class="forecast-chart">
-                    <div class="chart-legend">
-                        <div class="legend-item">
-                            <div class="legend-color"></div>
-                            <div>PM2.5 Forecast</div>
-                        </div>
-                    </div>
-
-                    <div class="chart-container">
-                        <canvas id="forecastChart" width="400" height="200"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="forecast-table">
-                <h4>7-Day PM2.5 Forecast Table</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Day</th>
-                            <th>PM2.5 (µg/m³)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Day1</td>
-                            <td>40</td>
-                        </tr>
-                        <tr>
-                            <td>Day2</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td>Day3</td>
-                            <td>35</td>
-                        </tr>
-                        <tr>
-                            <td>Day4</td>
-                            <td>42</td>
-                        </tr>
-                        <tr>
-                            <td>Day5</td>
-                            <td>43</td>
-                        </tr>
-                        <tr>
-                            <td>Day6</td>
-                            <td>40</td>
-                        </tr>
-                        <tr>
-                            <td>Day7</td>
-                            <td>35</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="metric-label small-text">PM2.5</div>
+            <div class="metric-value">
+                <span id="pm25-value">45</span> <span class="metric-unit">μg/m³</span>
             </div>
         </div>
-    </article>
+
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <circle cx="12" cy="12" r="10" stroke="#4285F4" stroke-width="2" fill="none" />
+                    <path d="M12 8v8M8 12h8" stroke="#4285F4" stroke-width="2" />
+                </svg>
+            </div>
+            <div class="metric-label small-text">PM10</div>
+            <div class="metric-value">
+                <span id="pm10-value">75</span> <span class="metric-unit">μg/m³</span>
+            </div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 3v18M6 7h12" stroke="#FF5252" stroke-width="2" />
+                </svg>
+            </div>
+            <div class="metric-label small-text">Temperature</div>
+            <div class="metric-value">
+                <span id="temperature-value">26</span> <span class="metric-unit">°C</span>
+            </div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z" stroke="#4FC3F7"
+                        stroke-width="2" fill="none" />
+                    <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" fill="#4FC3F7" />
+                </svg>
+            </div>
+            <div class="metric-label small-text">Humidity</div>
+            <div class="metric-value">
+                <span id="humidity-value">65</span> <span class="metric-unit">%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="forecast-section">
+        <div class="forecast-header">
+            <h3>Forecast Model</h3>
+            <select id="forecast-model" class="forecast-select">
+                <option value="SARIMAX">SARIMAX</option>
+            </select>
+        </div>
+
+        <h4>7-Day PM2.5 Forecast</h4>
+
+        <div class="forecast-chart">
+            <div class="chart-legend">
+                <div class="legend-item">
+                    <div class="legend-color"></div>
+                    <div>PM2.5 Forecast</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="forecastChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="forecast-table">
+        <h4>7-Day PM2.5 Forecast Table</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>PM2.5 (µg/m³)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Day1</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Day2</td>
+                    <td>38</td>
+                </tr>
+                <tr>
+                    <td>Day3</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Day4</td>
+                    <td>42</td>
+                </tr>
+                <tr>
+                    <td>Day5</td>
+                    <td>43</td>
+                </tr>
+                <tr>
+                    <td>Day6</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Day7</td>
+                    <td>35</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
