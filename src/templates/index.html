@@ -12,6 +12,11 @@
         </div>
         <div class="view-predictions-container">
             <a href="#" id="view-predictions" class="view-predictions-link">View Predictions</a>
+            <select id="location-dropdown" class="form-select w-auto">
+                <option value="">Select Location</option>
+                <option value="export-4B7B6566022D">export-4B7B6566022D</option>
+                <option value="export-4EAAECB6B0E6">export-4EAAECB6B0E6</option>
+            </select>
         </div>
     </div>
 
@@ -69,29 +74,7 @@
         </div>
     </div>
 
-    <div class="forecast-section">
-        <div class="forecast-header">
-            <h3>Forecast Model</h3>
-            <select id="forecast-model" class="forecast-select">
-                <option value="SARIMAX">SARIMAX</option>
-            </select>
-        </div>
-
-        <h4>7-Day PM2.5 Forecast</h4>
-
-        <div class="forecast-chart">
-            <div class="chart-legend">
-                <div class="legend-item">
-                    <div class="legend-color"></div>
-                    <div>PM2.5 Forecast</div>
-                </div>
-            </div>
-
-            <div class="chart-container">
-                <canvas id="forecastChart" width="400" height="200"></canvas>
-            </div>
-        </div>
-    </div>
+    
 
     <div class="forecast-blocks">
         <span class="forecast-block">
@@ -125,58 +108,6 @@
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    // สร้างกราฟพยากรณ์ PM2.5
-    const ctx = document.getElementById('forecastChart').getContext('2d');
-    const forecastChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['2024-03-01', '2024-03-02', '2024-03-03', '2024-03-04', '2024-03-05', '2024-03-06', '2024-03-07'],
-            datasets: [{
-                label: 'PM2.5 Forecast',
-                data: [40, 38, 35, 42, 43, 40, 35],
-                backgroundColor: 'rgba(77, 208, 225, 0.2)',
-                borderColor: '#4DD0E1',
-                borderWidth: 2,
-                tension: 0.3,
-                pointRadius: 4,
-                pointBackgroundColor: '#fff',
-                pointBorderColor: '#4DD0E1'
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                y: {
-                    beginAtZero: false,
-                    min: 20,
-                    max: 60,
-                    grid: {
-                        display: true,
-                        color: 'rgba(255, 255, 255, 0.2)' // Slightly darker white
-                    },
-                    ticks: {
-                        color: 'rgba(255, 255, 255, 0.7)' // Slightly darker white for labels
-                    }
-                },
-                x: {
-                    grid: {
-                        display: false
-                    },
-                    ticks: {
-                        color: 'rgba(255, 255, 255, 0.7)' // Slightly darker white for labels
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    display: false
-                }
-            }
-        }
-    });
-</script>
+
 
 {% endblock %}
