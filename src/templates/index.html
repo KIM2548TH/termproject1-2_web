@@ -4,15 +4,14 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
 <div class="air-quality-container scrollable-container">
-    <!-- ส่วนแสดงสถานที่และอุณหภูมิ -->
-    <div class="location-temperature fixed-top">
+    <div class="location-temperature fixed-top" id="locationTemperature">
         <h1 id="location-name">AMPHOE HAT YAI</h1>
         <div class="temperature-display">
-            <span id="pm25-value">45</span> μg/m³ <!-- Changed to PM2.5 -->
+            <span id="pm25-value">45</span> μg/m³
             <span class="weather-condition">PM2.5</span>
         </div>
         <div class="view-predictions-container">
-            <a href="#" id="view-predictions" class="view-predictions-link">View Predictions</a> <!-- Styled link -->
+            <a href="#" id="view-predictions" class="view-predictions-link">View Predictions</a>
         </div>
     </div>
 
@@ -93,46 +92,36 @@
             </div>
         </div>
     </div>
-    <div class="forecast-table">
-        <h4>7-Day PM2.5 Forecast Table</h4>
-        <table>
-            <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>PM2.5 (µg/m³)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Day1</td>
-                    <td>40</td>
-                </tr>
-                <tr>
-                    <td>Day2</td>
-                    <td>38</td>
-                </tr>
-                <tr>
-                    <td>Day3</td>
-                    <td>35</td>
-                </tr>
-                <tr>
-                    <td>Day4</td>
-                    <td>42</td>
-                </tr>
-                <tr>
-                    <td>Day5</td>
-                    <td>43</td>
-                </tr>
-                <tr>
-                    <td>Day6</td>
-                    <td>40</td>
-                </tr>
-                <tr>
-                    <td>Day7</td>
-                    <td>35</td>
-                </tr>
-            </tbody>
-        </table>
+
+    <div class="forecast-blocks">
+        <span class="forecast-block">
+            <span class="forecast-day">Day1</span>
+            <span class="forecast-value">40 µg/m³</span>
+        </span>
+        <span class="forecast-block">
+            <span class="forecast-day">Day2</span>
+            <span class="forecast-value">38 µg/m³</span>
+        </span>
+        <span class="forecast-block">
+            <span class="forecast-day">Day3</span>
+            <span class="forecast-value">35 µg/m³</span>
+        </span>
+        <span class="forecast-block">
+            <span class="forecast-day">Day4</span>
+            <span class="forecast-value">42 µg/m³</span>
+        </span>
+        <span class="forecast-block">
+            <span class="forecast-day">Day5</span>
+            <span class="forecast-value">43 µg/m³</span>
+        </span>
+        <span class="forecast-block">
+            <span class="forecast-day">Day6</span>
+            <span class="forecast-value">40 µg/m³</span>
+        </span>
+        <span class="forecast-block">
+            <span class="forecast-day">Day7</span>
+            <span class="forecast-value">35 µg/m³</span>
+        </span>
     </div>
 </div>
 
@@ -166,12 +155,18 @@
                     max: 60,
                     grid: {
                         display: true,
-                        color: 'rgba(0, 0, 0, 0.05)'
+                        color: 'rgba(255, 255, 255, 0.2)' // Slightly darker white
+                    },
+                    ticks: {
+                        color: 'rgba(255, 255, 255, 0.7)' // Slightly darker white for labels
                     }
                 },
                 x: {
                     grid: {
                         display: false
+                    },
+                    ticks: {
+                        color: 'rgba(255, 255, 255, 0.7)' // Slightly darker white for labels
                     }
                 }
             },
@@ -182,38 +177,6 @@
             }
         }
     });
-</script>
-
-<script>
-    // ข้อมูลพยากรณ์ PM2.5 จากกราฟ
-    const forecastData = {
-        labels: ['Day1', 'Day2', 'Day3', 'Day4', 'Day5', 'Day6', 'Day7'],
-        pm25Values: [40, 38, 35, 42, 43, 40, 35]
-    };
-
-    // ฟังก์ชันสร้างแถวในตาราง
-    function createTableRow(day, pm25Value) {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${day}</td>
-            <td>${pm25Value}</td>
-        `;
-        return row;
-    }
-
-    // ฟังก์ชันอัปเดตตารางพยากรณ์
-    function updateForecastTable(data) {
-        const tableBody = document.getElementById('forecast-table-body');
-        tableBody.innerHTML = ''; // ล้างข้อมูลเดิม
-
-        data.labels.forEach((label, index) => {
-            const row = createTableRow(label, data.pm25Values[index]);
-            tableBody.appendChild(row);
-        });
-    }
-
-    // อัปเดตตารางเมื่อโหลดหน้าเว็บ
-    updateForecastTable(forecastData);
 </script>
 
 {% endblock %}

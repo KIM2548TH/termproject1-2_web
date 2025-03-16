@@ -1,7 +1,10 @@
 /* ตั้งค่าทั่วไป */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #F5F5F5;
+    background-color: #1c1c1e;
+    /* Dark background */
+    color: #f5f5f5;
+    /* Light text color */
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -128,24 +131,29 @@ h2 {
 
 /* Navbar */
 .navbar {
-    background-color: #333333;
-    color: #accaf1;
+    background-color: #2c2c2e;
+    /* Dark background */
+    color: #f5f5f5;
+    /* Light text color */
     padding: 10px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #accaf1;
+    /* Accent color */
 }
 
 .navbar h1 {
-    color: #accaf1;
+    color: #f5f5f5;
+    /* Light text color */
     margin: 0;
     font-weight: 700;
 }
 
 .navbar a {
-    color: #accaf1;
+    color: #f5f5f5;
+    /* Light text color */
     text-decoration: none;
     padding: 10px;
     font-weight: 400;
@@ -432,40 +440,57 @@ h2 {
 .forecast-table {
     margin-top: 20px;
     padding: 15px;
-    background-color: #ffffff;
+    background-color: #2c2c2e;
+    /* Dark background */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #f5f5f5;
+    /* Light text color */
 }
 
 .forecast-table h4 {
     margin-bottom: 15px;
     font-size: 18px;
-    color: #333;
+    color: #f5f5f5;
+    /* Light text color */
 }
 
 .forecast-table table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    /* Use separate borders for block effect */
+    border-spacing: 0 10px;
+    /* Add space between rows for block effect */
 }
 
 .forecast-table th,
 .forecast-table td {
     padding: 10px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: none;
+    /* Remove default borders */
+    background-color: #333;
+    /* Darker background for blocks */
+    color: #f5f5f5;
+    /* Light text color */
+    border-radius: 8px;
+    /* Rounded corners for block effect */
 }
 
 .forecast-table th {
-    background-color: #f5f5f5;
+    background-color: #444;
+    /* Slightly darker for header */
     font-weight: bold;
 }
 
-.forecast-table tbody tr:nth-child(odd) {
-    background-color: #fff;
+.forecast-table tbody tr {
+    transition: background-color 0.3s ease;
+    /* Smooth transition on hover */
 }
 
 .forecast-table tbody tr:hover {
-    background-color: #f1f1f1;
+    background-color: #3a3a3a;
+    /* Slightly lighter on hover */
 }
 
 /* สไตล์สำหรับแสดงสถานที่และอุณหภูมิ */
@@ -508,53 +533,112 @@ h2 {
     text-align: center;
     position: sticky;
     top: 0;
-    background-color: #333;
+    background-color: #2c2c2e;
+    /* Darker sticky header */
     z-index: 1000;
-    padding-top: 10px; /* Add padding to align with the navbar */
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    /* Smooth transition */
+}
+
+.location-temperature.shrink {
+    font-size: 0.8em;
+    /* Smaller font size */
+    padding: 5px 0;
+    /* Adjust padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #f5f5f5;
+    /* Light text color */
 }
 
 .metric-card {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
+    background-color: #2c2c2e;
+    /* Dark card background */
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #f5f5f5;
+    /* Light text color */
 }
 
-.metric-label {
-    font-size: 0.8em;
-    /* Smaller font size */
+.metric-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f5f5f5;
+    /* Light text color */
 }
 
-.metric-icon {
-    margin-bottom: 10px;
+.forecast-section,
+.forecast-table {
+    background-color: #2c2c2e;
+    /* Dark section background */
+    border-radius: 10px;
+    padding: 20px;
+    color: #f5f5f5;
+    /* Light text color */
 }
-
-.chart-legend .legend-color {
-    width: 20px;
-    height: 10px;
-    display: inline-block;
-    margin-right: 5px;
-    background-color: #4DD0E1;
-}
-
 
 .view-predictions-container {
     display: flex;
-    justify-content: flex-end; /* Align to the right */
-    margin-top: 10px; /* Add some space above */
+    justify-content: flex-end;
+    /* Align to the right */
+    margin-top: 10px;
+    /* Add some space above */
 }
 
 .view-predictions-link {
-    background-color: #4DD0E1; /* Background color */
-    color: #fff; /* Text color */
-    padding: 10px 20px; /* Padding for size */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Bold text */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color: #007aff;
+    /* iOS blue */
+    color: #fff;
+    /* White text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .view-predictions-link:hover {
-    background-color: #3CBAC6; /* Darker color on hover */
+    background-color: #005bb5;
+    /* Darker blue on hover */
+}
+
+.forecast-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Space between blocks */
+}
+
+.forecast-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    /* Dark background for blocks */
+    color: #f5f5f5;
+    /* Light text color */
+    padding: 10px;
+    border-radius: 8px;
+    /* Rounded corners for block effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.forecast-day {
+    font-weight: bold;
+}
+
+.forecast-value {
+    font-size: 16px;
 }
