@@ -620,12 +620,13 @@ h4 {
 .forecast-blocks {
     display: flex;
     flex-direction: column;
+    background-color: #f5f5f5;
+    border-radius: 10px;
     gap: 10px;
     /* Space between blocks */
 }
 
 .forecast-block {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #a5bbd2;
@@ -633,10 +634,19 @@ h4 {
     color: #f5f5f5;
     /* Light text color */
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 12px;
     /* Rounded corners for block effect */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     /* Subtle shadow */
+    /* ปรับขนาดความกว้างของ block */
+    min-width: 400px; /* หรือใช้ width: 100% ถ้าต้องการให้เต็มพื้นที่ */
+    width: 100%;
+    max-width: 450px; /* กำหนดขนาดสูงสุดเพื่อไม่ให้กว้างเกินไป */
+    /* จัดให้อยู่ตรงกลาง */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .forecast-day {
