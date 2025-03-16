@@ -368,12 +368,14 @@ h2 {
 }
 
 .info-box {
-    background: #fcfcfb;
-    /* Light Almond */
-    padding: 0.05px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background: #fcfcfb; /* สีพื้นหลัง */
+    padding: 10px; /* ปรับ padding ให้เล็กลง */
+    border-radius: 10px; /* มุมโค้ง */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* เงาเล็กน้อย */
+    width: 80%; /* ปรับความกว้างของกล่อง */
+    max-width: 500px; /* กำหนดขนาดสูงสุดของกล่อง */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
 }
 
 .value {
@@ -486,11 +488,7 @@ h2 {
     /* Slightly lighter on hover */
 }
 
-/* สไตล์สำหรับแสดงสถานที่และอุณหภูมิ */
-.location-temperature {
-    text-align: center;
-    margin-bottom: 20px;
-}
+
 
 .location-temperature h1 {
     font-size: 32px;
@@ -522,18 +520,17 @@ h2 {
 }
 
 .location-temperature {
-    margin-top: 40px;
+    margin-top: 0; /* เอา margin-top ออกเพื่อให้ติดกับ Navbar */
     margin-bottom: 30px;
     text-align: center;
     position: sticky;
-    top: 0;
-    background-color: #333333;
-    /* Darker sticky header */
-    z-index: 1000;
-    padding: 10px 0;
-    transition: all 0.3s ease;
-    height: 180px;
-    /* Smooth transition */
+    top: 0; /* ติดกับ Navbar ข้างบน */
+    background-color: #333333; /* สีพื้นหลังกล่องสีดำ */
+    z-index: 1000; /* ให้อยู่เหนือองค์ประกอบอื่น */
+    padding: 18px 0; /* ปรับ padding ด้านบนและล่าง */
+    transition: all 0.3s ease; /* เพิ่มเอฟเฟกต์ transition */
+    height: 170px; /* ความสูงของกล่อง */
+    width: 100%; /* กว้างเต็มพื้นที่ */
 }
 
 .location-temperature.shrink {
@@ -550,7 +547,7 @@ h1,
 h2,
 h3,
 h4 {
-    color: #f5f5f5;
+    color: #444b59;
     /* Light text color */
 }
 
@@ -568,19 +565,7 @@ h4 {
     /* Light text color */
 }
 
-/* Fixed width for forecast blocks */
-.forecast-block {
-    width: 200px;
-    /* Set a fixed width */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #a5bbd2;
-    color: #f5f5f5;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+
 
 .view-predictions-container {
     display: flex;
@@ -617,36 +602,151 @@ h4 {
     /* Darker blue on hover */
 }
 
+
+
 .forecast-blocks {
     display: flex;
     flex-direction: column;
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* สีพื้นหลังกล่องสีขาว */
     border-radius: 10px;
-    gap: 10px;
-    /* Space between blocks */
+    gap: 10px; /* ระยะห่างระหว่างกล่องสีฟ้า */
+    padding: 15px; /* ปรับ padding ทั้งหมด */
+    padding-right: 20px; /* ปรับเฉพาะ padding ด้านขวาให้แคบลง */
+    width: 90%; /* ให้กล่องสีขาวเต็มพื้นที่ */
+    max-width: 450px; /* กำหนดขนาดสูงสุดของกล่องสีขาว */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
 }
 
 .forecast-block {
     justify-content: space-between;
     align-items: center;
-    background-color: #a5bbd2;
-    /* Dark background for blocks */
-    color: #f5f5f5;
-    /* Light text color */
-    padding: 10px;
-    border-radius: 12px;
-    /* Rounded corners for block effect */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
-    /* ปรับขนาดความกว้างของ block */
-    min-width: 400px; /* หรือใช้ width: 100% ถ้าต้องการให้เต็มพื้นที่ */
-    width: 100%;
-    max-width: 450px; /* กำหนดขนาดสูงสุดเพื่อไม่ให้กว้างเกินไป */
-    /* จัดให้อยู่ตรงกลาง */
+    background-color: #a5bbd2; /* สีพื้นหลังกล่องสีฟ้า */
+    color: #f5f5f5; /* สีข้อความในกล่องสีฟ้า */
+    padding: 15px; /* เพิ่ม padding ภายในกล่องสีฟ้า */
+    border-radius: 12px; /* มุมโค้งของกล่องสีฟ้า */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* เงาเล็กน้อย */
+    width: 90%; /* ให้กล่องสีฟ้าเต็มพื้นที่ของกล่องสีขาว */
+    max-width: 450px; /* กำหนดขนาดสูงสุดของกล่องสีฟ้า */
+    margin: 10px 0; /* เพิ่ม margin ด้านบนและล่างเพื่อไม่ให้ติดขอบกล่องสีขาว */
+}
+
+.forecast-day {
+    font-weight: bold;
+}
+
+.forecast-value {
+    font-size: 16px;
+}
+
+
+#location-dropdown {
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 2px solid #a5bbd2;
+    border-radius: 8px; /* มุมโค้ง */
+    background-color: #f9f9f9; /* สีพื้นหลัง */
+    color: #456687; /* สีตัวอักษร */
+    width: auto;
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวล */
+    margin-left: 10px; /* เพิ่มระยะห่างทางซ้ายเล็กน้อย */
+}
+
+/* เปลี่ยนสีเมื่อ hover */
+#location-dropdown:hover {
+    border-color: #a5bbd2;
+    background-color: #e8f5e9;
+}
+
+
+
+.location-temperature.shrink {
+    font-size: 0.8em;
+    /* Smaller font size */
+    padding: 5px 0;
+    /* Adjust padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Fixed width for metric cards */
+.metric-card {
+    width: 200px;
+    /* Set a fixed width */
+    background-color: #f6f6f9;
+    border-radius: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    color: #1b1c1f;
+    /* Light text color */
+}
+
+
+
+.view-predictions-container {
+    display: flex;
+    justify-content: space-between; /* ให้มีระยะห่างระหว่างปุ่มทั้งสอง */
+    align-items: center; /* จัดให้อยู่ในแนวกลางตามแนวตั้ง */
+    margin-top: 10px;
+}
+
+/* Fixed width for location temperature */
+.location-temperature {
+    width: 100%;
+    /* Set a fixed width */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.view-predictions-link {
+    background-color: #a5bbd2;
+    /* iOS blue */
+    color: #fff;
+    /* White text color */
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    justify-content: flex-start;
+}
+
+.view-predictions-link:hover {
+    background-color: #f2fab1;
+    color: #53514c;
+    /* Darker blue on hover */
+}
+
+
+
+.forecast-blocks {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5; /* สีพื้นหลังกล่องสีขาว */
+    border-radius: 10px;
+    gap: 10px; /* ระยะห่างระหว่างกล่องสีฟ้า */
+    padding: 15px; /* เพิ่ม padding เพื่อให้กล่องสีขาวใหญ่ขึ้น */
+    width: 90%; /* ให้กล่องสีขาวเต็มพื้นที่ */
+    max-width: 500px; /* กำหนดขนาดสูงสุดของกล่องสีขาว */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+}
+
+.forecast-block {
+    justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    background-color: #a5bbd2; /* สีพื้นหลังกล่องสีฟ้า */
+    color: #f5f5f5; /* สีข้อความในกล่องสีฟ้า */
+    padding: 15px; /* เพิ่ม padding ภายในกล่องสีฟ้า */
+    border-radius: 12px; /* มุมโค้งของกล่องสีฟ้า */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* เงาเล็กน้อย */
+    width: 89.9%; /* ให้กล่องสีฟ้าเต็มพื้นที่ของกล่องสีขาว */
+    max-width: 450px; /* กำหนดขนาดสูงสุดของกล่องสีฟ้า */
+    margin: 10px 0; /* เพิ่ม margin ด้านบนและล่างเพื่อไม่ให้ติดขอบกล่องสีขาว */
 }
 
 .forecast-day {
