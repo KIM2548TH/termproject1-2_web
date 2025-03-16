@@ -3,112 +3,139 @@
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
-<div class="air-quality-container scrollable-container">
-    <div class="location-temperature fixed-top" id="locationTemperature">
-        <h1 id="location-name">AMPHOE HAT YAI</h1>
-        <div class="temperature-display">
-            <span id="pm25-value">45</span> μg/m³
-            <span class="weather-condition">PM2.5</span>
-        </div>
-        <div class="view-predictions-container">
-            <a href="#" id="view-predictions" class="view-predictions-link">View Predictions</a>
-        </div>
-    </div>
-
-    <div class="metrics-grid">
-        <div class="metric-card">
-            <div class="metric-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24">
-                    <circle cx="12" cy="12" r="10" stroke="#4285F4" stroke-width="2" fill="none" />
-                    <path d="M12 8v8M8 12h8" stroke="#4285F4" stroke-width="2" />
-                </svg>
+<div class="container-fluid air-quality-container">
+    <div class="row location-temperature fixed-top p-3 bg-light">
+        <div class="col-12 text-center">
+            <h1 id="location-name">AMPHOE HAT YAI</h1>
+            <div class="temperature-display">
+                <span id="pm25-value">45</span> μg/m³
+                <span class="weather-condition">PM2.5</span>
             </div>
-            <div class="metric-label small-text">PM2.5</div>
-            <div class="metric-value">
-                <span id="pm25-value">45</span> <span class="metric-unit">μg/m³</span>
-            </div>
-        </div>
-
-        <div class="metric-card">
-            <div class="metric-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24">
-                    <circle cx="12" cy="12" r="10" stroke="#4285F4" stroke-width="2" fill="none" />
-                    <path d="M12 8v8M8 12h8" stroke="#4285F4" stroke-width="2" />
-                </svg>
-            </div>
-            <div class="metric-label small-text">PM10</div>
-            <div class="metric-value">
-                <span id="pm10-value">75</span> <span class="metric-unit">μg/m³</span>
-            </div>
-        </div>
-
-        <div class="metric-card">
-            <div class="metric-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24">
-                    <path d="M12 3v18M6 7h12" stroke="#FF5252" stroke-width="2" />
-                </svg>
-            </div>
-            <div class="metric-label small-text">Temperature</div>
-            <div class="metric-value">
-                <span id="temperature-value">26</span> <span class="metric-unit">°C</span>
-            </div>
-        </div>
-
-        <div class="metric-card">
-            <div class="metric-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24">
-                    <path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z" stroke="#4FC3F7"
-                        stroke-width="2" fill="none" />
-                    <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" fill="#4FC3F7" />
-                </svg>
-            </div>
-            <div class="metric-label small-text">Humidity</div>
-            <div class="metric-value">
-                <span id="humidity-value">65</span> <span class="metric-unit">%</span>
+            <div class="view-predictions-container mt-2">
+                <a href="#" id="view-predictions" class="btn btn-primary">View Predictions</a>
             </div>
         </div>
     </div>
 
-    <div class="forecast-section">
-        <div class="forecast-header">
-            <h3>Forecast Model</h3>
-            <select id="forecast-model" class="forecast-select">
-                <option value="SARIMAX">SARIMAX</option>
-            </select>
+    <div class="row metrics-grid mt-5">
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card metric-card text-center p-3">
+                <div class="metric-icon mb-2">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <circle cx="12" cy="12" r="10" stroke="#4285F4" stroke-width="2" fill="none" />
+                        <path d="M12 8v8M8 12h8" stroke="#4285F4" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="metric-label small-text">PM2.5</div>
+                <div class="metric-value">
+                    <span id="pm25-value">45</span> <span class="metric-unit">μg/m³</span>
+                </div>
+            </div>
         </div>
 
-        <h4>7-Day PM2.5 Forecast</h4>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card metric-card text-center p-3">
+                <div class="metric-icon mb-2">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <circle cx="12" cy="12" r="10" stroke="#4285F4" stroke-width="2" fill="none" />
+                        <path d="M12 8v8M8 12h8" stroke="#4285F4" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="metric-label small-text">PM10</div>
+                <div class="metric-value">
+                    <span id="pm10-value">75</span> <span class="metric-unit">μg/m³</span>
+                </div>
+            </div>
+        </div>
 
-        <!-- Removed the forecast chart section -->
-        <div class="forecast-blocks">
-            <span class="forecast-block">
-                <span class="forecast-day">Day1</span>
-                <span class="forecast-value">40 µg/m³</span>
-            </span>
-            <span class="forecast-block">
-                <span class="forecast-day">Day2</span>
-                <span class="forecast-value">38 µg/m³</span>
-            </span>
-            <span class="forecast-block">
-                <span class="forecast-day">Day3</span>
-                <span class="forecast-value">35 µg/m³</span>
-            </span>
-            <span class="forecast-block">
-                <span class="forecast-day">Day4</span>
-                <span class="forecast-value">42 µg/m³</span>
-            </span>
-            <span class="forecast-block">
-                <span class="forecast-day">Day5</span>
-                <span class="forecast-value">43 µg/m³</span>
-            </span>
-            <span class="forecast-block">
-                <span class="forecast-day">Day6</span>
-                <span class="forecast-value">40 µg/m³</span>
-            </span>
-            <span class="forecast-block">
-                <span class="forecast-day">Day7</span>
-                <span class="forecast-value">35 µg/m³</span>
-            </span>
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card metric-card text-center p-3">
+                <div class="metric-icon mb-2">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 3v18M6 7h12" stroke="#FF5252" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="metric-label small-text">Temperature</div>
+                <div class="metric-value">
+                    <span id="temperature-value">26</span> <span class="metric-unit">°C</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card metric-card text-center p-3">
+                <div class="metric-icon mb-2">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z" stroke="#4FC3F7"
+                            stroke-width="2" fill="none" />
+                        <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" fill="#4FC3F7" />
+                    </svg>
+                </div>
+                <div class="metric-label small-text">Humidity</div>
+                <div class="metric-value">
+                    <span id="humidity-value">65</span> <span class="metric-unit">%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row forecast-section mt-5">
+        <div class="col-12">
+            <div class="forecast-header d-flex justify-content-between align-items-center">
+                <h3>Forecast Model</h3>
+                <select id="forecast-model" class="form-select forecast-select w-auto">
+                    <option value="SARIMAX">SARIMAX</option>
+                </select>
+            </div>
+
+            <h4 class="mt-3">7-Day PM2.5 Forecast</h4>
+
+            <div class="forecast-blocks mt-3">
+                <div class="row">
+                    <div class="col-md-1 col-sm-2 col-4 mb-3">
+                        <div class="forecast-block text-center p-2">
+                            <span class="forecast-day">Day1</span>
+                            <span class="forecast-value">40 µg/m³</span>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-2 col-4 mb-3">
+                        <div class="forecast-block text-center p-2">
+                            <span class="forecast-day">Day2</span>
+                            <span class="forecast-value">38 µg/m³</span>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-2 col-4 mb-3">
+                        <div class="forecast-block text-center p-2">
+                            <span class="forecast-day">Day3</span>
+                            <span class="forecast-value">35 µg/m³</span>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-2 col-4 mb-3">
+                        <div class="forecast-block text-center p-2">
+                            <span class="forecast-day">Day4</span>
+                            <span class="forecast-value">42 µg/m³</span>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-2 col-4 mb-3">
+                        <div class="forecast-block text-center p-2">
+                            <span class="forecast-day">Day5</span>
+                            <span class="forecast-value">43 µg/m³</span>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-2 col-4 mb-3">
+                        <div class="forecast-block text-center p-2">
+                            <span class="forecast-day">Day6</span>
+                            <span class="forecast-value">40 µg/m³</span>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-2 col-4 mb-3">
+                        <div class="forecast-block text-center p-2">
+                            <span class="forecast-day">Day7</span>
+                            <span class="forecast-value">35 µg/m³</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
