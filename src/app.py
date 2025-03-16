@@ -1,18 +1,21 @@
-from flask import Flask, render_template, request, jsonify
+from server import app  # นำเข้า Flask app จาก server.py
+from flask import render_template, request, jsonify
 import models
 import forms
 import utils
-from dash_app import app as dash_app
+from dash_app import dash_app  # นำเข้า Dash app จาก dash_app.py
 
-app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///pm25.db"
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-models.init_app(app)
+# เส้นทางหลัก
+@app.route("/")
+def index():
+    return render_template("index.html")
 
+# เส้นทางสำหรับ PM25
 @app.route("/pm25")
 def pm25():
     return render_template("pm25.html")
 
+# API สำหรับดึงข้อมูล PM2.5
 @app.route("/api/pm25/<sensor_id>")
 def get_pm25(sensor_id):
     # ดึงค่าฝุ่น PM2.5 ที่ทำนายไว้จากฐานข้อมูล
@@ -26,16 +29,14 @@ def get_pm25(sensor_id):
     else:
         return jsonify({"error": "Sensor not found"}), 404
 
+# เส้นทางสำหรับทำนายค่า PM2.5
 @app.route("/predict", methods=["POST"])
 def predict():
     sensor_id = request.form.get("sensor_id")
     predicted_value = utils.get_predicted_pm25(sensor_id)
     return jsonify({"predicted_value": predicted_value})
 
-@app.route("/")
-def index():
-    return render_template("index.html")
-
+# เส้นทางสำหรับแสดงผลการทำนาย
 @app.route("/prediction")
 def prediction():
     predictions = models.PM25Prediction.query.all()
