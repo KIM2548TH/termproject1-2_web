@@ -178,56 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // สถานีจำลองในภาคใต้
         const dummyStations = [
-            {
-                name: "Prince of Songkla University",
-                latitude: 7.006,
-                longitude: 100.498,
-                pm25: 25,
-                pm10: 40,
-                temperature: 32,
-                humidity: 65,
-                timestamp: new Date().toLocaleString()
-            },
-            {
-                name: "Hatyai City Municipal Park",
-                latitude: 7.017,
-                longitude: 100.504,
-                pm25: 30,
-                pm10: 45,
-                temperature: 31,
-                humidity: 70,
-                timestamp: new Date().toLocaleString()
-            },
-            {
-                name: "Jiranakorn Stadium",
-                latitude: 7.008,
-                longitude: 100.474,
-                pm25: 28,
-                pm10: 42,
-                temperature: 30,
-                humidity: 68,
-                timestamp: new Date().toLocaleString()
-            },
-            {
-                name: "สถานีตรวจวัดคุณภาพอากาศหาดใหญ่",
-                latitude: 7.0254,
-                longitude: 100.4752,
-                pm25: 22,
-                pm10: 38,
-                temperature: 31.5,
-                humidity: 72,
-                timestamp: new Date().toLocaleString()
-            },
-            {
-                name: "สถานีตรวจวัดคุณภาพอากาศสงขลา",
-                latitude: 7.2125,
-                longitude: 100.5947,
-                pm25: 18,
-                pm10: 32,
-                temperature: 30.8,
-                humidity: 75,
-                timestamp: new Date().toLocaleString()
-            }
+            
         ];
 
         // เพิ่มข้อมูลจำลองเข้าไปในรายการสถานี
@@ -276,18 +227,32 @@ function createMarkers() {
 
     map.addControl(searchControl);
 }
-
+document.getElementById('location-dropdown').addEventListener('change', function () {
+    const selectedStationId = this.value;
+    
+    // หาข้อมูลสถานีที่ตรงกับค่า selectedStationId
+    const selectedStation = stationData.find(station => station.name === selectedStationId);
+    
+    if (selectedStation) {
+        // เรียกฟังก์ชัน updateIndexContent() เพื่ออัปเดตข้อมูล
+        updateIndexContent(selectedStation);
+        
+        // ย้ายแผนที่ไปยังตำแหน่งของสถานีที่เลือก
+        map.setView([selectedStation.latitude, selectedStation.longitude], 13);
+    }
+});
 // ฟังก์ชันในการอัปเดตข้อมูลบนหน้า index.html
 function updateIndexContent(station) {
     // อัปเดตค่า PM2.5, PM10, Temperature, Humidity
     document.getElementById('pm25-value').textContent = station.pm25;
     document.getElementById('pm10-value').textContent = station.pm10;
-    document.getElementById('temperature-value').textContent = station.temperature;
-    document.getElementById('humidity-value').textContent = station.humidity;
+    document.getElementById('temperature-value').textContent = parseFloat(station.temperature).toFixed(2);
+    document.getElementById('humidity-value').textContent = parseFloat(station.humidity).toFixed(2);
 
     // อัปเดตชื่อสถานี
     document.getElementById('location-name').textContent = station.name;
 }
+
 
 
         // 📌 Move PM2.5 Quality Index to Bottom-Right
@@ -343,5 +308,63 @@ function updateIndexContent(station) {
                 }
             }
         });
+
+        function createMarkers() {
+            console.log(`Creating ${stationData.length} markers`);
+        
+            stationData.forEach(station => {
+                // สร้าง marker
+                const marker = L.marker([station.latitude, station.longitude])
+                    .addTo(map);
+        
+                // สร้าง popup สำหรับแสดงข้อมูลเมื่อคลิก
+                const fullPopupContent = `
+                    <div style="font-family: Arial, sans-serif; min-width: 200px;">
+                        <h3 style="margin: 0 0 10px 0; color: #333;">${station.name}</h3>
+                        <div style="margin-bottom: 5px;"><strong>PM2.5:</strong> ${station.pm25} µg/m³</div>
+                        <div style="margin-bottom: 5px;"><strong>PM10:</strong> ${station.pm10} µg/m³</div>
+                        <div style="margin-bottom: 5px;"><strong>อุณหภูมิ:</strong> ${station.temperature}°C</div>
+                        <div style="margin-bottom: 5px;"><strong>ความชื้น:</strong> ${station.humidity}%</div>
+                        <div style="margin-bottom: 5px;"><strong>เวลา:</strong> ${station.timestamp}</div>
+                    </div>
+                `;
+        
+                marker.bindPopup(fullPopupContent);  // Bind full data for click popup
+        
+                // เพิ่ม event listener เมื่อคลิกที่ marker
+                marker.on('click', function () {
+                    updateIndexContent(station);
+                });
+        
+                // เพิ่ม event listener สำหรับการชี้เมาส์ไปที่ marker
+                marker.on('mouseover', function () {
+                    // สร้าง popup สำหรับการแสดงชื่อสถานีกับ PM2.5
+                    const hoverPopupContent = `
+                        <div style="font-family: Arial, sans-serif; min-width: 150px;">
+                            <h3 style="margin: 0 0 10px 0; color: #333;">${station.name}</h3>
+                            <div style="margin-bottom: 5px;"><strong>PM2.5:</strong> ${station.pm25} µg/m³</div>
+                        </div>
+                    `;
+                    marker.bindPopup(hoverPopupContent).openPopup();
+                });
+        
+                // เมื่อเมาส์ออกจาก marker ให้ปิด popup
+                marker.on('mouseout', function () {
+                    marker.closePopup();
+                });
+        
+                markers.push(marker);
+            });
+        
+            // ปรับ zoom เพื่อให้เห็นทุก marker
+            if (markers.length > 0) {
+                const group = new L.featureGroup(markers);
+                map.fitBounds(group.getBounds().pad(0.1));
+            }
+        
+            map.addControl(searchControl);
+        }
+        
+        
 });
 
