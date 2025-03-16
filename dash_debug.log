@@ -1,0 +1,1033 @@
+2025-03-17 00:21:46.248088: สถานีที่เลือก: export-jsps016
+2025-03-17 00:21:46.248658: สถานีที่เลือก: export-jsps016
+2025-03-17 00:21:46.506931: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:21:46.508333: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:21:46.508333: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:21:46.509846: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:21:46.509846: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:21:46.511172: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:21:46.511172: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:21:46.555185: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:21:46.556693: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:21:46.565457: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:21:46.573274: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:21:46.596792: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:21:46.598119: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:21:46.598119: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:21:46.598119: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:21:46.599303: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:21:46.600340: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:21:46.601407: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:21:46.601912: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:21:46.647496: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:21:46.648500: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:21:46.658424: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:21:46.659832: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:21:46.678049: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:21:46.680051: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:26:43.703928: สถานีที่เลือก: export-jsps016
+2025-03-17 00:26:43.735857: สถานีที่เลือก: export-jsps016
+2025-03-17 00:30:22.377962: สถานีที่เลือก: export-jsps016
+2025-03-17 00:30:22.441885: สถานีที่เลือก: export-jsps016
+2025-03-17 00:30:22.599158: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:30:22.689107: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:30:22.709660: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:30:22.751984: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:30:22.753604: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:30:22.753604: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:30:22.755118: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:30:22.756121: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:30:22.756121: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:30:22.757336: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:30:22.757336: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:30:22.757336: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:30:22.757336: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:30:22.758600: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:30:22.863580: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:30:22.863580: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:30:22.890317: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:30:22.892321: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:30:22.938848: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:30:22.941066: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:30:23.072346: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:30:23.073349: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:30:23.222408: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:30:23.453129: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:30:23.856025: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:30:23.906387: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:31:22.157555: สถานีที่เลือก: export-jsps016
+2025-03-17 00:31:22.187858: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:31:22.223200: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:31:22.257200: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:31:22.268613: สถานีที่เลือก: export-jsps016
+2025-03-17 00:31:22.306816: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:31:22.308077: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:31:22.309283: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:31:22.310286: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:31:22.312796: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:31:22.312796: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:31:22.313798: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:31:22.315353: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:31:22.317085: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:31:22.318088: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:31:22.319091: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:31:22.807657: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:31:22.845634: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:31:22.955558: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:31:22.958889: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:31:22.992031: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:31:23.058393: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:31:23.166096: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:31:23.207229: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:31:23.320307: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:31:23.524720: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:31:24.894513: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:31:25.096199: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:32:22.151889: สถานีที่เลือก: export-jsps016
+2025-03-17 00:32:22.282838: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:32:22.307943: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:32:22.307943: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:32:22.307943: สถานีที่เลือก: export-jsps016
+2025-03-17 00:32:22.323006: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:32:22.337853: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:32:22.364690: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:32:22.366697: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:32:22.404043: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:32:22.430910: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:32:22.446459: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:32:22.482999: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:32:22.534023: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:32:22.614534: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:32:22.615535: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:32:22.778043: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:32:22.800268: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:32:22.901999: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:32:22.934238: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:32:23.182062: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:32:23.223789: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:32:23.266118: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:32:23.357744: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:32:23.724253: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:32:23.964100: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:32:25.542068: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:32:25.549090: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:33:22.107405: สถานีที่เลือก: export-jsps016
+2025-03-17 00:33:22.118809: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:33:22.120082: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:33:22.121084: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:33:22.122475: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:33:22.123481: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:33:22.123481: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:33:22.124729: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:33:22.192424: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:33:22.193776: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:33:22.209431: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:33:22.209431: สถานีที่เลือก: export-jsps016
+2025-03-17 00:33:22.212439: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:33:22.221912: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:33:22.304845: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:33:22.304845: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:33:22.305848: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:33:22.306854: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:33:22.374410: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:33:22.514097: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:33:22.637630: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:33:22.776063: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:33:22.869863: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:33:22.870997: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:33:22.883836: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:33:22.884859: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:33:22.909110: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:33:22.910951: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:34:22.108956: สถานีที่เลือก: export-jsps016
+2025-03-17 00:34:22.120993: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:34:22.122000: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:34:22.122000: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:34:22.124009: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:34:22.124009: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:34:22.125012: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:34:22.126016: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:34:22.195456: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:34:22.196465: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:34:22.211907: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:34:22.211907: สถานีที่เลือก: export-jsps016
+2025-03-17 00:34:22.214010: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:34:22.223349: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:34:22.225365: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:34:22.308307: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:34:22.308832: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:34:22.309357: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:34:22.310388: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:34:22.377662: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:34:22.515965: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:34:22.687320: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:34:22.901751: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:34:22.902974: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:34:22.917089: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:34:22.921053: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:34:22.948143: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:34:22.949411: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:35:22.110913: สถานีที่เลือก: export-jsps016
+2025-03-17 00:35:22.119732: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:35:22.120803: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:35:22.121889: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:35:22.121889: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:35:22.123397: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:35:22.124421: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:35:22.125657: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:35:22.187850: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:35:22.188901: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:35:22.203332: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:35:22.204413: สถานีที่เลือก: export-jsps016
+2025-03-17 00:35:22.206007: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:35:22.215946: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:35:22.218978: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:35:22.221998: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:35:22.237506: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:35:22.245018: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:35:22.246021: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:35:22.246021: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:35:22.313268: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:35:22.437177: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:35:22.760966: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:35:22.762086: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:35:22.776316: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:35:22.779657: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:35:22.803765: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:35:22.804768: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:49:39.965597: สถานีที่เลือก: export-jsps016
+2025-03-17 00:49:39.973123: สถานีที่เลือก: export-jsps016
+2025-03-17 00:49:40.084190: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:49:40.085193: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:49:40.087198: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:49:40.088297: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:49:40.089300: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:49:40.090303: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:49:40.091305: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:49:40.112362: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:49:40.114368: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:49:40.115370: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:49:40.115370: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:49:40.117375: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:49:40.118378: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:49:40.119465: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:49:40.155689: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:49:40.156692: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:49:40.205853: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:49:40.380150: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:49:40.475455: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:49:40.485140: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:49:40.486143: สถานีที่เลือก: export-jsps016
+2025-03-17 00:49:40.527038: สถานีที่เลือก: export-jsps016
+2025-03-17 00:49:40.529043: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:49:40.533054: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:49:40.638047: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:49:40.640051: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:49:41.768510: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:49:41.769512: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:50:23.927458: สถานีที่เลือก: export-jsps016
+2025-03-17 00:50:23.928460: สถานีที่เลือก: export-jsps016
+2025-03-17 00:50:23.941203: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:50:23.942218: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:50:23.943513: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:50:23.946550: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:50:23.947558: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:50:23.950671: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+-jsps016
+2025-03-17 00:50:23.952179: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:50:23.952179: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:50:23.953900: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:50:23.955943: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:50:23.957589: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:50:23.958095: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:50:23.959119: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:50:24.043364: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:50:24.047247: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:50:24.061302: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:50:24.062720: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:50:24.063723: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:50:24.078244: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:50:24.092611: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:50:24.106189: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:50:24.109948: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:50:24.450236: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:50:24.590086: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:50:42.937689: สถานีที่เลือก: export-jsps016
+2025-03-17 00:50:43.245868: สถานีที่เลือก: export-jsps016
+2025-03-17 00:51:29.938713: สถานีที่เลือก: export-jsps016
+2025-03-17 00:51:29.938713: สถานีที่เลือก: export-jsps016
+2025-03-17 00:51:29.947649: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:51:29.948823: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:51:29.950145: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:51:29.951153: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:51:29.952155: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:51:29.953397: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:51:29.956298: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:51:29.956298: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:51:29.959826: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:51:29.960828: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:51:29.962338: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:51:29.963739: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:51:29.963739: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:51:29.965065: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:51:30.043655: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:51:30.044907: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:51:30.062407: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:51:30.065730: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:51:30.068239: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:51:30.081678: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:51:30.104947: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:51:30.106374: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:51:30.109927: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:51:30.602383: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:51:30.650851: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:51:45.925735: สถานีที่เลือก: export-jsps016
+2025-03-17 00:51:46.235958: สถานีที่เลือก: export-jsps016
+2025-03-17 00:52:33.933980: สถานีที่เลือก: export-jsps016
+2025-03-17 00:52:33.935474: สถานีที่เลือก: export-jsps016
+2025-03-17 00:52:33.943472: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:52:33.944479: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:52:33.946952: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:52:33.950494: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:52:33.950494: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:52:33.951882: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:52:33.951882: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:52:33.952884: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:52:33.952884: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:52:33.953887: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:52:33.953887: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:52:33.954997: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:52:33.956003: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:52:33.956003: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:52:34.028933: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:52:34.030944: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:52:34.047870: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:52:34.050354: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:52:34.063180: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:52:34.073788: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:52:34.107807: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:52:34.110360: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:52:34.175999: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:52:34.661883: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:52:34.664130: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:52:48.926041: สถานีที่เลือก: export-jsps016
+2025-03-17 00:52:49.232507: สถานีที่เลือก: export-jsps016
+2025-03-17 00:53:37.934721: สถานีที่เลือก: export-jsps016
+2025-03-17 00:53:37.934721: สถานีที่เลือก: export-jsps016
+2025-03-17 00:53:37.944910: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:53:37.946257: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:53:37.950436: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:53:37.950436: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:53:37.951820: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:53:37.951820: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:53:37.952822: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:53:37.953825: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:53:37.954828: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:53:37.954828: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:53:37.955830: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:53:37.956833: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:53:37.956833: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:53:38.026537: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:53:38.032274: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:53:38.048410: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:53:38.048410: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:53:38.050499: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:53:38.069126: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:53:38.070614: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:53:38.073899: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:53:38.162704: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:53:38.182098: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:53:38.223126: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:53:38.425034: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:53:51.934488: สถานีที่เลือก: export-jsps016
+2025-03-17 00:53:52.243804: สถานีที่เลือก: export-jsps016
+2025-03-17 00:54:41.925574: สถานีที่เลือก: export-jsps016
+2025-03-17 00:54:41.926605: สถานีที่เลือก: export-jsps016
+2025-03-17 00:54:41.934900: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:54:41.936702: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:54:41.937713: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:54:41.942022: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+atic
+2025-03-17 00:54:41.944417: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+ps016-1h.csv
+2025-03-17 00:54:41.945420: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:54:41.945420: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:54:41.945420: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:54:41.946423: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 00:54:41.947425: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:54:41.948437: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:54:41.948437: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:54:42.026046: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:54:42.027329: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:54:42.041769: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:54:42.049108: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:54:42.052501: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:54:42.054882: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:54:42.068097: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:54:42.153175: พบคอลัมน์ PM2.5: pm_2_5
+��จ, จำนวนข้อมูล: 25802
+2025-03-17 00:54:42.156569: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:54:42.632988: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:54:42.634115: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:54:54.924190: สถานีที่เลือก: export-jsps016
+2025-03-17 00:54:55.234173: สถานีที่เลือก: export-jsps016
+2025-03-17 00:55:45.930637: สถานีที่เลือก: export-jsps016
+2025-03-17 00:55:45.930637: สถานีที่เลือก: export-jsps016
+2025-03-17 00:55:45.939193: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 00:55:45.940361: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:55:45.941397: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:55:45.945800: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+atic
+2025-03-17 00:55:45.946824: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:55:45.946824: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 00:55:45.949359: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 00:55:45.949359: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:55:45.950488: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:55:45.950488: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:55:45.951680: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:55:45.952683: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 00:55:46.030972: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:55:46.031981: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 00:55:46.031981: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:55:46.051285: พบคอลัมน์เวลา: timestamp
+2025-03-17 00:55:46.063382: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:55:46.064386: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 00:55:46.065685: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:55:46.066704: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 00:55:46.113197: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 00:55:46.115231: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 00:55:46.173775: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:00:42.547765: สถานีที่เลือก: export-jsps016
+2025-03-17 01:00:42.553200: สถานีที่เลือก: export-jsps016
+2025-03-17 01:00:42.936841: สถานีที่เลือก: export-jsps016
+2025-03-17 01:00:42.937862: สถานีที่เลือก: export-jsps016
+2025-03-17 01:00:42.947672: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:00:42.948179: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:00:42.950183: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:00:42.953190: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:00:42.955194: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:00:42.955194: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:00:42.955194: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:00:42.957706: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:00:42.958707: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:00:42.959709: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:00:42.960714: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:00:42.963719: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:00:43.030507: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:00:43.032943: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:00:43.046725: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:00:43.047729: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:00:43.048821: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:00:43.061477: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:00:43.062482: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:00:43.065705: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:00:43.091209: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:00:43.098348: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:00:43.208077: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:00:43.439282: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:01:44.924320: สถานีที่เลือก: export-jsps016
+2025-03-17 01:01:45.235215: สถานีที่เลือก: export-jsps016
+2025-03-17 01:01:46.926901: สถานีที่เลือก: export-jsps016
+2025-03-17 01:01:46.927908: สถานีที่เลือก: export-jsps016
+2025-03-17 01:01:46.937216: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:01:46.938221: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:01:46.940807: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:01:46.941811: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:01:46.943744: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:01:46.945251: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:01:46.945251: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:01:46.945251: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:01:46.946292: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:01:46.947294: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:01:46.948297: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:01:46.949584: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:01:46.949584: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:01:46.950866: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:01:47.028264: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:01:47.031362: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:01:47.053097: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:01:47.054104: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:01:47.055611: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:01:47.056782: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:01:47.077696: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:01:47.080079: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:01:47.111589: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:01:47.114257: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:01:47.402360: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:01:47.525837: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:02:47.932456: สถานีที่เลือก: export-jsps016
+2025-03-17 01:02:48.241354: สถานีที่เลือก: export-jsps016
+2025-03-17 01:02:51.925815: สถานีที่เลือก: export-jsps016
+2025-03-17 01:02:51.929694: สถานีที่เลือก: export-jsps016
+2025-03-17 01:02:51.933833: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:02:51.936163: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:02:51.938076: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:02:51.941327: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:02:51.941327: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:02:51.942329: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:02:51.942329: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:02:51.943589: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:02:51.944095: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:02:51.944095: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:02:51.944095: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:02:51.944095: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:02:51.946624: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:02:51.947627: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:02:52.005600: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:02:52.017336: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:02:52.032465: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:02:52.035105: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:02:52.047781: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:02:52.048787: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:02:52.085691: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+ed data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:02:52.086695: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:02:52.138259: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:02:52.633058: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:02:52.634540: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:03:50.924083: สถานีที่เลือก: export-jsps016
+2025-03-17 01:03:51.237973: สถานีที่เลือก: export-jsps016
+2025-03-17 01:03:55.934814: สถานีที่เลือก: export-jsps016
+2025-03-17 01:03:55.934814: สถานีที่เลือก: export-jsps016
+2025-03-17 01:03:55.946897: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:03:55.948859: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:03:55.953624: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:03:55.954678: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:03:55.954678: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:03:55.956432: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:03:55.956432: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:03:55.956432: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:03:55.957764: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:03:55.957764: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:03:55.958854: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:03:55.959590: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:03:55.961108: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:03:56.039605: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:03:56.041617: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:03:56.053234: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:03:56.054624: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:03:56.054624: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:03:56.068445: พบคอลัมน์ PM2.5: pm_2_5
+��ลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:03:56.072172: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:03:56.167229: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:03:56.171129: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:03:56.172245: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:03:56.235464: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:04:53.932822: สถานีที่เลือก: export-jsps016
+2025-03-17 01:04:54.251917: สถานีที่เลือก: export-jsps016
+2025-03-17 01:04:58.932794: สถานีที่เลือก: export-jsps016
+2025-03-17 01:04:58.933888: สถานีที่เลือก: export-jsps016
+2025-03-17 01:04:58.944942: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:04:58.944942: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:04:58.949527: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:04:58.951036: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:04:58.952425: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:04:58.952425: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:04:58.953474: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:04:58.953474: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:04:58.954647: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:04:58.954647: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:04:58.954647: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:04:58.956115: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:04:58.957153: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:04:58.958413: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:04:59.033150: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:04:59.036341: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:04:59.051857: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:04:59.051857: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:04:59.053303: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:04:59.065967: พบคอลัมน์ PM2.5: pm_2_5
+��ลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:04:59.070584: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:04:59.157453: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:04:59.176269: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:04:59.240384: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:04:59.347672: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:05:57.238505: สถานีที่เลือก: export-jsps016
+2025-03-17 01:05:57.239571: สถานีที่เลือก: export-jsps016
+2025-03-17 01:06:01.932099: สถานีที่เลือก: export-jsps016
+2025-03-17 01:06:01.933119: สถานีที่เลือก: export-jsps016
+2025-03-17 01:06:01.942908: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:06:01.944988: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:06:01.949042: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:06:01.949042: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:06:01.950046: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+-2_web\src\static
+2025-03-17 01:06:01.952593: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:06:01.952593: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:01.953595: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:06:01.953595: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:01.953595: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:01.955018: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:01.956019: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:01.956019: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:02.040056: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:06:02.042070: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:06:02.062131: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:06:02.062131: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:06:02.081547: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:06:02.083552: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:06:02.086583: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:06:02.173301: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:06:02.193414: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:06:02.251020: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:06:02.358196: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:06:26.138384: สถานีที่เลือก: export-jsps016
+2025-03-17 01:06:26.142352: สถานีที่เลือก: export-jsps016
+2025-03-17 01:06:26.152451: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:06:26.155212: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:06:26.160246: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:06:26.161755: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:06:26.162758: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:06:26.162758: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:06:26.164763: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+tic', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:06:26.165765: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:26.167667: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:06:26.167667: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:26.168674: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:26.170729: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:26.170729: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:26.265267: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:06:26.265267: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:06:26.266655: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:06:26.284361: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:06:26.296560: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:06:26.297641: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:06:26.298888: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:06:26.301217: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:06:26.358474: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:06:26.358474: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:06:26.360570: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:06:26.436069: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:06:29.375001: สถานีที่เลือก: export-jsps016
+2025-03-17 01:06:29.379517: สถานีที่เลือก: export-jsps016
+2025-03-17 01:06:29.404917: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:06:29.408023: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:06:29.409146: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:06:29.410608: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:06:29.410608: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:06:29.410608: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:06:29.412138: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:06:29.412138: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:29.412138: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+web\src\static
+2025-03-17 01:06:29.414556: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:29.415861: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:29.417523: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:29.418678: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:06:29.507986: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:06:29.508992: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:06:29.533247: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:06:29.537786: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:06:29.538793: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:06:29.542313: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:06:29.558695: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:06:29.579174: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:06:29.585606: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:06:29.589734: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:06:30.181173: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:06:30.183624: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:07:00.245581: สถานีที่เลือก: export-jsps016
+2025-03-17 01:07:00.245581: สถานีที่เลือก: export-jsps016
+2025-03-17 01:07:29.940927: สถานีที่เลือก: export-jsps016
+2025-03-17 01:07:29.944065: สถานีที่เลือก: export-jsps016
+2025-03-17 01:07:29.952959: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:07:29.952959: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:07:29.954830: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:07:29.956187: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:07:29.958696: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:07:29.958696: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:07:29.958696: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:07:29.958696: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:07:29.960414: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:07:29.961473: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:07:29.962486: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:07:29.963486: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:07:29.963486: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:07:30.011292: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:07:30.012294: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:07:30.020463: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:07:30.020968: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:07:30.020968: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:07:30.030529: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:07:30.031707: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:07:30.032713: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:07:30.052406: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:07:30.127644: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:07:30.197686: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:07:30.320857: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:08:03.237242: สถานีที่เลือก: export-jsps016
+2025-03-17 01:08:29.930168: สถานีที่เลือก: export-jsps016
+2025-03-17 01:08:29.931170: สถานีที่เลือก: export-jsps016
+2025-03-17 01:08:29.943845: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:08:29.947515: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:08:29.947515: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:08:29.948542: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:08:29.948542: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:08:29.949627: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+ 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:08:29.949627: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:08:29.950628: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:08:29.950628: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:08:29.950628: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:08:29.951684: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:08:29.951684: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:08:29.952189: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:08:30.009138: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:08:30.010279: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:08:30.010279: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:08:30.030110: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:08:30.030110: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:08:30.032635: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:08:30.117220: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:08:30.118237: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:08:30.119420: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:08:30.216820: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:09:06.242235: สถานีที่เลือก: export-jsps016
+2025-03-17 01:09:15.694736: สถานีที่เลือก: export-jsps016
+2025-03-17 01:09:15.707835: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:09:15.709153: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:09:15.710782: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:09:15.711795: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:09:15.712806: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:15.714028: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:15.714028: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:15.760211: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:09:15.761215: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:09:15.771378: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:09:15.772383: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:09:15.854372: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:09:15.854372: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:09:20.463746: สถานีที่เลือก: export-jsps016
+2025-03-17 01:09:20.477936: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:09:20.480534: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:09:20.481554: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:09:20.482707: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:09:20.482707: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:20.484023: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:20.485826: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:20.553346: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:09:20.555373: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:09:20.576134: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:09:20.578518: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:09:20.606830: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:09:20.608001: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:09:28.632326: สถานีที่เลือก: export-jsps016
+2025-03-17 01:09:28.643771: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:09:28.644773: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:09:28.646273: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:09:28.646273: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:09:28.648619: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:28.648619: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:28.649850: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:28.715323: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:09:28.716325: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:09:28.733547: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:09:28.735615: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:09:28.838636: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:09:28.839641: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:09:30.568863: สถานีที่เลือก: export-jsps016
+2025-03-17 01:09:30.578882: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:09:30.578882: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:09:30.580244: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:09:30.581249: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:09:30.582632: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:30.584063: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:30.585128: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:30.662119: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:09:30.662119: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:09:30.679633: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:09:30.681298: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:09:30.714412: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:09:30.714412: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:09:34.084654: สถานีที่เลือก: export-jsps016
+2025-03-17 01:09:34.101791: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:09:34.103330: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:09:34.104764: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:09:34.104764: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:09:34.106538: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:34.107570: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:34.108572: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:34.186504: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:09:34.186504: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:09:34.202763: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:09:34.204777: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:09:34.237026: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:09:34.238027: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:09:37.386612: สถานีที่เลือก: export-jsps016
+2025-03-17 01:09:37.397640: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 01:09:37.399090: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:09:37.400771: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:09:37.401277: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:09:37.401277: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:37.402276: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:37.402276: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:09:37.468876: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:09:37.469879: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:09:37.491938: ไม่สามารถแปลงคอลัมน์เวลาได้: unconverted data remains when parsing with format "%Y-%m-%d %H:%M:%S": ".000", at position 25000. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-03-17 01:09:37.494291: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:09:37.528135: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 25802
+2025-03-17 01:09:37.529139: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 25802
+2025-03-17 01:10:09.246788: สถานีที่เลือก: export-jsps016
+2025-03-17 01:10:09.246788: สถานีที่เลือก: export-jsps016
+2025-03-17 01:15:06.147404: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 01:15:06.148591: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:15:06.148591: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:15:06.150282: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:15:06.150789: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:06.151803: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:06.151803: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:06.162255: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 01:15:06.163315: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:15:06.164321: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:15:06.165321: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:15:06.165321: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:06.166829: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:06.168080: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:06.231237: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:15:06.234257: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:15:06.248136: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:15:06.249160: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 01:15:06.250352: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:15:06.263664: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:15:06.265087: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 01:15:06.266093: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:15:06.268935: มีข้อมูลทั้งหมด 25803 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 01:15:06.272006: มีข้อมูลทั้งหมด 25803 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 01:15:06.275172: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 01:15:06.276173: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 01:15:06.279327: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 01:15:06.279833: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 01:15:15.209452: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 01:15:15.209957: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:15:15.212925: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:15:15.213932: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:15:15.214938: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:15.219959: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 01:15:15.220962: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:15.220962: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:15:15.221964: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:15.222470: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:15:15.223473: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:15:15.224475: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:15.226479: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:15.229005: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:15.302112: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:15:15.302112: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:15:15.303162: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:15:15.303162: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:15:15.337005: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 01:15:15.337005: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 01:15:15.337005: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:15:15.337005: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:15:15.346646: มีข้อมูลทั้งหมด 25803 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 01:15:15.352079: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 01:15:15.353179: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 01:15:30.661634: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 01:15:30.662640: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:15:30.662640: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:15:30.664757: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:15:30.666054: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:30.667061: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:30.668392: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:30.736586: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:15:30.737610: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:15:30.759138: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 01:15:30.760143: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:15:30.765998: มีข้อมูลทั้งหมด 25803 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 01:15:30.770701: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 01:15:30.772724: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 01:15:32.348008: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 01:15:32.350408: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:15:32.351413: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:15:32.352415: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:15:32.353452: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:32.354532: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:32.357259: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:32.416720: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:15:32.418149: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:15:32.441728: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 01:15:32.442986: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:15:32.447891: มีข้อมูลทั้งหมด 25803 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 01:15:32.453351: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 01:15:32.454392: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 01:15:33.904172: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 01:15:33.905575: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 01:15:33.906883: โฟลเดอร์ที่จะค้นหา: ['c:\\webbb\\termproject1-2_web\\src\\static', 'c:\\webbb\\termproject1-2_web\\static', 'c:\\webbb\\termproject1-2_web\\src\\static\\data', 'c:\\webbb\\termproject1-2_web\\src\\data', 'c:\\webbb\\termproject1-2_web\\src', 'c:\\webbb\\termproject1-2_web']
+2025-03-17 01:15:33.907889: กำลังค้นหาในโฟลเดอร์: c:\webbb\termproject1-2_web\src\static
+2025-03-17 01:15:33.907889: ตรวจสอบไฟล์: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:33.909236: พบไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:33.911152: กำลังอ่านไฟล์ CSV: c:\webbb\termproject1-2_web\src\static\export-jsps016-1h.csv
+2025-03-17 01:15:33.974132: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 01:15:33.975138: พบคอลัมน์เวลา: timestamp
+2025-03-17 01:15:33.997633: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 01:15:33.999133: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 01:15:34.004130: มีข้อมูลทั้งหมด 25803 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 01:15:34.008052: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 01:15:34.010133: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
