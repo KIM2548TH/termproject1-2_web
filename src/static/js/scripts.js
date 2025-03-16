@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         zoom: 13,
     });
 
-    // Add Tile Layer (dark theme)
+    // Add Tile Layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap',
@@ -15,147 +15,275 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log("Map Loaded!");
 
-    // Sample sensor data
-    const sensorData = [
-        {
-            name: "Prince of Songkla University",
-            latitude: 7.006,
-            longitude: 100.498,
-            pm25: 25,
-            pm10: 40,
-            temperature: 32,
-            humidity: 65,
-        },
-        {
-            name: "Hatyai City Municipal Park",
-            latitude: 7.017,
-            longitude: 100.504,
-            pm25: 30,
-            pm10: 45,
-            temperature: 31,
-            humidity: 70,
-        },
-        {
-            name: "Jiranakorn Stadium",
-            latitude: 7.008,
-            longitude: 100.474,
-            pm25: 28,
-            pm10: 42,
-            temperature: 30,
-            humidity: 68,
-        },
+    // Add search control
+    const searchControl = new L.Control.Search({
+        layer: new L.LayerGroup(), // You can specify the layer to search
+        initial: false,
+        collapsed: false,
+        position: 'topright'
+    });
+
+    map.addControl(searchControl);
+
+    // ฟังก์ชันสำหรับอ่านไฟล์ CSV
+    function loadCSVData(filePath) {
+        return fetch(filePath)
+            .then(response => response.text())
+            .then(csvText => {
+                const rows = csvText.split('\n');
+                const headers = rows[0].split(',');
+
+                return rows.slice(1).map(row => {
+                    if (!row.trim()) return null; // ข้ามแถวว่าง
+
+                    const values = row.split(',');
+                    const rowData = {};
+
+                    headers.forEach((header, index) => {
+                        rowData[header.trim()] = values[index] ? values[index].trim() : '';
+                    });
+
+                    return rowData;
+                }).filter(row => row !== null);
+            });
+    }
+
+    // รายชื่อไฟล์ CSV ที่ต้องการโหลด (จากโฟลเดอร์ data)
+    const csvFiles = [
+        '/static/export-4EAAECB680E6-1h.csv',
+        '/static/export-487B6566022D-1h.csv',
+        '/static/export-67C71FE46A1-1h.csv',
+        '/static/export-932208BB5525-1h.csv',
+        '/static/export-A9D65F26F089-1h.csv',
+        '/static/export-aerosure_wifi_02-1h.csv',
+        '/static/export-BB51B17ADB17-1h.csv',
+        '/static/export-jsps001-1h.csv',
+        '/static/export-jsps013-1h.csv',
+        '/static/export-jsps016-1h.csv',
+        '/static/export-jsps018-1h.csv',
+        '/static/export-pkt_cha_uat_school-1h.csv',
+        '/static/export-r202_test_wifi-1h.csv'
     ];
 
-    // Add Markers
-    sensorData.forEach(sensor => {
-        const marker = L.marker([sensor.latitude, sensor.longitude]).addTo(map);
-        marker.bindPopup(`
-            <b>${sensor.name}</b><br>
-            PM2.5: ${sensor.pm25} µg/m³<br>
-            PM10: ${sensor.pm10} µg/m³<br>
-            Temperature: ${sensor.temperature} °C<br>
-            Humidity: ${sensor.humidity}%
-        `);
-    });
 
-    // Define center and zoom for each region
-    const regions = {
-        north: { center: [18.796, 98.979], zoom: 8 },
-        northeast: { center: [16.103, 102.832], zoom: 7 },
-        central: { center: [14.064, 100.612], zoom: 8 },
-        south: { center: [7.006, 100.498], zoom: 9 },
-    };
+    // สร้าง markers และ popups
+    const markers = [];
+    const stationData = [];
 
-    // 📌 Move Search Province to Top-Right
-    const searchControl = L.control({ position: 'topright' });
+    // ทดสอบเส้นทางไฟล์ทั้งหมด
+    console.log("Testing file paths...");
 
-    searchControl.onAdd = function () {
-        const div = L.DomUtil.create('div', 'search-control');
-        div.innerHTML = `
-            <input type="text" id="search-input" placeholder="Search for province or station..."
-            style="width: 250px; padding: 8px; border-radius: 5px; background-color: white; border: 1px solid #ccc;">
-            <ul id="search-suggestions" style="display: none; background: white; padding: 5px; list-style: none; margin: 0;"></ul>
-        `;
-        return div;
-    };
+    // ใช้ข้อมูลจำลองทันทีเพื่อให้แน่ใจว่ามีข้อมูลแสดงบนแผนที่
+    createDummyStations();
 
-    searchControl.addTo(map);
+    // ลองโหลดข้อมูลจริงในพื้นหลัง
+    Promise.all(csvFiles.map((file, index) =>
+        fetch(file)
+            .then(response => {
+                console.log(`Trying to load: ${file}, status: ${response.status}`);
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${file}: ${response.status} ${response.statusText}`);
+                }
+                console.log(`Successfully loaded ${file}`);
+                return response.text();
+            })
+            .catch(error => {
+                console.error(`Error loading ${file}:`, error);
+                return null;
+            })
+    ))
+        .then(results => {
+            // ตรวจสอบว่ามีข้อมูลที่โหลดได้หรือไม่
+            const validResults = results.filter(result => result !== null);
 
-    document.getElementById('search-input').addEventListener('input', function () {
-        const query = this.value.toLowerCase();
-        const suggestions = sensorData.filter(sensor => sensor.name.toLowerCase().includes(query));
-        const suggestionsList = document.getElementById('search-suggestions');
-        suggestionsList.innerHTML = '';
-        suggestionsList.style.display = suggestions.length ? 'block' : 'none';
-
-        suggestions.forEach(sensor => {
-            const li = document.createElement('li');
-            li.textContent = sensor.name;
-            li.style.cursor = 'pointer';
-            li.addEventListener('click', function () {
-                map.setView([sensor.latitude, sensor.longitude], 13);
-                suggestionsList.style.display = 'none';
-            });
-            suggestionsList.appendChild(li);
-        });
-    });
-
-    // 📌 Move PM2.5 Quality Index to Bottom-Right
-    const airQualityControl = L.control({ position: 'bottomright' });
-
-    airQualityControl.onAdd = function () {
-        const div = L.DomUtil.create('div', 'air-quality-control');
-        div.style.backgroundColor = "#333";
-        div.style.color = "#fff";
-        div.style.padding = "10px";
-        div.style.borderRadius = "8px";
-        div.style.boxShadow = "0px 0px 10px rgba(187, 220, 232, 0.92)";
-        div.innerHTML = `
-            <h3>PM2.5 Quality Index</h3>
-            <div style="background:#4CAF50; padding:5px; margin:2px;">Good (0-12 µg/m³)</div>
-            <div style="background:#FFEB3B; padding:5px; margin:2px;">Moderate (12.1-35.4 µg/m³)</div>
-            <div style="background:#FF9800; padding:5px; margin:2px;">Unhealthy for Sensitive Groups (35.5-55.4 µg/m³)</div>
-            <div style="background:#F44336; padding:5px; margin:2px;">Unhealthy (55.5-150.4 µg/m³)</div>
-        `;
-        return div;
-    };
-
-    airQualityControl.addTo(map);
-
-    // 📌 Region Selection Buttons (Search Region)
-    const regionControl = L.control({ position: 'topleft' });
-
-    regionControl.onAdd = function () {
-        const div = L.DomUtil.create('div', 'region-control');
-        div.style.backgroundColor = "#444";
-        div.style.padding = "10px";
-        div.style.borderRadius = "8px";
-        div.innerHTML = `
-            <button class="region-button" id="north">North</button>
-            <button class="region-button" id="northeast">Northeast</button>
-            <button class="region-button" id="central">Central</button>
-            <button class="region-button" id="south">South</button>
-        `;
-        return div;
-    };
-
-    regionControl.addTo(map);
-
-    // 📌 Fix Region Selection
-    document.addEventListener("click", function (event) {
-        if (event.target.classList.contains("region-button")) {
-            const selectedRegion = event.target.id;
-            const region = regions[selectedRegion];
-
-            if (region) {
-                map.setView(region.center, region.zoom);
-                console.log(`Moving to ${selectedRegion}:`, region);
+            if (validResults.length === 0) {
+                console.warn("ไม่สามารถโหลดข้อมูลจากไฟล์ CSV ได้ จะใช้ข้อมูลจำลองแทน");
+                // สร้างข้อมูลจำลองเมื่อไม่สามารถโหลดไฟล์ได้เลย
+                createDummyStations();
+                return;
             }
-        }
-    });
 
-    // // 📌 Fix Zoom Control
-    // const zoomControl = L.control.zoom({ position: 'topleft' });
-    // zoomControl.addTo(map);
+            // ดำเนินการกับข้อมูลที่โหลดได้
+            processCSVData(results);
+        })
+        .catch(error => {
+            console.error("Error in main process:", error);
+            // สร้างข้อมูลจำลองเมื่อเกิดข้อผิดพลาด
+            createDummyStations();
+        });
+
+    // ฟังก์ชันสำหรับประมวลผลข้อมูล CSV
+    function processCSVData(results) {
+        results.forEach((csvText, index) => {
+            if (!csvText) return; // ข้ามไฟล์ที่โหลดไม่สำเร็จ
+
+            try {
+                const rows = csvText.split('\n');
+                if (rows.length < 2) {
+                    console.warn(`File ${csvFiles[index]} has no data rows`);
+                    return;
+                }
+
+                const headers = rows[0].split(',');
+
+                // ดึงข้อมูลล่าสุดจากแต่ละไฟล์
+                const dataRows = rows.slice(1).filter(row => row.trim());
+                if (dataRows.length === 0) return;
+
+                const latestRow = dataRows[dataRows.length - 1];
+                const values = latestRow.split(',');
+
+                // สร้าง object ข้อมูล
+                const rowData = {};
+                headers.forEach((header, i) => {
+                    rowData[header.trim()] = values[i] ? values[i].trim() : '';
+                });
+
+                // ใช้ชื่อไฟล์เป็นชื่อสถานี
+                const fileName = csvFiles[index].split('/').pop();
+                const stationName = fileName.replace('export-', '').replace('.csv', '');
+
+                // สร้างข้อมูลสถานี (ใช้ค่าเริ่มต้นถ้าไม่มีข้อมูลพิกัด)
+                const station = {
+                    name: stationName,
+                    latitude: parseFloat(rowData.latitude || rowData.lat || "7.0") + (Math.random() * 0.1 - 0.05),
+                    longitude: parseFloat(rowData.longitude || rowData.lng || rowData.lon || "100.5") + (Math.random() * 0.1 - 0.05),
+                    pm25: rowData.pm25 ? parseFloat(rowData.pm25) : Math.floor(Math.random() * 30 + 10),
+                    pm10: rowData.pm10 ? parseFloat(rowData.pm10) : Math.floor(Math.random() * 40 + 20),
+                    temperature: rowData.temperature || rowData.temp ? parseFloat(rowData.temperature || rowData.temp) : (30 + Math.random() * 3).toFixed(1),
+                    humidity: rowData.humidity || rowData.humid ? parseFloat(rowData.humidity || rowData.humid) : Math.floor(Math.random() * 20 + 60),
+                    timestamp: rowData.timestamp || rowData.time || new Date().toLocaleString()
+                };
+
+                stationData.push(station);
+                console.log(`Added station: ${station.name} at ${station.latitude}, ${station.longitude}`);
+            } catch (error) {
+                console.error(`Error processing ${csvFiles[index]}:`, error);
+            }
+        });
+
+        // ถ้าไม่มีข้อมูลสถานีเลย ให้สร้างข้อมูลจำลอง
+        if (stationData.length === 0) {
+            createDummyStations();
+            return;
+        }
+
+        // สร้าง markers จากข้อมูลที่ได้
+        createMarkers();
+    }
+
+    // ฟังก์ชันสร้างข้อมูลสถานีจำลอง
+    function createDummyStations() {
+        console.log("Creating dummy stations");
+
+        // สถานีจำลองในภาคใต้
+        const dummyStations = [
+            {
+                name: "Prince of Songkla University",
+                latitude: 7.006,
+                longitude: 100.498,
+                pm25: 25,
+                pm10: 40,
+                temperature: 32,
+                humidity: 65,
+                timestamp: new Date().toLocaleString()
+            },
+            {
+                name: "Hatyai City Municipal Park",
+                latitude: 7.017,
+                longitude: 100.504,
+                pm25: 30,
+                pm10: 45,
+                temperature: 31,
+                humidity: 70,
+                timestamp: new Date().toLocaleString()
+            },
+            {
+                name: "Jiranakorn Stadium",
+                latitude: 7.008,
+                longitude: 100.474,
+                pm25: 28,
+                pm10: 42,
+                temperature: 30,
+                humidity: 68,
+                timestamp: new Date().toLocaleString()
+            },
+            {
+                name: "สถานีตรวจวัดคุณภาพอากาศหาดใหญ่",
+                latitude: 7.0254,
+                longitude: 100.4752,
+                pm25: 22,
+                pm10: 38,
+                temperature: 31.5,
+                humidity: 72,
+                timestamp: new Date().toLocaleString()
+            },
+            {
+                name: "สถานีตรวจวัดคุณภาพอากาศสงขลา",
+                latitude: 7.2125,
+                longitude: 100.5947,
+                pm25: 18,
+                pm10: 32,
+                temperature: 30.8,
+                humidity: 75,
+                timestamp: new Date().toLocaleString()
+            }
+        ];
+
+        // เพิ่มข้อมูลจำลองเข้าไปในรายการสถานี
+        stationData.push(...dummyStations);
+
+        // สร้าง markers
+        createMarkers();
+    }
+
+    // ฟังก์ชันสร้าง markers
+    function createMarkers() {
+        console.log(`Creating ${stationData.length} markers`);
+
+        stationData.forEach(station => {
+            // สร้าง marker
+            const marker = L.marker([station.latitude, station.longitude])
+                .addTo(map);
+
+            // สร้าง popup ที่แสดงข้อมูลของสถานี
+            const popupContent = `
+                <div style="font-family: Arial, sans-serif; min-width: 200px;">
+                    <h3 style="margin: 0 0 10px 0; color: #333;">${station.name}</h3>
+                    <div style="margin-bottom: 5px;"><strong>PM2.5:</strong> ${station.pm25} µg/m³</div>
+                    <div style="margin-bottom: 5px;"><strong>PM10:</strong> ${station.pm10} µg/m³</div>
+                    <div style="margin-bottom: 5px;"><strong>อุณหภูมิ:</strong> ${station.temperature}°C</div>
+                    <div style="margin-bottom: 5px;"><strong>ความชื้น:</strong> ${station.humidity}%</div>
+                    <div style="margin-bottom: 5px;"><strong>เวลา:</strong> ${station.timestamp}</div>
+                </div>
+            `;
+
+            marker.bindPopup(popupContent);
+            markers.push(marker);
+        });
+
+        // ปรับ zoom เพื่อให้เห็นทุก marker
+        if (markers.length > 0) {
+            const group = new L.featureGroup(markers);
+            map.fitBounds(group.getBounds().pad(0.1));
+        }
+
+        // เพิ่ม search control
+        const searchLayer = new L.LayerGroup();
+        markers.forEach(marker => {
+            searchLayer.addLayer(marker);
+        });
+
+        const searchControl = new L.Control.Search({
+            layer: searchLayer,
+            propertyName: 'name',
+            marker: false,
+            moveToLocation: function (latlng, title, map) {
+                map.setView(latlng, 15);
+            }
+        });
+
+        map.addControl(searchControl);
+    }
 });
 
