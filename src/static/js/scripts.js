@@ -238,52 +238,110 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ฟังก์ชันสร้าง markers
-    function createMarkers() {
-        console.log(`Creating ${stationData.length} markers`);
+function createMarkers() {
+    console.log(`Creating ${stationData.length} markers`);
 
-        stationData.forEach(station => {
-            // สร้าง marker
-            const marker = L.marker([station.latitude, station.longitude])
-                .addTo(map);
+    stationData.forEach(station => {
+        // สร้าง marker
+        const marker = L.marker([station.latitude, station.longitude])
+            .addTo(map);
 
-            // สร้าง popup ที่แสดงข้อมูลของสถานี
-            const popupContent = `
-                <div style="font-family: Arial, sans-serif; min-width: 200px;">
-                    <h3 style="margin: 0 0 10px 0; color: #333;">${station.name}</h3>
-                    <div style="margin-bottom: 5px;"><strong>PM2.5:</strong> ${station.pm25} µg/m³</div>
-                    <div style="margin-bottom: 5px;"><strong>PM10:</strong> ${station.pm10} µg/m³</div>
-                    <div style="margin-bottom: 5px;"><strong>อุณหภูมิ:</strong> ${station.temperature}°C</div>
-                    <div style="margin-bottom: 5px;"><strong>ความชื้น:</strong> ${station.humidity}%</div>
-                    <div style="margin-bottom: 5px;"><strong>เวลา:</strong> ${station.timestamp}</div>
-                </div>
+        // สร้าง popup ที่แสดงข้อมูลของสถานี
+        const popupContent = `
+            <div style="font-family: Arial, sans-serif; min-width: 200px;">
+                <h3 style="margin: 0 0 10px 0; color: #333;">${station.name}</h3>
+                <div style="margin-bottom: 5px;"><strong>PM2.5:</strong> ${station.pm25} µg/m³</div>
+                <div style="margin-bottom: 5px;"><strong>PM10:</strong> ${station.pm10} µg/m³</div>
+                <div style="margin-bottom: 5px;"><strong>อุณหภูมิ:</strong> ${station.temperature}°C</div>
+                <div style="margin-bottom: 5px;"><strong>ความชื้น:</strong> ${station.humidity}%</div>
+                <div style="margin-bottom: 5px;"><strong>เวลา:</strong> ${station.timestamp}</div>
+            </div>
+        `;
+
+        marker.bindPopup(popupContent);
+
+        // เพิ่ม event listener เมื่อคลิกที่ marker
+        marker.on('click', function () {
+            updateIndexContent(station);
+        });
+
+        markers.push(marker);
+    });
+
+    // ปรับ zoom เพื่อให้เห็นทุก marker
+    if (markers.length > 0) {
+        const group = new L.featureGroup(markers);
+        map.fitBounds(group.getBounds().pad(0.1));
+    }
+
+    map.addControl(searchControl);
+}
+
+// ฟังก์ชันในการอัปเดตข้อมูลบนหน้า index.html
+function updateIndexContent(station) {
+    // อัปเดตค่า PM2.5, PM10, Temperature, Humidity
+    document.getElementById('pm25-value').textContent = station.pm25;
+    document.getElementById('pm10-value').textContent = station.pm10;
+    document.getElementById('temperature-value').textContent = station.temperature;
+    document.getElementById('humidity-value').textContent = station.humidity;
+
+    // อัปเดตชื่อสถานี
+    document.getElementById('location-name').textContent = station.name;
+}
+
+
+        // 📌 Move PM2.5 Quality Index to Bottom-Right
+        const airQualityControl = L.control({ position: 'bottomright' });
+
+        airQualityControl.onAdd = function () {
+            const div = L.DomUtil.create('div', 'air-quality-control');
+            div.style.backgroundColor = "#333";
+            div.style.color = "#fff";
+            div.style.padding = "10px";
+            div.style.borderRadius = "8px";
+            div.style.boxShadow = "0px 0px 10px rgba(187, 220, 232, 0.92)";
+            div.innerHTML = `
+                <h3>PM2.5 Quality Index</h3>
+                <div style="background:#4CAF50; padding:5px; margin:2px;">Good (0-12 µg/m³)</div>
+                <div style="background:#FFEB3B; padding:5px; margin:2px;">Moderate (12.1-35.4 µg/m³)</div>
+                <div style="background:#FF9800; padding:5px; margin:2px;">Unhealthy for Sensitive Groups (35.5-55.4 µg/m³)</div>
+                <div style="background:#F44336; padding:5px; margin:2px;">Unhealthy (55.5-150.4 µg/m³)</div>
             `;
-
-            marker.bindPopup(popupContent);
-            markers.push(marker);
-        });
-
-        // ปรับ zoom เพื่อให้เห็นทุก marker
-        if (markers.length > 0) {
-            const group = new L.featureGroup(markers);
-            map.fitBounds(group.getBounds().pad(0.1));
-        }
-
-        // เพิ่ม search control
-        const searchLayer = new L.LayerGroup();
-        markers.forEach(marker => {
-            searchLayer.addLayer(marker);
-        });
-
-        const searchControl = new L.Control.Search({
-            layer: searchLayer,
-            propertyName: 'name',
-            marker: false,
-            moveToLocation: function (latlng, title, map) {
-                map.setView(latlng, 15);
+            return div;
+        };
+    
+        airQualityControl.addTo(map);
+    
+        // 📌 Region Selection Buttons (Search Region)
+        const regionControl = L.control({ position: 'topleft' });
+    
+        regionControl.onAdd = function () {
+            const div = L.DomUtil.create('div', 'region-control');
+            div.style.backgroundColor = "#444";
+            div.style.padding = "10px";
+            div.style.borderRadius = "8px";
+            div.innerHTML = `
+                <button class="region-button" id="north">North</button>
+                <button class="region-button" id="northeast">Northeast</button>
+                <button class="region-button" id="central">Central</button>
+                <button class="region-button" id="south">South</button>
+            `;
+            return div;
+        };
+    
+        regionControl.addTo(map);
+    
+        // 📌 Fix Region Selection
+        document.addEventListener("click", function (event) {
+            if (event.target.classList.contains("region-button")) {
+                const selectedRegion = event.target.id;
+                const region = regions[selectedRegion];
+    
+                if (region) {
+                    map.setView(region.center, region.zoom);
+                    console.log(`Moving to ${selectedRegion}:`, region);
+                }
             }
         });
-
-        map.addControl(searchControl);
-    }
 });
 
