@@ -247,7 +247,7 @@ function updateIndexContent(station) {
     document.getElementById('pm25-value').textContent = station.pm25;
     document.getElementById('pm10-value').textContent = station.pm10;
     document.getElementById('temperature-value').textContent = parseFloat(station.temperature).toFixed(2);
-    document.getElementById('humidity-value').textContent = parseFloat(station.humidity).toFixed(2);
+    document.getElementById('humidity-value').textContent = parseFloat(station.hu).toFixed(2);
 
     // อัปเดตชื่อสถานี
     document.getElementById('location-name').textContent = station.name;
@@ -367,4 +367,22 @@ function updateIndexContent(station) {
         
         
 });
+// ในส่วนที่คุณจัดการการคลิก marker
+marker.on('click', function () {
+    // สร้างข้อมูลสถานีที่คลิก
+    const clickData = {
+        points: [{
+            customdata: station.name // ส่งชื่อสถานีไปยัง Dash app
+        }]
+    };
 
+    // ส่งข้อมูลไปยัง Dash app
+    if (window.DashApp) {
+        window.DashApp.updateComponent('map', 'clickData', clickData);
+    } else {
+        console.error("DashApp is not defined");
+    }
+
+    // อัปเดตข้อมูลบนหน้า index.html
+    updateIndexContent(station);
+});

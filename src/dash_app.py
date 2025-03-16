@@ -10,6 +10,7 @@ import pandas as pd
 from flask import request
 import glob
 import json
+from urllib.parse import parse_qs
 
 # เพิ่มฟังก์ชันสำหรับการดีบัก
 def debug_log(message):
@@ -23,15 +24,10 @@ dash_app = Dash(__name__, server=app, url_base_pathname='/dash/')
 
 # Define the layout of the Dash app
 dash_app.layout = html.Div([
-    html.Div(id='debug-info', style={'color': 'white', 'fontSize': '12px', 'marginBottom': '10px'}),
+    dcc.Location(id='url', refresh=False),  # รับค่า URL parameter
+    dcc.Store(id='selected-station', storage_type='memory'),  # เก็บสถานีที่ถูกเลือก
     dcc.Graph(id='feature-graph', style={'backgroundColor': '#333'}),
-    dcc.Interval(
-        id='interval-component',
-        interval=60*1000,  # Update every minute
-        n_intervals=0
-    ),
-    # Hidden div to store the selected station
-    html.Div(id='selected-station', style={'display': 'none'})
+    dcc.Interval(id='interval-component', interval=60*1000, n_intervals=0)
 ], style={'backgroundColor': '#333', 'padding': '15px', 'borderRadius': '10px'})
 
 # ฟังก์ชันสำหรับค้นหาไฟล์ CSV
@@ -88,7 +84,7 @@ def find_csv_file(station_name):
         all_csv_files = glob.glob(os.path.join(search_dir, "*.csv"))
         debug_log(f"ไฟล์ CSV ทั้งหมดในโฟลเดอร์: {all_csv_files}")
         
-        # ตรวจสอบว่ามีไฟล์ใดที่มีชื่อียู่ในชื่อไฟล์
+        # ตรวจสอบว่ามีไฟล์ใดที่มีชื่ออยู่ในชื่อไฟล์
         station_variants = [
             station_name,
             station_filename,
@@ -216,17 +212,31 @@ def read_csv_data(csv_path):
         debug_log(traceback.format_exc())
         return None
 
-# Define the callback to update the graph
+# Callback เพื่อรับค่า station จาก URL parameter
+@dash_app.callback(
+    Output('selected-station', 'data'),
+    Input('url', 'search')  # รับค่า query string จาก URL
+)
+def update_selected_station(search):
+    if search:
+        # แยกค่า station จาก query string (?station=...)
+        params = parse_qs(search.lstrip('?'))
+        station = params.get('station', [None])[0]
+        debug_log(f"สถานีที่เลือกจาก URL: {station}")
+        return station
+    return None  # ถ้าไม่มีค่า station ใน URL
+
+# Callback เพื่ออัปเดตกราฟ
 @dash_app.callback(
     Output('feature-graph', 'figure'),
     [Input('interval-component', 'n_intervals'),
-    Input('selected-station', 'children')]
+     Input('selected-station', 'data')]  # ใช้ 'data' จาก dcc.Store
 )
 def update_graph(n, selected_station):
     debug_log(f"กำลังอัปเดตกราฟสำหรับสถานี: {selected_station}")
     
-    # Use the selected station from URL parameter
-    station = selected_station or 'export-jsps016'  # Default if none selected
+    # ใช้สถานีที่เลือกจาก URL parameter หรือค่า default
+    station = selected_station or 'export-jsps001'  # Default if none selected
     
     # ค้นหาไฟล์ CSV
     csv_path = find_csv_file(station)

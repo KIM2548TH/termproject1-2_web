@@ -14,7 +14,7 @@
             <a href="#" id="view-predictions" class="view-predictions-link">View Predictions</a>
             <select id="location-dropdown" class="form-select w-auto">
                 <option value="">Select Station</option>
-                <option value="export-4B7B6566022D">export-4B7B6566022D</option>
+                <option value="export-4B7B6566022D">export-4B7B6566022D-1h</option>
                 <option value="export-4EAAECB6B0E6">export-4EAAECB6B0E6</option>
                 <option value="export-67C711FE46A1">export-67C711FE46A1</option>
                 <option value="export-932208BB5525">export-932208BB5525</option>
@@ -84,8 +84,6 @@
         </div>
     </div>
 
-
-
     <div class="forecast-blocks">
         <span class="forecast-block">
             <span class="forecast-day">Day1</span>
@@ -116,6 +114,7 @@
             <span class="forecast-value">35 µg/m³</span>
         </span>
     </div>
+
     <!-- แทรก iframe เพื่อแสดง Dash Application -->
     <iframe id="dash-iframe" src="/dash/" width="100%" height="600px" style="border:none;"></iframe>
 
@@ -131,11 +130,20 @@
                 iframe.src = `/dash/?station=${selectedStation}`;
             });
         });
+
+        // เมื่อคลิกที่ marker บนแผนที่
+        function updateIndexContent(station) {
+            // อัปเดตข้อมูลบนหน้า index.html
+            document.getElementById('pm25-value').textContent = station.pm25;
+            document.getElementById('pm10-value').textContent = station.pm10;
+            document.getElementById('temperature-value').textContent = parseFloat(station.temperature).toFixed(2);
+            document.getElementById('humidity-value').textContent = parseFloat(station.humidity).toFixed(2);
+            document.getElementById('location-name').textContent = station.name;
+
+            // อัปเดต iframe ด้วย URL parameter
+            const iframe = document.getElementById('dash-iframe');
+            iframe.src = `/dash/?station=${station.name}`;
+        }
     </script>
 </div>
-
-
-
-
-
 {% endblock %}
