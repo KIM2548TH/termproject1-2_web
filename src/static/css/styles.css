@@ -1,7 +1,7 @@
 /* ตั้งค่าทั่วไป */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #1c1c1e;
+    background-color: #F5F5F5;
     /* Dark background */
     color: #f5f5f5;
     /* Light text color */
@@ -236,14 +236,7 @@ h2 {
     margin-bottom: 30px;
 }
 
-.metric-card {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+
 
 .metric-icon {
     margin-bottom: 10px;
@@ -502,14 +495,14 @@ h2 {
 .location-temperature h1 {
     font-size: 32px;
     font-weight: bold;
-    color: #fcfafa;
+    color: #dcdbdb;
     margin-bottom: 10px;
 }
 
 .temperature-display {
     font-size: 48px;
     font-weight: bold;
-    color: #dcdbdb;
+    color: #fcfdaa;
 }
 
 .weather-condition {
@@ -529,15 +522,17 @@ h2 {
 }
 
 .location-temperature {
+    margin-top: 40px;
     margin-bottom: 30px;
     text-align: center;
     position: sticky;
     top: 0;
-    background-color: #2c2c2e;
+    background-color: #333333;
     /* Darker sticky header */
     z-index: 1000;
     padding: 10px 0;
     transition: all 0.3s ease;
+    height: 180px;
     /* Smooth transition */
 }
 
@@ -547,7 +542,7 @@ h2 {
     padding: 5px 0;
     /* Adjust padding */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -560,26 +555,27 @@ h4 {
 }
 
 .metric-card {
-    background-color: #2c2c2e;
+    background-color: #f6f6f9;
     /* Dark card background */
     border-radius: 10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    color: #f5f5f5;
+    color: #1b1c1f;
     /* Light text color */
 }
 
 .metric-value {
     font-size: 24px;
     font-weight: bold;
-    color: #f5f5f5;
+    color: #4a4d5a;
     /* Light text color */
 }
 
 .forecast-section,
 .forecast-table {
+    margin-bottom: 30px;
     background-color: #2c2c2e;
     /* Dark section background */
     border-radius: 10px;
@@ -597,19 +593,20 @@ h4 {
 }
 
 .view-predictions-link {
-    background-color: #007aff;
+    background-color: #a5bbd2;
     /* iOS blue */
     color: #fff;
     /* White text color */
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 .view-predictions-link:hover {
-    background-color: #005bb5;
+    background-color: #f2fab1;
+    color: #53514c;
     /* Darker blue on hover */
 }
 
@@ -624,7 +621,7 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #a5bbd2;
     /* Dark background for blocks */
     color: #f5f5f5;
     /* Light text color */
