@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Script Loaded!");
 
-    // กำหนดค่าเริ่มต้นของแผนที่
+    // Initialize the map with a dark theme
     const map = L.map('map', {
-        center: [7.006, 100.498], // ศูนย์กลางที่มหาวิทยาลัยสงขลานครินทร์
+        center: [7.006, 100.498], // Center at Prince of Songkla University
         zoom: 13,
     });
 
-    // เพิ่ม Tile Layer (แผนที่พื้นหลัง)
+    // Add Tile Layer (dark theme)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap',
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log("Map Loaded!");
 
-    // ข้อมูลเซ็นเซอร์ตัวอย่าง
+    // Sample sensor data
     const sensorData = [
         {
             name: "Prince of Songkla University",
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     ];
 
-    // เพิ่ม Marker และ Popup สำหรับแต่ละเซ็นเซอร์
+    // Add Marker and Popup for each sensor
     sensorData.forEach(sensor => {
         const marker = L.marker([sensor.latitude, sensor.longitude], {
             icon: L.icon({
@@ -61,46 +61,59 @@ document.addEventListener("DOMContentLoaded", function () {
             <b>${sensor.name}</b><br>
             PM2.5: ${sensor.pm25} µg/m³<br>
             PM10: ${sensor.pm10} µg/m³<br>
-            อุณหภูมิ: ${sensor.temperature} °C<br>
-            ความชื้น: ${sensor.humidity}%
+            Temperature: ${sensor.temperature} °C<br>
+            Humidity: ${sensor.humidity}%
         `);
 
-        // เมื่อคลิกที่ Marker ให้อัปเดตข้อมูลใน sidebar
+        // Update sidebar information on marker click
         marker.on('click', function () {
             updateLocationInfo(
-                sensor.name, // ชื่อสถานที่
-                sensor.pm25, // ค่า PM2.5
-                sensor.pm10, // ค่า PM10
-                sensor.temperature, // อุณหภูมิ
-                sensor.humidity // ความชื้น
+                sensor.name,
+                sensor.pm25,
+                sensor.pm10,
+                sensor.temperature,
+                sensor.humidity
             );
         });
     });
 
-    // ฟังก์ชันอัปเดตข้อมูลใน sidebar
+    // Function to update sidebar information
     function updateLocationInfo(location, pm25, pm10, temperature, humidity) {
-        // อัปเดตชื่อสถานที่
         document.getElementById('location-name').textContent = location;
-
-        // อัปเดตค่า PM2.5
         document.getElementById('pm25-value').textContent = pm25;
-
-        // อัปเดตค่า PM10
         document.getElementById('pm10-value').textContent = pm10;
-
-        // อัปเดตอุณหภูมิ
         document.getElementById('temperature-value').textContent = temperature;
-
-        // อัปเดตความชื้น
         document.getElementById('humidity-value').textContent = humidity;
     }
 
-    // เพิ่ม Control สำหรับแสดง PM2.5 Air Quality Index ในแผนที่
+    // Add Region Control with buttons next to zoom controls
+    // Add Region Control with buttons arranged horizontally
+    const regionControl = L.control({ position: 'topleft' });
+
+    regionControl.onAdd = function (map) {
+        const div = L.DomUtil.create('div', 'region-control');
+        div.style.display = 'flex';
+        div.style.flexDirection = 'row'; // Arrange buttons in a row
+        div.style.backgroundColor = '#333333'; // Dark background
+        div.style.padding = '10px';
+        div.style.borderRadius = '8px';
+        div.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.2)';
+        div.innerHTML = `
+            <button id="north" class="region-button" style="margin: 5px; background-color: #444444; color: #ffffff; border: none; padding: 10px 20px; border-radius: 20px;">North</button>
+            <button id="northeast" class="region-button" style="margin: 5px; background-color: #444444; color: #ffffff; border: none; padding: 10px 20px; border-radius: 20px;">Northeast</button>
+            <button id="central" class="region-button" style="margin: 5px; background-color: #444444; color: #ffffff; border: none; padding: 10px 20px; border-radius: 20px;">Central</button>
+            <button id="south" class="region-button" style="margin: 5px; background-color: #444444; color: #ffffff; border: none; padding: 10px 20px; border-radius: 20px;">South</button>
+        `;
+        return div;
+    };
+
+    // Add PM2.5 Air Quality Index Control to the map
     const airQualityControl = L.control({ position: 'bottomleft' });
 
     airQualityControl.onAdd = function (map) {
         const div = L.DomUtil.create('div', 'air-quality-control');
-        div.style.backgroundColor = "white";
+        div.style.backgroundColor = "#333333"; // Dark background
+        div.style.color = "#f5f5f5"; // Light text color
         div.style.padding = "8px";
         div.style.borderRadius = "8px";
         div.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.2)";
@@ -116,42 +129,87 @@ document.addEventListener("DOMContentLoaded", function () {
         return div;
     };
 
-    airQualityControl.addTo(map);
+    // Add Combined Control to the map
+    const combinedControl = L.control({ position: 'topleft' });
 
-    // เพิ่ม Control สำหรับเลือกภาค
-    const regionControl = L.control({ position: 'topleft' });
-
-    regionControl.onAdd = function (map) {
-        const div = L.DomUtil.create('div', 'region-control');
+    combinedControl.onAdd = function (map) {
+        const div = L.DomUtil.create('div', 'combined-control');
+        div.style.display = 'flex';
+        div.style.flexDirection = 'column'; // Arrange vertically
+        div.style.backgroundColor = '#333333'; // Dark background
+        div.style.padding = '20px'; // Increase padding for larger size
+        div.style.borderRadius = '12px'; // Increase border radius for larger size
+        div.style.boxShadow = '0px 0px 15px rgba(0,0,0,0.3)'; // Larger shadow for emphasis
+        div.style.width = '350px'; // Increase width for larger size
         div.innerHTML = `
-            <select id="region-select">
-                <option value="north">ภาคเหนือ</option>
-                <option value="northeast">ภาคตะวันออกเฉียงเหนือ</option>
-                <option value="central">ภาคกลาง</option>
-                <option value="south">ภาคใต้</option>
-                <option value="east">ภาคตะวันออก</option>
-                <option value="west">ภาคตะวันตก</option>
-            </select>
+            <input type="text" id="search-input" placeholder="Search for province or station..." style="width: 100%; padding: 8px; border: none; border-radius: 4px; background-color: #444444; color: #f5f5f5; margin-bottom: 10px;">
+            <ul id="search-suggestions" style="list-style: none; padding: 0; margin: 0; background-color: #333333; color: #f5f5f5; border-radius: 4px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2); display: none;"></ul>
+            <div style="display: flex; justify-content: space-around;"> <!-- Adjusted for symmetry -->
+                <button id="north" class="region-button" style="flex: 1; margin: 5px; background-color: #444444; color: #ffffff; border: none; padding: 10px 20px; border-radius: 20px;">North</button>
+                <button id="northeast" class="region-button" style="flex: 1; margin: 5px; background-color: #444444; color: #ffffff; border: none; padding: 10px 20px; border-radius: 20px;">Northeast</button>
+                <button id="central" class="region-button" style="flex: 1; margin: 5px; background-color: #444444; color: #ffffff; border: none; padding: 10px 20px; border-radius: 20px;">Central</button>
+                <button id="south" class="region-button" style="flex: 1; margin: 5px; background-color: #444444; color: #ffffff; border: none; padding: 10px 20px; border-radius: 20px;">South</button>
+            </div>
         `;
         return div;
     };
 
-    regionControl.addTo(map);
+    combinedControl.addTo(map);
 
-    // กำหนดศูนย์กลางและระดับการซูมสำหรับแต่ละภาค
-    const regions = {
-        north: { center: [18.796, 98.979], zoom: 8 }, // ภาคเหนือ
-        northeast: { center: [16.103, 102.832], zoom: 7 }, // ภาคตะวันออกเฉียงเหนือ
-        central: { center: [14.064, 100.612], zoom: 8 }, // ภาคกลาง
-        south: { center: [7.006, 100.498], zoom: 9 }, // ภาคใต้
-        east: { center: [12.712, 101.431], zoom: 8 }, // ภาคตะวันออก
-        west: { center: [14.019, 99.532], zoom: 8 }, // ภาคตะวันตก
+    // Add event listener for search input
+    document.getElementById('search-input').addEventListener('input', function () {
+        const query = this.value.toLowerCase();
+        const suggestions = sensorData.filter(sensor => sensor.name.toLowerCase().includes(query));
+        const suggestionsList = document.getElementById('search-suggestions');
+        suggestionsList.innerHTML = '';
+        suggestionsList.style.display = suggestions.length ? 'block' : 'none';
+
+        suggestions.forEach(sensor => {
+            const li = document.createElement('li');
+            li.textContent = sensor.name;
+            li.style.padding = '8px';
+            li.style.cursor = 'pointer';
+            li.style.backgroundColor = '#444444'; // Match dropdown style
+            li.style.borderBottom = '2px solid #555555'; // Larger border for emphasis
+            li.addEventListener('click', function () {
+                map.setView([sensor.latitude, sensor.longitude], 13);
+                suggestionsList.style.display = 'none';
+            });
+            suggestionsList.appendChild(li);
+        });
+    });
+
+    // Add PM2.5 Air Quality Index Control to the map
+    airQualityControl.addTo(map);
+    zoomControl.addTo(map);
+
+    // Ensure zoom control buttons have a dark theme
+    const zoomControl = L.control.zoom({ position: 'topleft' });
+    zoomControl.onAdd = function (map) {
+        const div = L.DomUtil.create('div', 'leaflet-control-zoom');
+        div.style.backgroundColor = '#333333'; // Dark background
+        div.style.color = '#ffffff'; // Light text color
+        div.style.borderRadius = '8px';
+        div.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.2)';
+        return div;
     };
 
-    // เมื่อผู้ใช้เลือกภาค
-    document.getElementById('region-select').addEventListener('change', function (e) {
-        const selectedRegion = e.target.value;
-        const region = regions[selectedRegion];
-        map.setView(region.center, region.zoom);
+    zoomControl.addTo(map);
+
+    // Define center and zoom for each region
+    const regions = {
+        north: { center: [18.796, 98.979], zoom: 8 },
+        northeast: { center: [16.103, 102.832], zoom: 7 },
+        central: { center: [14.064, 100.612], zoom: 8 },
+        south: { center: [7.006, 100.498], zoom: 9 },
+    };
+
+    // Add event listeners for region buttons
+    document.querySelectorAll('.region-button').forEach(button => {
+        button.addEventListener('click', function () {
+            const selectedRegion = this.id;
+            const region = regions[selectedRegion];
+            map.setView(region.center, region.zoom);
+        });
     });
 });
