@@ -1,170 +1,128 @@
-
 {% extends "base.html" %}
 
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
-<div class="col-md-8">
-    <article class="blog-post">
-        <div class="air-quality-container scrollable-container">
-            <!-- ส่วนแสดงสถานที่และอุณหภูมิ -->
-            <div class="location-temperature">
-                <h1 id="location-name">AMPHOE HAT YAI</h1>
-                <div class="temperature-display">
-                    <span id="temperature-value">26</span>°C
-                    <span class="weather-condition">Cloudy</span>
-                </div>
-                <button id="prediction-button" class="btn btn-primary">Prediction</button>
+<div class="air-quality-container scrollable-container">
+    <div class="location-temperature fixed-top" id="locationTemperature">
+        <h1 id="location-name">AMPHOE HAT YAI</h1>
+        <div class="temperature-display">
+            <span id="pm25-value">45</span> μg/m³
+            <span class="weather-condition">PM2.5</span>
+        </div>
+        <div class="view-predictions-container">
+            <a href="#" id="view-predictions" class="view-predictions-link">View Predictions</a>
+        </div>
+    </div>
+
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <circle cx="12" cy="12" r="10" stroke="#4285F4" stroke-width="2" fill="none" />
+                    <path d="M12 8v8M8 12h8" stroke="#4285F4" stroke-width="2" />
+                </svg>
             </div>
-
-            <div class="metrics-grid">
-                <div class="metric-card" id="pm25-card">
-                    <div class="metric-icon">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <circle cx="12" cy="12" r="10" stroke="#4285F4"  fill="none" />
-                            <path d="M12 8v8M8 12h8" stroke="#4285F4"  />
-                        </svg>
-                    </div>
-                    <div class="metric-label">PM2.5</div>
-                    <div class="metric-value">
-                        <span id="pm25-value">45</span> <span class="metric-unit">μg/m³</span>
-                    </div>
-                </div>
-                <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        function updatePM25Color() {
-                            const pm25Element = document.getElementById("pm25-value");
-                            const pm25Card = document.getElementById("pm25-card");
-                            const pm25Value = parseFloat(pm25Element.textContent);
-                
-                            let bgColor = "#4CAF50"; // Good (0-12)
-                            if (pm25Value > 12 && pm25Value <= 35.4) {
-                                bgColor = "#FFEB3B"; // Moderate
-                            } else if (pm25Value > 35.4 && pm25Value <= 55.4) {
-                                bgColor = "#FF9800"; // Unhealthy for Sensitive Groups
-                            } else if (pm25Value > 55.4 && pm25Value <= 150.4) {
-                                bgColor = "#F44336"; // Unhealthy
-                            } else if (pm25Value > 150.4 && pm25Value <= 250.4) {
-                                bgColor = "#9C27B0"; // Very Unhealthy
-                            } else if (pm25Value > 250.4) {
-                                bgColor = "#795548"; // Hazardous
-                            }
-                
-                            pm25Card.style.backgroundColor = bgColor;
-                            pm25Card.style.color = "#fff";
-                        }
-                
-                        updatePM25Color();
-                    });
-                </script>
-
-                <div class="metric-card">
-                    <div class="metric-icon">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <circle cx="12" cy="12" r="10" stroke="#4285F4" stroke-width="2" fill="none" />
-                            <path d="M12 8v8M8 12h8" stroke="#4285F4" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <div class="metric-label">PM10</div>
-                    <div class="metric-value">
-                        <span id="pm10-value">75</span> <span class="metric-unit">μg/m³</span>
-                    </div>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-icon">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <path d="M12 3v18M6 7h12" stroke="#FF5252" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <div class="metric-label">Temperature</div>
-                    <div class="metric-value">
-                        <span id="temperature-metric">26</span> <span class="metric-unit">°C</span>
-                    </div>
-                </div>
-                
-
-                <div class="metric-card">
-                    <div class="metric-icon">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z" stroke="#4FC3F7"
-                                stroke-width="2" fill="none" />
-                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" fill="#4FC3F7" />
-                        </svg>
-                    </div>
-                    <div class="metric-label">Humidity</div>
-                    <div class="metric-value">
-                        <span id="humidity-value">65</span> <span class="metric-unit">%</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="forecast-section">
-                <div class="forecast-header">
-                    <h3>Forecast Model</h3>
-                    <select id="forecast-model" class="forecast-select">
-                        <option value="SARIMAX">SARIMAX</option>
-                    </select>
-                </div>
-
-                <h4>7-Day PM2.5 Forecast</h4>
-
-                <div class="forecast-chart">
-                    <div class="chart-legend">
-                        <div class="legend-item">
-                            <div class="legend-color"></div>
-                            <div>PM2.5 Forecast</div>
-                        </div>
-                    </div>
-
-                    <div class="chart-container">
-                        <canvas id="forecastChart" width="400" height="200"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="forecast-table">
-                <h4>7-Day PM2.5 Forecast Table</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Day</th>
-                            <th>PM2.5 (µg/m³)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Day1</td>
-                            <td>40</td>
-                        </tr>
-                        <tr>
-                            <td>Day2</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td>Day3</td>
-                            <td>35</td>
-                        </tr>
-                        <tr>
-                            <td>Day4</td>
-                            <td>42</td>
-                        </tr>
-                        <tr>
-                            <td>Day5</td>
-                            <td>43</td>
-                        </tr>
-                        <tr>
-                            <td>Day6</td>
-                            <td>40</td>
-                        </tr>
-                        <tr>
-                            <td>Day7</td>
-                            <td>35</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="metric-label small-text">PM2.5</div>
+            <div class="metric-value">
+                <span id="pm25-value">45</span> <span class="metric-unit">μg/m³</span>
             </div>
         </div>
-    </article>
+
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <circle cx="12" cy="12" r="10" stroke="#4285F4" stroke-width="2" fill="none" />
+                    <path d="M12 8v8M8 12h8" stroke="#4285F4" stroke-width="2" />
+                </svg>
+            </div>
+            <div class="metric-label small-text">PM10</div>
+            <div class="metric-value">
+                <span id="pm10-value">75</span> <span class="metric-unit">μg/m³</span>
+            </div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 3v18M6 7h12" stroke="#FF5252" stroke-width="2" />
+                </svg>
+            </div>
+            <div class="metric-label small-text">Temperature</div>
+            <div class="metric-value">
+                <span id="temperature-value">26</span> <span class="metric-unit">°C</span>
+            </div>
+        </div>
+
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z" stroke="#4FC3F7"
+                        stroke-width="2" fill="none" />
+                    <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" fill="#4FC3F7" />
+                </svg>
+            </div>
+            <div class="metric-label small-text">Humidity</div>
+            <div class="metric-value">
+                <span id="humidity-value">65</span> <span class="metric-unit">%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="forecast-section">
+        <div class="forecast-header">
+            <h3>Forecast Model</h3>
+            <select id="forecast-model" class="forecast-select">
+                <option value="SARIMAX">SARIMAX</option>
+            </select>
+        </div>
+
+        <h4>7-Day PM2.5 Forecast</h4>
+
+        <div class="forecast-chart">
+            <div class="chart-legend">
+                <div class="legend-item">
+                    <div class="legend-color"></div>
+                    <div>PM2.5 Forecast</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="forecastChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="forecast-blocks">
+        <span class="forecast-block">
+            <span class="forecast-day">Day1</span>
+            <span class="forecast-value">40 µg/m³</span>
+        </span>
+        <span class="forecast-block">
+            <span class="forecast-day">Day2</span>
+            <span class="forecast-value">38 µg/m³</span>
+        </span>
+        <span class="forecast-block">
+            <span class="forecast-day">Day3</span>
+            <span class="forecast-value">35 µg/m³</span>
+        </span>
+        <span class="forecast-block">
+            <span class="forecast-day">Day4</span>
+            <span class="forecast-value">42 µg/m³</span>
+        </span>
+        <span class="forecast-block">
+            <span class="forecast-day">Day5</span>
+            <span class="forecast-value">43 µg/m³</span>
+        </span>
+        <span class="forecast-block">
+            <span class="forecast-day">Day6</span>
+            <span class="forecast-value">40 µg/m³</span>
+        </span>
+        <span class="forecast-block">
+            <span class="forecast-day">Day7</span>
+            <span class="forecast-value">35 µg/m³</span>
+        </span>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -197,12 +155,18 @@
                     max: 60,
                     grid: {
                         display: true,
-                        color: 'rgba(0, 0, 0, 0.05)'
+                        color: 'rgba(255, 255, 255, 0.2)' // Slightly darker white
+                    },
+                    ticks: {
+                        color: 'rgba(255, 255, 255, 0.7)' // Slightly darker white for labels
                     }
                 },
                 x: {
                     grid: {
                         display: false
+                    },
+                    ticks: {
+                        color: 'rgba(255, 255, 255, 0.7)' // Slightly darker white for labels
                     }
                 }
             },
@@ -213,38 +177,6 @@
             }
         }
     });
-</script>
-
-<script>
-    // ข้อมูลพยากรณ์ PM2.5 จากกราฟ
-    const forecastData = {
-        labels: ['Day1', 'Day2', 'Day3', 'Day4', 'Day5', 'Day6', 'Day7'],
-        pm25Values: [40, 38, 35, 42, 43, 40, 35]
-    };
-
-    // ฟังก์ชันสร้างแถวในตาราง
-    function createTableRow(day, pm25Value) {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${day}</td>
-            <td>${pm25Value}</td>
-        `;
-        return row;
-    }
-
-    // ฟังก์ชันอัปเดตตารางพยากรณ์
-    function updateForecastTable(data) {
-        const tableBody = document.getElementById('forecast-table-body');
-        tableBody.innerHTML = ''; // ล้างข้อมูลเดิม
-
-        data.labels.forEach((label, index) => {
-            const row = createTableRow(label, data.pm25Values[index]);
-            tableBody.appendChild(row);
-        });
-    }
-
-    // อัปเดตตารางเมื่อโหลดหน้าเว็บ
-    updateForecastTable(forecastData);
 </script>
 
 {% endblock %}
