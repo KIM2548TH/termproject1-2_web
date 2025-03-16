@@ -554,9 +554,11 @@ h4 {
     /* Light text color */
 }
 
+/* Fixed width for metric cards */
 .metric-card {
+    width: 200px;
+    /* Set a fixed width */
     background-color: #f6f6f9;
-    /* Dark card background */
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -566,22 +568,35 @@ h4 {
     /* Light text color */
 }
 
-.metric-value {
-    font-size: 24px;
-    font-weight: bold;
-    color: #4a4d5a;
-    /* Light text color */
+/* Fixed width for forecast blocks */
+.forecast-block {
+    width: 200px;
+    /* Set a fixed width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a5bbd2;
+    color: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.forecast-section,
-.forecast-table {
-    margin-bottom: 30px;
-    background-color: #2c2c2e;
-    /* Dark section background */
-    border-radius: 10px;
-    padding: 20px;
-    color: #f5f5f5;
-    /* Light text color */
+/* Fixed width for view predictions container */
+.view-predictions-container {
+    width: 200px;
+    /* Set a fixed width */
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+/* Fixed width for location temperature */
+.location-temperature {
+    width: 100%;
+    /* Set a fixed width */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .view-predictions-container {

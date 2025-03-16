@@ -79,104 +79,38 @@
 
         <h4>7-Day PM2.5 Forecast</h4>
 
-        <div class="forecast-chart">
-            <div class="chart-legend">
-                <div class="legend-item">
-                    <div class="legend-color"></div>
-                    <div>PM2.5 Forecast</div>
-                </div>
-            </div>
-
-            <div class="chart-container">
-                <canvas id="forecastChart" width="400" height="200"></canvas>
-            </div>
+        <!-- Removed the forecast chart section -->
+        <div class="forecast-blocks">
+            <span class="forecast-block">
+                <span class="forecast-day">Day1</span>
+                <span class="forecast-value">40 µg/m³</span>
+            </span>
+            <span class="forecast-block">
+                <span class="forecast-day">Day2</span>
+                <span class="forecast-value">38 µg/m³</span>
+            </span>
+            <span class="forecast-block">
+                <span class="forecast-day">Day3</span>
+                <span class="forecast-value">35 µg/m³</span>
+            </span>
+            <span class="forecast-block">
+                <span class="forecast-day">Day4</span>
+                <span class="forecast-value">42 µg/m³</span>
+            </span>
+            <span class="forecast-block">
+                <span class="forecast-day">Day5</span>
+                <span class="forecast-value">43 µg/m³</span>
+            </span>
+            <span class="forecast-block">
+                <span class="forecast-day">Day6</span>
+                <span class="forecast-value">40 µg/m³</span>
+            </span>
+            <span class="forecast-block">
+                <span class="forecast-day">Day7</span>
+                <span class="forecast-value">35 µg/m³</span>
+            </span>
         </div>
     </div>
-
-    <div class="forecast-blocks">
-        <span class="forecast-block">
-            <span class="forecast-day">Day1</span>
-            <span class="forecast-value">40 µg/m³</span>
-        </span>
-        <span class="forecast-block">
-            <span class="forecast-day">Day2</span>
-            <span class="forecast-value">38 µg/m³</span>
-        </span>
-        <span class="forecast-block">
-            <span class="forecast-day">Day3</span>
-            <span class="forecast-value">35 µg/m³</span>
-        </span>
-        <span class="forecast-block">
-            <span class="forecast-day">Day4</span>
-            <span class="forecast-value">42 µg/m³</span>
-        </span>
-        <span class="forecast-block">
-            <span class="forecast-day">Day5</span>
-            <span class="forecast-value">43 µg/m³</span>
-        </span>
-        <span class="forecast-block">
-            <span class="forecast-day">Day6</span>
-            <span class="forecast-value">40 µg/m³</span>
-        </span>
-        <span class="forecast-block">
-            <span class="forecast-day">Day7</span>
-            <span class="forecast-value">35 µg/m³</span>
-        </span>
-    </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    // สร้างกราฟพยากรณ์ PM2.5
-    const ctx = document.getElementById('forecastChart').getContext('2d');
-    const forecastChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['2024-03-01', '2024-03-02', '2024-03-03', '2024-03-04', '2024-03-05', '2024-03-06', '2024-03-07'],
-            datasets: [{
-                label: 'PM2.5 Forecast',
-                data: [40, 38, 35, 42, 43, 40, 35],
-                backgroundColor: 'rgba(77, 208, 225, 0.2)',
-                borderColor: '#4DD0E1',
-                borderWidth: 2,
-                tension: 0.3,
-                pointRadius: 4,
-                pointBackgroundColor: '#fff',
-                pointBorderColor: '#4DD0E1'
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                y: {
-                    beginAtZero: false,
-                    min: 20,
-                    max: 60,
-                    grid: {
-                        display: true,
-                        color: 'rgba(255, 255, 255, 0.2)' // Slightly darker white
-                    },
-                    ticks: {
-                        color: 'rgba(255, 255, 255, 0.7)' // Slightly darker white for labels
-                    }
-                },
-                x: {
-                    grid: {
-                        display: false
-                    },
-                    ticks: {
-                        color: 'rgba(255, 255, 255, 0.7)' // Slightly darker white for labels
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    display: false
-                }
-            }
-        }
-    });
-</script>
 
 {% endblock %}
