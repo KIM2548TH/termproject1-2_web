@@ -582,12 +582,10 @@ h4 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Fixed width for view predictions container */
 .view-predictions-container {
-    width: 200px;
-    /* Set a fixed width */
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between; /* ให้มีระยะห่างระหว่างปุ่มทั้งสอง */
+    align-items: center; /* จัดให้อยู่ในแนวกลางตามแนวตั้ง */
     margin-top: 10px;
 }
 
@@ -599,24 +597,18 @@ h4 {
     margin-bottom: 20px;
 }
 
-.view-predictions-container {
-    display: flex;
-    justify-content: flex-end;
-    /* Align to the right */
-    margin-top: 10px;
-    /* Add some space above */
-}
 
 .view-predictions-link {
     background-color: #a5bbd2;
     /* iOS blue */
     color: #fff;
     /* White text color */
-    padding: 10px 20px;
-    border-radius: 15px;
+    padding: 5px 20px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    justify-content: flex-start;
 }
 
 .view-predictions-link:hover {
@@ -653,4 +645,29 @@ h4 {
 
 .forecast-value {
     font-size: 16px;
+}
+
+
+#location-dropdown {
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 2px solid #a5bbd2;
+    border-radius: 8px; /* มุมโค้ง */
+    background-color: #f9f9f9; /* สีพื้นหลัง */
+    color: #456687; /* สีตัวอักษร */
+    width: auto;
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวล */
+    margin-left: 10px; /* เพิ่มระยะห่างทางซ้ายเล็กน้อย */
+}
+
+/* เปลี่ยนสีเมื่อ hover */
+#location-dropdown:hover {
+    border-color: #a5bbd2;
+    background-color: #e8f5e9;
+}
+
+/* เปลี่ยนสีเมื่อโฟกัส */
+#location-dropdown:focus {
+    outline: none; /* ลบเส้นขอบเมื่อโฟกัส */
+    border-color: #a5bbd2;
 }
