@@ -14,7 +14,7 @@ from urllib.parse import parse_qs
 
 # เพิ่มฟังก์ชันสำหรับการดีบัก
 def debug_log(message):
-    """บันทึกข้อความดีบักลงในไฟล์และแสดงในคอนโซวลความ"""
+    """บันทึกข้อความดีบักลงในไฟล์และแสดงในคอนโซล"""
     print(f"[DEBUG] {message}")
     with open("dash_debug.log", "a", encoding="utf-8") as f:
         f.write(f"{datetime.now()}: {message}\n")
@@ -26,7 +26,8 @@ dash_app = Dash(__name__, server=app, url_base_pathname='/dash/')
 dash_app.layout = html.Div([
     dcc.Location(id='url', refresh=False),  # รับค่า URL parameter
     dcc.Store(id='selected-station', storage_type='memory'),  # เก็บสถานีที่ถูกเลือก
-    dcc.Graph(id='feature-graph', style={'backgroundColor': '#333'}),
+    dcc.Graph(id='pm25-graph', style={'backgroundColor': '#333', 'height': '400px'}),
+    dcc.Graph(id='pm10-graph', style={'backgroundColor': '#333', 'height': '400px'}),
     dcc.Interval(id='interval-component', interval=60*1000, n_intervals=0)
 ], style={'backgroundColor': '#333', 'padding': '15px', 'borderRadius': '10px'})
 
@@ -155,9 +156,12 @@ def read_csv_data(csv_path):
             debug_log("ไม่พบคอลัมน์เวลา, สร้างคอลัมน์เวลาใหม่")
             df['timestamp'] = pd.date_range(start=datetime.now() - timedelta(hours=24), periods=len(df), freq='h')
         
-        # ตรวจสอบคอลัมน์ PM2.5
+        # ตรวจสอบคอลัมน์ PM2.5 และ PM10
         pm25_columns = ['pm_2_5', 'pm25', 'PM2.5', 'PM25', 'pm2.5', 'PM_2_5', 'pm2_5']
+        pm10_columns = ['pm10', 'PM10', 'pm_10', 'PM_10']
+        
         pm25_col = None
+        pm10_col = None
         
         for col in pm25_columns:
             if col in df.columns:
@@ -165,32 +169,22 @@ def read_csv_data(csv_path):
                 debug_log(f"พบคอลัมน์ PM2.5: {pm25_col}")
                 break
         
-        # ถ้าไม่พบคอลัมน์ PM2.5 ให้ลองดูทุกคอลัมน์ที่มีค่าเป็นตัวเลข
-        if not pm25_col:
-            for col in df.columns:
-                if pd.api.types.is_numeric_dtype(df[col]) and ('pm' in col.lower() or '2.5' in col.lower()):
-                    pm25_col = col
-                    debug_log(f"ใช้คอลัมน์ตัวเลขที่เกี่ยวข้องกับ PM: {pm25_col}")
-                    break
+        for col in pm10_columns:
+            if col in df.columns:
+                pm10_col = col
+                debug_log(f"พบคอลัมน์ PM10: {pm10_col}")
+                break
         
-        # ถ้ายังไม่พบ ให้ใช้คอลัมน์ตัวเลขคอลัมน์แรก
-        if not pm25_col:
-            for col in df.columns:
-                if pd.api.types.is_numeric_dtype(df[col]):
-                    pm25_col = col
-                    debug_log(f"ใช้คอลัมน์ตัวเลขคอลัมน์แรก: {pm25_col}")
-                    break
+        # แปลงค่า PM2.5 และ PM10 เป็นตัวเลข
+        if pm25_col:
+            df[pm25_col] = pd.to_numeric(df[pm25_col], errors='coerce')
+            df = df.dropna(subset=[pm25_col])
         
-        if not pm25_col:
-            debug_log("ไม่พบคอลัมน์ PM2.5 ที่เหมาะสม")
-            return None
-        
-        # แปลงค่า PM2.5 เป็นตัวเลข
-        df[pm25_col] = pd.to_numeric(df[pm25_col], errors='coerce')
-        df = df.dropna(subset=[pm25_col])
+        if pm10_col:
+            df[pm10_col] = pd.to_numeric(df[pm10_col], errors='coerce')
+            df = df.dropna(subset=[pm10_col])
         
         # กรองข้อมูลเฉพาะ 24 ชั่วโมงที่ผ่านมา
-        # ใช้ข้อมูลล่าสุด 24 จุด แทนการใช้ช่วงเวลา
         if len(df) > 24:
             debug_log(f"มีข้อมูลทั้งหมด {len(df)} รายการ, จะใช้เฉพาะ 24 รายการล่าสุด")
             df = df.sort_values('timestamp', ascending=False).head(24)
@@ -199,8 +193,8 @@ def read_csv_data(csv_path):
         # สร้างข้อมูลสำหรับกราฟ
         result = {
             'timestamp': df['timestamp'].tolist(),
-            'pm25': df[pm25_col].tolist(),
-            'pm25_column': pm25_col
+            'pm25': df[pm25_col].tolist() if pm25_col else None,
+            'pm10': df[pm10_col].tolist() if pm10_col else None
         }
         
         debug_log(f"อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: {len(result['timestamp'])}")
@@ -226,9 +220,10 @@ def update_selected_station(search):
         return station
     return None  # ถ้าไม่มีค่า station ใน URL
 
-# Callback เพื่ออัปเดตกราฟ
+# Callback เพื่ออัปเดตกราฟ PM2.5 และ PM10
 @dash_app.callback(
-    Output('feature-graph', 'figure'),
+    [Output('pm25-graph', 'figure'),
+     Output('pm10-graph', 'figure')],
     [Input('interval-component', 'n_intervals'),
      Input('selected-station', 'data')]  # ใช้ 'data' จาก dcc.Store
 )
@@ -248,8 +243,8 @@ def update_graph(n, selected_station):
         if data and len(data['timestamp']) > 0:
             debug_log(f"สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: {len(data['timestamp'])}")
             
-            # สร้าฟกราฟ
-            figure = {
+            # สร้างกราฟ PM2.5
+            pm25_figure = {
                 'data': [
                     go.Scatter(
                         x=data['timestamp'],
@@ -283,7 +278,44 @@ def update_graph(n, selected_station):
                     'margin': {'l': 60, 'r': 30, 't': 50, 'b': 50}
                 }
             }
-            return figure
+            
+            # สร้างกราฟ PM10
+            pm10_figure = {
+                'data': [
+                    go.Scatter(
+                        x=data['timestamp'],
+                        y=data['pm10'],
+                        mode='lines+markers',
+                        name='PM10 Data',
+                        line={'color': '#FF6B6B'},
+                        marker={'color': '#FF6B6B', 'size': 8}
+                    )
+                ],
+                'layout': {
+                    'title': {
+                        'text': f'PM10 Data for {station.replace("export-", "")} (Last 24 Hours)',
+                        'font': {'color': 'white'}
+                    },
+                    'xaxis': {
+                        'title': 'Time',
+                        'type': 'date',
+                        'tickformat': '%H:%M',  # แสดงเฉพาะชั่วโมงและนาที
+                        'color': 'white',
+                        'gridcolor': '#444'
+                    },
+                    'yaxis': {
+                        'title': 'PM10 (µg/m³)',
+                        'color': 'white',
+                        'gridcolor': '#444'
+                    },
+                    'paper_bgcolor': '#333',
+                    'plot_bgcolor': '#333',
+                    'hovermode': 'x unified',
+                    'margin': {'l': 60, 'r': 30, 't': 50, 'b': 50}
+                }
+            }
+            
+            return pm25_figure, pm10_figure
     
     # ถ้าไม่มีข้อมูล ให้สร้างข้อมูลจำลอง
     debug_log("ไม่พบข้อมูล, สร้างข้อมูลจำลอง")
@@ -295,21 +327,24 @@ def update_graph(n, selected_station):
     # สร้างเวลาทุก 1 ชั่วโมง
     timestamps = pd.date_range(start=start_time, end=end_time, freq='h')
     
-    # สร้างค่า PM2.5 จำลอง (ค่าระหว่าง 10-50)
+    # สร้างค่า PM2.5 และ PM10 จำลอง
     import numpy as np
-    base_value = np.random.randint(10, 30)
-    pm25_values = [base_value + np.random.randint(-5, 15) for _ in range(len(timestamps))]
+    base_value_pm25 = np.random.randint(10, 30)
+    pm25_values = [base_value_pm25 + np.random.randint(-5, 15) for _ in range(len(timestamps))]
     
-    # สร้าฟกราฟจากข้อมูลจำลอง
-    figure = {
+    base_value_pm10 = np.random.randint(20, 50)
+    pm10_values = [base_value_pm10 + np.random.randint(-10, 20) for _ in range(len(timestamps))]
+    
+    # สร้างกราฟ PM2.5 จำลอง
+    pm25_figure = {
         'data': [
             go.Scatter(
                 x=timestamps,
                 y=pm25_values,
                 mode='lines+markers',
                 name='PM2.5 Data (Simulated)',
-                line={'color': '#FF6B6B'},
-                marker={'color': '#FF6B6B', 'size': 8}
+                line={'color': '#4ECDC4'},
+                marker={'color': '#4ECDC4', 'size': 8}
             )
         ],
         'layout': {
@@ -332,16 +367,44 @@ def update_graph(n, selected_station):
             'paper_bgcolor': '#333',
             'plot_bgcolor': '#333',
             'hovermode': 'x unified',
-            'margin': {'l': 60, 'r': 30, 't': 50, 'b': 50},
-            'annotations': [{
-                'text': 'Using simulated data',
-                'showarrow': False,
-                'font': {'color': 'white', 'size': 12},
-                'xref': 'paper',
-                'yref': 'paper',
-                'x': 0.5,
-                'y': 0.95
-            }]
+            'margin': {'l': 60, 'r': 30, 't': 50, 'b': 50}
         }
     }
-    return figure
+    
+    # สร้างกราฟ PM10 จำลอง
+    pm10_figure = {
+        'data': [
+            go.Scatter(
+                x=timestamps,
+                y=pm10_values,
+                mode='lines+markers',
+                name='PM10 Data (Simulated)',
+                line={'color': '#FF6B6B'},
+                marker={'color': '#FF6B6B', 'size': 8}
+            )
+        ],
+        'layout': {
+            'title': {
+                'text': f'Simulated PM10 Data for {station.replace("export-", "")} (Last 24 Hours)',
+                'font': {'color': 'white'}
+            },
+            'xaxis': {
+                'title': 'Time',
+                'type': 'date',
+                'tickformat': '%H:%M',  # แสดงเฉพาะชั่วโมงและนาที
+                'color': 'white',
+                'gridcolor': '#444'
+            },
+            'yaxis': {
+                'title': 'PM10 (µg/m³)',
+                'color': 'white',
+                'gridcolor': '#444'
+            },
+            'paper_bgcolor': '#333',
+            'plot_bgcolor': '#333',
+            'hovermode': 'x unified',
+            'margin': {'l': 60, 'r': 30, 't': 50, 'b': 50}
+        }
+    }
+    
+    return pm25_figure, pm10_figure
