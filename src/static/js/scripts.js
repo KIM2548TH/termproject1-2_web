@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     pm25: rowData.pm25 ? parseFloat(rowData.pm25) : Math.floor(Math.random() * 30 + 10),
                     pm10: rowData.pm10 ? parseFloat(rowData.pm10) : Math.floor(Math.random() * 40 + 20),
                     temperature: rowData.temperature || rowData.temp ? parseFloat(rowData.temperature || rowData.temp) : (30 + Math.random() * 3).toFixed(1),
-                    humidity: rowData.humidity || rowData.humid ? parseFloat(rowData.humidity || rowData.humid) : Math.floor(Math.random() * 20 + 60),
+                    humidity: rowData.humidity || rowData.humid ? parseFloat(rowData.humidity || rowData.humid) : null, // แก้ไขตรงนี้
                     timestamp: rowData.timestamp || rowData.time || new Date().toLocaleString()
                 };
 
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div style="margin-bottom: 5px;"><strong>PM2.5:</strong> ${station.pm25} µg/m³</div>
                     <div style="margin-bottom: 5px;"><strong>PM10:</strong> ${station.pm10} µg/m³</div>
                     <div style="margin-bottom: 5px;"><strong>อุณหภูมิ:</strong> ${station.temperature}°C</div>
-                    <div style="margin-bottom: 5px;"><strong>ความชื้น:</strong> ${station.humidity}%</div>
+                    <div style="margin-bottom: 5px;"><strong>ความชื้น:</strong> ${station.humidity !== null ? station.humidity + '%' : '-'}</div>
                     <div style="margin-bottom: 5px;"><strong>เวลา:</strong> ${station.timestamp}</div>
                 </div>
             `;
@@ -226,21 +226,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         map.addControl(searchControl);
     }
-
-    document.getElementById('location-dropdown').addEventListener('change', function () {
-        const selectedStationId = this.value;
-
-        // หาข้อมูลสถานีที่ตรงกับค่า selectedStationId
-        const selectedStation = stationData.find(station => station.name === selectedStationId);
-
-        if (selectedStation) {
-            // เรียกฟังก์ชัน updateIndexContent() เพื่ออัปเดตข้อมูล
-            updateIndexContent(selectedStation);
-
-            // ย้ายแผนที่ไปยังตำแหน่งของสถานีที่เลือก
-            map.setView([selectedStation.latitude, selectedStation.longitude], 13);
-        }
-    });
 
     // ฟังก์ชันในการอัปเดตข้อมูลบนหน้า index.html
     function updateIndexContent(station) {

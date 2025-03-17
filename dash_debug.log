@@ -6100,3 +6100,462 @@ web\src\static
 2025-03-17 12:11:08.884323: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
 2025-03-17 12:11:08.885509: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
 2025-03-17 12:11:08.885561: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:22:51.019760: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:22:51.020188: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:22:51.020350: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:22:51.020444: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:22:51.020502: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:22:51.020566: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:22:51.020621: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:22:51.050863: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:22:51.051227: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:22:51.051822: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:22:51.051859: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:22:51.053136: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:22:51.053168: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:22:51.059145: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:22:51.059258: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:22:51.059415: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:22:51.059497: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:22:51.059724: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:22:51.063145: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:22:51.065519: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:22:51.065592: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:22:51.106805: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:22:51.106928: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:22:51.111636: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:22:51.111800: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:22:51.113332: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:22:51.114809: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:22:51.114869: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:23:08.889976: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:23:08.890710: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:23:08.890746: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:23:08.890769: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:23:08.890871: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:23:08.890891: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:23:08.890947: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:23:08.891018: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:23:08.891053: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:23:08.891079: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:23:08.891100: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:23:08.891140: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:23:08.891150: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:23:08.891334: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:23:08.920738: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:23:08.921358: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:23:08.921375: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:23:08.925333: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:23:08.929298: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:23:08.929374: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:23:08.929397: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:23:08.929669: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:23:08.931188: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:23:08.931249: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:23:08.932723: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:23:08.933539: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:23:08.933553: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:23:08.934346: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:24:08.950714: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:24:08.952087: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:24:08.952408: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:24:08.952595: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:24:08.952814: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:24:08.954363: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:24:08.954626: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:24:08.954716: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:24:08.954779: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:24:08.955582: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:24:08.955845: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:24:08.956018: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:24:08.956786: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:24:08.956993: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:24:09.002962: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:24:09.003010: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:24:09.003129: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:24:09.007964: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:24:09.012486: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:24:09.012605: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:24:09.012635: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:24:09.012652: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:24:09.014868: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:24:09.014888: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:24:09.016626: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:24:09.017455: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:24:09.017487: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:24:09.017500: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:25:09.020229: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:25:09.020943: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:25:09.021423: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:25:09.021634: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:25:09.021769: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:25:09.021860: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:25:09.021950: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:25:09.024446: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:25:09.024795: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:25:09.024995: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:25:09.025153: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:25:09.025475: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:25:09.025584: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:25:09.025659: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:25:09.069432: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:25:09.070190: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:25:09.070251: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:25:09.075106: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:25:09.079581: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:25:09.079691: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:25:09.079708: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:25:09.079811: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:25:09.081977: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:25:09.081994: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:25:09.085061: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:25:09.085078: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:25:09.085134: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:25:09.085764: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:26:09.153576: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:26:09.154959: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:26:09.155346: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:26:09.155644: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:26:09.155801: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:26:09.155924: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:26:09.156045: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:26:09.170734: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:26:09.170920: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:26:09.171022: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:26:09.171105: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:26:09.171141: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:26:09.171178: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:26:09.171210: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:26:09.193211: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:26:09.200263: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:26:09.205620: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:26:09.205737: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:26:09.207428: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:26:09.210977: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:26:09.211211: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:26:09.216581: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:26:09.216597: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:26:09.216699: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:26:09.216720: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:26:09.219297: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:26:09.220854: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:26:09.220904: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:26:50.521261: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:26:50.521657: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:26:50.521799: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:26:50.521898: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:26:50.521978: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:26:50.522060: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:26:50.522128: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:26:50.553799: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:26:50.553942: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:26:50.559784: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:26:50.559865: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:26:50.559953: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:26:50.560107: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:26:50.561005: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:26:50.561233: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:26:50.561346: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:26:50.561575: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:26:50.561590: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:26:50.561732: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:26:50.563573: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:26:50.563664: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:26:50.585770: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:26:50.585885: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:26:50.589851: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:26:50.589909: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:26:50.591220: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:26:50.592734: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:26:50.592875: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:27:17.842887: สถานีที่เลือกจาก URL: export-932208BB5525
+2025-03-17 12:27:17.848401: กำลังอัปเดตกราฟสำหรับสถานี: export-932208BB5525
+2025-03-17 12:27:17.848666: ค้นหาไฟล์ CSV สำหรับสถานี: export-932208BB5525
+2025-03-17 12:27:17.850100: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:27:17.850312: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:27:17.850418: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:27:17.850486: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:27:17.850540: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:27:17.872559: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_10', 'pm_2_5', 'temperature', 'location']
+2025-03-17 12:27:17.872684: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:27:17.874848: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:27:17.874877: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:27:17.875627: มีข้อมูลทั้งหมด 16046 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:27:17.876502: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:27:17.876537: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:27:20.468911: สถานีที่เลือกจาก URL: export-jsps016
+2025-03-17 12:27:20.475443: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 12:27:20.475654: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 12:27:20.475798: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:27:20.475896: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:27:20.475962: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps016-1h.csv
+2025-03-17 12:27:20.476031: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps016-1h.csv
+2025-03-17 12:27:20.476089: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps016-1h.csv
+2025-03-17 12:27:20.499080: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:27:20.499299: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:27:20.504859: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:27:20.505154: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:27:20.506902: มีข้อมูลทั้งหมด 25803 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:27:20.508507: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:27:20.508576: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:27:22.793696: สถานีที่เลือกจาก URL: export-932208BB5525
+2025-03-17 12:27:22.799939: กำลังอัปเดตกราฟสำหรับสถานี: export-932208BB5525
+2025-03-17 12:27:22.800140: ค้นหาไฟล์ CSV สำหรับสถานี: export-932208BB5525
+2025-03-17 12:27:22.800276: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:27:22.800378: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:27:22.800450: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:27:22.800526: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:27:22.800594: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:27:22.816787: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_10', 'pm_2_5', 'temperature', 'location']
+2025-03-17 12:27:22.816953: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:27:22.819382: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:27:22.819431: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:27:22.820465: มีข้อมูลทั้งหมด 16046 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:27:22.821520: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:27:22.821558: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:27:50.507579: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:27:50.509091: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:27:50.509471: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:27:50.509821: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:27:50.510028: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:27:50.510228: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:27:50.510410: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:27:50.549645: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:27:50.549841: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:27:50.554799: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:27:50.554842: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:27:50.556424: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:27:50.558172: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:27:50.558226: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:28:22.908079: กำลังอัปเดตกราฟสำหรับสถานี: export-932208BB5525
+2025-03-17 12:28:22.908581: ค้นหาไฟล์ CSV สำหรับสถานี: export-932208BB5525
+2025-03-17 12:28:22.909178: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:28:22.909623: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:28:22.909963: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:28:22.910261: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:28:22.910483: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:28:22.939462: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_10', 'pm_2_5', 'temperature', 'location']
+2025-03-17 12:28:22.939713: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:28:22.943458: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:28:22.943514: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:28:22.944950: มีข้อมูลทั้งหมด 16046 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:28:22.946578: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:28:22.946654: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:28:50.600333: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:28:50.601754: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:28:50.602133: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:28:50.602491: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:28:50.602729: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:28:50.602983: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:28:50.603226: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:28:50.645300: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:28:50.645469: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:28:50.650507: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:28:50.650544: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:28:50.652154: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:28:50.653983: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:28:50.654037: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:29:22.999504: กำลังอัปเดตกราฟสำหรับสถานี: export-932208BB5525
+2025-03-17 12:29:23.000057: ค้นหาไฟล์ CSV สำหรับสถานี: export-932208BB5525
+2025-03-17 12:29:23.000621: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:29:23.001000: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:29:23.001297: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:29:23.001618: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:29:23.001893: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:29:23.029387: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_10', 'pm_2_5', 'temperature', 'location']
+2025-03-17 12:29:23.029553: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:29:23.033390: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:29:23.033449: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:29:23.034841: มีข้อมูลทั้งหมด 16046 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:29:23.037184: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:29:23.037414: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:29:50.698816: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:29:50.699502: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:29:50.699996: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:29:50.700741: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:29:50.701188: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:29:50.701737: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:29:50.702451: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:29:50.740066: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:29:50.740222: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:29:50.745216: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:29:50.745257: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:29:50.746830: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:29:50.748414: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:29:50.748456: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:30:23.165772: กำลังอัปเดตกราฟสำหรับสถานี: export-932208BB5525
+2025-03-17 12:30:23.167177: ค้นหาไฟล์ CSV สำหรับสถานี: export-932208BB5525
+2025-03-17 12:30:23.167445: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:30:23.167626: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:30:23.167801: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:30:23.167960: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:30:23.168051: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:30:23.197011: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_10', 'pm_2_5', 'temperature', 'location']
+2025-03-17 12:30:23.197279: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:30:23.201463: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:30:23.201554: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:30:23.203200: มีข้อมูลทั้งหมด 16046 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:30:23.204739: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:30:23.204804: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:30:50.828753: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:30:50.829563: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:30:50.829885: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:30:50.830079: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:30:50.830168: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:30:50.830247: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:30:50.830315: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:30:50.869558: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:30:50.869740: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:30:50.874882: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:30:50.874922: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:30:50.876698: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:30:50.878303: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:30:50.878353: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:31:23.237515: กำลังอัปเดตกราฟสำหรับสถานี: export-932208BB5525
+2025-03-17 12:31:23.238984: ค้นหาไฟล์ CSV สำหรับสถานี: export-932208BB5525
+2025-03-17 12:31:23.239251: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:31:23.239383: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:31:23.239464: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:31:23.239550: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:31:23.239620: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:31:23.265153: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_10', 'pm_2_5', 'temperature', 'location']
+2025-03-17 12:31:23.265348: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:31:23.269326: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:31:23.269379: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:31:23.270682: มีข้อมูลทั้งหมด 16046 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:31:23.272315: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:31:23.272392: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:31:50.891363: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:31:50.892593: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:31:50.892902: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:31:50.893105: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:31:50.893228: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:31:50.893348: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:31:50.893447: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:31:50.930603: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:31:50.930797: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:31:50.935994: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:31:50.936045: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:31:50.938223: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:31:50.940111: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:31:50.940179: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:32:23.334896: กำลังอัปเดตกราฟสำหรับสถานี: export-932208BB5525
+2025-03-17 12:32:23.335917: ค้นหาไฟล์ CSV สำหรับสถานี: export-932208BB5525
+2025-03-17 12:32:23.336096: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:32:23.336219: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:32:23.336313: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:32:23.336411: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:32:23.336500: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:32:23.360243: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_10', 'pm_2_5', 'temperature', 'location']
+2025-03-17 12:32:23.360447: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:32:23.364432: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:32:23.364488: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:32:23.365737: มีข้อมูลทั้งหมด 16046 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:32:23.367180: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:32:23.367247: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:32:50.989015: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:32:50.990165: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:32:50.990531: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:32:50.990777: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:32:50.990887: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:32:50.990985: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:32:50.991068: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:32:51.029830: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:32:51.030042: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:32:51.035426: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:32:51.035578: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:32:51.037611: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:32:51.039912: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:32:51.040007: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:33:23.435223: กำลังอัปเดตกราฟสำหรับสถานี: export-932208BB5525
+2025-03-17 12:33:23.436352: ค้นหาไฟล์ CSV สำหรับสถานี: export-932208BB5525
+2025-03-17 12:33:23.436569: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:33:23.436708: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:33:23.436806: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:33:23.436908: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:33:23.436999: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv
+2025-03-17 12:33:23.457889: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_10', 'pm_2_5', 'temperature', 'location']
+2025-03-17 12:33:23.458065: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:33:23.460507: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:33:23.460546: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:33:23.461651: มีข้อมูลทั้งหมด 16046 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:33:23.462807: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:33:23.462848: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:34:12.591267: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:34:12.592753: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:34:12.593050: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:34:12.593230: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:34:12.593312: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:34:12.593391: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:34:12.593466: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:34:12.623560: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:34:12.623691: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:34:12.628419: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:34:12.628469: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:34:12.630266: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:34:12.631906: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:34:12.631961: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:34:13.811529: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:34:13.811724: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:34:13.811858: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:34:13.811961: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:34:13.812025: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:34:13.812092: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:34:13.812150: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:34:13.822066: กำลังอัปเดตกราฟสำหรับสถานี: None
+2025-03-17 12:34:13.822237: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps001
+2025-03-17 12:34:13.822358: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:34:13.822447: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:34:13.822515: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:34:13.822586: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:34:13.822648: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv
+2025-03-17 12:34:13.856117: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:34:13.856287: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:34:13.861541: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:34:13.861700: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:34:13.863262: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:34:13.867809: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:34:13.867827: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:34:13.867933: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:34:13.867965: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:34:13.873308: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:34:13.873438: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:34:13.875367: มีข้อมูลทั้งหมด 27549 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:34:13.877663: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:34:13.877879: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:34:22.202299: สถานีที่เลือกจาก URL: export-aerosure_wifi
+2025-03-17 12:34:22.207539: กำลังอัปเดตกราฟสำหรับสถานี: export-aerosure_wifi
+2025-03-17 12:34:22.207659: ค้นหาไฟล์ CSV สำหรับสถานี: export-aerosure_wifi
+2025-03-17 12:34:22.207722: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:34:22.207805: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:34:22.207866: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-aerosure_wifi-1h.csv
+2025-03-17 12:34:22.207983: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-aerosure_wifi.csv
+2025-03-17 12:34:22.208042: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/aerosure_wifi-1h.csv
+2025-03-17 12:34:22.208081: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/aerosure_wifi.csv
+2025-03-17 12:34:22.208116: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/aerosure_wifi-1h-1h.csv
+2025-03-17 12:34:22.208147: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/aerosure_wifi-1h.csv
+2025-03-17 12:34:22.208534: ไฟล์ CSV ทั้งหมดในโฟลเดอร์: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-aerosure_wifi_02-1h.csv', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps018-1h.csv', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps016-1h.csv', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-67C711FE46A1-1h.csv', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-932208BB5525-1h.csv', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-A9D65F26F0B9-1h.csv', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-pkk_cha_uat_school-1h.csv', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-r202_test_wifi-1h.csv', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-BB51B17ADB17-1h.csv', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps001-1h.csv', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-4EAAECB6B0E6-1h.csv', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps013-1h.csv', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-4B7B6566022D-1h.csv']
+2025-03-17 12:34:22.208710: พบไฟล์ CSV ที่ตรงกับสถานี: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-aerosure_wifi_02-1h.csv
+2025-03-17 12:34:22.208747: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-aerosure_wifi_02-1h.csv
+2025-03-17 12:34:22.218741: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_10', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:34:22.218880: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:34:22.220683: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:34:22.220747: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:34:22.221665: มีข้อมูลทั้งหมด 9622 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:34:22.222316: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:34:22.222386: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
+2025-03-17 12:34:23.990464: สถานีที่เลือกจาก URL: export-jsps016
+2025-03-17 12:34:23.996954: กำลังอัปเดตกราฟสำหรับสถานี: export-jsps016
+2025-03-17 12:34:23.997247: ค้นหาไฟล์ CSV สำหรับสถานี: export-jsps016
+2025-03-17 12:34:23.997421: โฟลเดอร์ที่จะค้นหา: ['/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/static', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/data', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src', '/Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web']
+2025-03-17 12:34:23.997528: กำลังค้นหาในโฟลเดอร์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static
+2025-03-17 12:34:23.997587: ตรวจสอบไฟล์: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps016-1h.csv
+2025-03-17 12:34:23.997648: พบไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps016-1h.csv
+2025-03-17 12:34:23.997704: กำลังอ่านไฟล์ CSV: /Users/pittachiox/Desktop/cloneagainnnnnnnnnnnnnnnnnn/termproject1-2_web/src/static/export-jsps016-1h.csv
+2025-03-17 12:34:24.022886: อ่านไฟล์สำเร็จ, คอลัมน์: ['Unnamed: 0', 'timestamp', 'timezone', 'humidity', 'pm_2_5', 'pm_2_5_sp', 'temperature', 'location']
+2025-03-17 12:34:24.023067: พบคอลัมน์เวลา: timestamp
+2025-03-17 12:34:24.027039: แปลงคอลัมน์เวลาสำเร็จ
+2025-03-17 12:34:24.027120: พบคอลัมน์ PM2.5: pm_2_5
+2025-03-17 12:34:24.029038: มีข้อมูลทั้งหมด 25803 รายการ, จะใช้เฉพาะ 24 รายการล่าสุด
+2025-03-17 12:34:24.030594: อ่านข้อมูลสำเร็จ, จำนวนข้อมูล: 24
+2025-03-17 12:34:24.030662: สร้าฟกราฟจากข้อมูล CSV, จำนวนข้อมูล: 24
